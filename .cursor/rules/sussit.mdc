@@ -1,0 +1,93 @@
+---
+description: SussIt engineering rules — valuation accuracy first; AI is interface only
+alwaysApply: true
+---
+
+# SussIt Engineering Rules
+
+SussIt is an Australian mobile-first second-hand buying decision app.
+
+Core principle:
+
+AI identifies and explains.
+Deterministic application code determines prices, scores and confidence.
+
+Never allow an LLM to invent or calculate the fundamental valuation.
+
+## V0 Audience
+
+Australian second-hand buyers.
+
+## V0 Categories
+
+- iPhones
+- PlayStation
+- Xbox
+- Nintendo Switch
+- Meta Quest
+
+MacBooks and cameras come later.
+
+## Design
+
+Use /docs/design as the visual source of truth.
+
+Brand:
+- #C6FF00 acid lime
+- #111111 near black
+- #FAF8F5 warm off-white
+- dark surface around #101617
+
+Design should feel:
+- premium consumer fintech
+- minimal
+- modern
+- youthful
+- mobile-first
+
+Avoid:
+- gradients
+- glassmorphism
+- excessive shadows
+- generic SaaS layouts
+- AI sparkles
+- cluttered dashboards
+
+## Technical stack
+
+- React
+- TypeScript
+- Vite
+- Tailwind
+- shadcn/ui
+- Supabase
+- Vercel
+- OpenAI
+
+## Architecture
+
+Core valuation logic lives in:
+
+src/lib/valuation/
+
+Pricing sources implement a PricingProvider interface.
+
+Never couple valuation logic directly to eBay.
+
+## Product philosophy
+
+Trust > fake precision.
+
+When data is insufficient, return INSUFFICIENT_DATA.
+
+Never fabricate:
+- accessories
+- product variants
+- condition
+- market prices
+- seller claims
+- confidence
+
+Unknown values remain null.
+
+Do not add features that were not requested.
