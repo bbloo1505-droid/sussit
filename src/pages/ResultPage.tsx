@@ -1,142 +1,106 @@
-import { useState } from 'react'
-import { Link, useParams } from 'react-router-dom'
-import { ArrowLeft, Share } from 'lucide-react'
-import { AppShell } from '@/components/layout/AppShell'
-import { VerdictHeader } from '@/components/result/VerdictHeader'
-import { PriceStack } from '@/components/result/PriceStack'
-import { ConfidenceBlock } from '@/components/result/ConfidenceBlock'
-import { OfferActions } from '@/components/result/OfferActions'
-import { ComparisonsSheet } from '@/components/result/ComparisonsSheet'
-import { Button } from '@/components/ui/button'
+import { useNavigate, useParams, Link } from 'react-router-dom'
+import { ChevronRight, MessageCircle, Search, ShieldCheck } from 'lucide-react'
+import { Header } from '@/components/layout/Header'
+import { ListingLine } from '@/components/shared/ListingLine'
+import { TextButton, PrimaryButton } from '@/components/ui/button'
 import { formatAud } from '@/lib/utils'
 import { getMockAnalysis } from '@/mocks/quest3-512'
 
 export function ResultPage() {
   const { id = '' } = useParams()
+  const navigate = useNavigate()
   const analysis = getMockAnalysis(id)
-  const [compsOpen, setCompsOpen] = useState(false)
-  const [offerOpen, setOfferOpen] = useState(false)
-  const [risksOpen, setRisksOpen] = useState(false)
 
   if (!analysis) {
     return (
-      <AppShell className="justify-center gap-6 text-center">
+      <div className="flex min-h-full flex-col items-center justify-center gap-4 px-6">
         <p className="text-muted">Analysis not found.</p>
         <Link to="/">
-          <Button type="button">Start over</Button>
+          <PrimaryButton>Start over</PrimaryButton>
         </Link>
-      </AppShell>
+      </div>
     )
   }
 
   return (
-    <AppShell className="gap-6">
-      <div className="flex items-center justify-between">
-        <Link
-          to="/confirm"
-          className="rounded-full p-2 hover:bg-white/5"
-          aria-label="Back"
-        >
-          <ArrowLeft className="h-5 w-5" />
-        </Link>
-        <button
-          type="button"
-          className="rounded-full p-2 hover:bg-white/5"
-          aria-label="Share"
-        >
-          <Share className="h-5 w-5" />
-        </button>
-      </div>
+    <div className="px-6 pt-5 pb-9">
+      <Header detail="RESULT" />
+      <ListingLine analysis={analysis} />
+      <main className="pt-10">
+        <p className="font-display text-[11px] font-bold tracking-[0.16em] text-lime">
+          OUR READ
+        </p>
+        <h1 className="mt-2 font-display text-[64px] leading-[0.84] font-black tracking-[-0.075em] text-lime">
+          GOOD
+          <br />
+          BUY
+        </h1>
+        <p className="mt-6 max-w-[300px] text-[15px] leading-6 text-muted">
+          {analysis.explanation}
+        </p>
 
-      <div className="flex items-center gap-3 rounded-2xl bg-surface px-3 py-3">
-        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-ink">
-          <span className="text-[10px] font-bold text-lime">VR</span>
-        </div>
-        <div className="min-w-0 flex-1">
-          <p className="truncate text-sm font-semibold">{analysis.productName}</p>
-          <p className="text-xs text-muted">
-            Asking {formatAud(analysis.askingPrice)}
+        <div className="mt-10">
+          <p className="font-display text-[11px] font-bold tracking-[0.14em] text-muted">
+            SUGGESTED OFFER
+          </p>
+          <p className="mt-1 font-display text-[42px] leading-none font-black tracking-[-0.05em] text-cream">
+            {formatAud(analysis.suggestedOffer)}
+          </p>
+          <p className="mt-8 font-display text-[11px] font-bold tracking-[0.14em] text-muted">
+            CURRENT ASKING COMPARABLES
+          </p>
+          <p className="mt-1 font-display text-[30px] leading-none font-black tracking-[-0.04em] text-cream">
+            {formatAud(analysis.comparableLow)}–{formatAud(analysis.comparableHigh)}
+          </p>
+          <p className="mt-2 text-[12px] leading-5 text-muted">
+            Based on current eBay Australia asking prices — not sold-price data.
           </p>
         </div>
-      </div>
 
-      <VerdictHeader
-        label={analysis.verdictLabel}
-        score={analysis.mockScore}
-        confidence={analysis.confidence}
-      />
-
-      <PriceStack
-        comparableLow={analysis.comparableLow}
-        comparableHigh={analysis.comparableHigh}
-        suggestedOffer={analysis.suggestedOffer}
-        goodBuyPrice={analysis.goodBuyPrice}
-      />
-
-      <ConfidenceBlock explanation={analysis.explanation} />
-
-      <div className="space-y-3">
-        <OfferActions
-          suggestedOffer={analysis.suggestedOffer}
-          askingPrice={analysis.askingPrice}
-          productName={analysis.productName}
-          expanded={offerOpen}
-          onExpand={() => setOfferOpen(true)}
-        />
-        <ComparisonsSheet
-          comps={analysis.comps}
-          open={compsOpen}
-          onOpenChange={setCompsOpen}
-        />
-      </div>
-
-      <button
-        type="button"
-        onClick={() => setRisksOpen((v) => !v)}
-        className="text-left text-sm font-semibold text-lime underline-offset-4 hover:underline"
-      >
-        {risksOpen ? 'Hide checks & questions' : 'Before you hand over the cash'}
-      </button>
-
-      {risksOpen ? (
-        <div className="space-y-5 rounded-3xl border border-white/10 bg-surface p-4">
+        <div className="mt-9 grid grid-cols-2 gap-7 border-t border-white/10 pt-5">
           <div>
-            <p className="text-xs font-bold tracking-wide text-muted uppercase">
-              Normal used-item risks
+            <p className="font-display text-[10px] font-bold tracking-[0.14em] text-muted">
+              DEAL SCORE
             </p>
-            <ul className="mt-3 space-y-2">
-              {analysis.risks.map((risk) => (
-                <li key={risk} className="flex items-center gap-2 text-sm">
-                  <span className="h-1.5 w-1.5 rounded-full bg-fair" />
-                  {risk}
-                </li>
-              ))}
-            </ul>
+            <p className="mt-1 font-display text-[23px] font-black text-cream">
+              {analysis.mockScore.toFixed(1)}{' '}
+              <span className="text-[13px] text-muted">/ 10</span>
+            </p>
           </div>
           <div>
-            <p className="text-xs font-bold tracking-wide text-muted uppercase">
-              Ask the seller
+            <p className="font-display text-[10px] font-bold tracking-[0.14em] text-muted">
+              CONFIDENCE
             </p>
-            <ul className="mt-3 space-y-2">
-              {analysis.questions.map((q) => (
-                <li
-                  key={q}
-                  className="rounded-xl bg-ink px-3 py-2.5 text-sm text-white/90"
-                >
-                  {q}
-                </li>
-              ))}
-            </ul>
+            <p className="mt-1 font-display text-[23px] font-black text-cream">
+              {analysis.confidence}
+            </p>
           </div>
         </div>
-      ) : null}
 
-      <Link
-        to="/"
-        className="pt-2 text-sm font-medium text-muted underline-offset-4 hover:text-white hover:underline"
-      >
-        Suss another listing
-      </Link>
-    </AppShell>
+        <div className="mt-6">
+          <TextButton onClick={() => navigate(`/result/${id}/offer`)}>
+            <span className="flex items-center gap-3">
+              <MessageCircle size={19} className="text-lime" />
+              Make an offer
+            </span>
+            <ChevronRight size={19} />
+          </TextButton>
+          <TextButton onClick={() => navigate(`/result/${id}/comparables`)}>
+            <span className="flex items-center gap-3">
+              <Search size={19} className="text-lime" />
+              View comparisons
+            </span>
+            <ChevronRight size={19} />
+          </TextButton>
+          <TextButton onClick={() => navigate(`/result/${id}/risks`)}>
+            <span className="flex items-center gap-3">
+              <ShieldCheck size={19} className="text-lime" />
+              What to check
+            </span>
+            <ChevronRight size={19} />
+          </TextButton>
+        </div>
+      </main>
+    </div>
   )
 }

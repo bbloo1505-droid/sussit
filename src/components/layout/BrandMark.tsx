@@ -1,31 +1,20 @@
 import { Link } from 'react-router-dom'
-import { cn } from '@/lib/utils'
-import { SussMark } from '@/components/brand/SussMark'
+import brandBoard from '@/assets/brand-board.png'
+import { ImageWithFallback } from '@/components/figma/ImageWithFallback'
 
-type BrandMarkProps = {
-  className?: string
-  showTagline?: boolean
-  showIcon?: boolean
-}
-
-export function BrandMark({
-  className,
-  showTagline = false,
-  showIcon = false,
-}: BrandMarkProps) {
+export function BrandMark() {
   return (
-    <Link to="/" className={cn('inline-flex flex-col gap-1', className)}>
-      <span className="inline-flex items-center gap-2">
-        {showIcon ? <SussMark size={28} /> : null}
-        <span className="font-display text-[1.65rem] font-extrabold tracking-tight text-white">
-          Suss<span className="text-lime">It</span>
-        </span>
+    <Link to="/" className="flex items-center gap-2" aria-label="SussIt">
+      <span className="relative block h-7 w-7 overflow-hidden rounded-[8px] bg-ink">
+        <ImageWithFallback
+          src={brandBoard}
+          alt=""
+          className="absolute top-[-11px] left-[-125px] w-[169px] max-w-none"
+        />
       </span>
-      {showTagline ? (
-        <span className="text-[10px] font-semibold tracking-[0.14em] text-muted uppercase">
-          Know before <span className="text-lime">you buy.</span>
-        </span>
-      ) : null}
+      <span className="font-display text-[23px] leading-none font-black tracking-[-0.055em] text-cream">
+        Suss<span className="text-lime">It</span>
+      </span>
     </Link>
   )
 }

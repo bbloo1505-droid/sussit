@@ -1,73 +1,85 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useNavigate, useSearchParams } from 'react-router-dom'
-import { LoaderCircle } from 'lucide-react'
-import { AppShell } from '@/components/layout/AppShell'
-import {
-  AnalysisStepper,
-  type AnalysisStep,
-} from '@/components/analysing/AnalysisStepper'
-import { MOCK_ANALYSIS_ID } from '@/mocks/quest3-512'
+import { Check } from 'lucide-react'
+import { BrandMark } from '@/components/layout/BrandMark'
+import { ListingLine } from '@/components/shared/ListingLine'
+import { MOCK_ANALYSIS_ID, quest3512Analysis } from '@/mocks/quest3-512'
+import { cn } from '@/lib/utils'
 
-const STEP_LABELS = [
-  'Identified product',
-  'Finding comparable 512GB',
-  'Checking model & condition',
-  'Calculating market range',
-  'Building your offer',
+const STEPS = [
+  'Finding current eBay Australia listings',
+  'Checking listing quality',
+  'Calculating a fair offer',
+  'Assessing this listing',
 ] as const
 
 export function AnalysingPage() {
   const navigate = useNavigate()
   const [params] = useSearchParams()
   const id = params.get('id') ?? MOCK_ANALYSIS_ID
-  const [activeIndex, setActiveIndex] = useState(0)
+  const [progress, setProgress] = useState(0)
 
   useEffect(() => {
-    if (activeIndex >= STEP_LABELS.length) {
-      const timer = window.setTimeout(() => {
-        navigate(`/result/${id}`, { replace: true })
-      }, 350)
-      return () => window.clearTimeout(timer)
-    }
-
-    const timer = window.setTimeout(() => {
-      setActiveIndex((i) => i + 1)
-    }, 650)
-
-    return () => window.clearTimeout(timer)
-  }, [activeIndex, id, navigate])
-
-  const steps: AnalysisStep[] = useMemo(
-    () =>
-      STEP_LABELS.map((label, index) => ({
-        id: String(index),
-        label,
-        status:
-          index < activeIndex
-            ? 'done'
-            : index === activeIndex
-              ? 'active'
-              : 'pending',
-      })),
-    [activeIndex],
-  )
+    setProgress(0)
+    let current = 0
+    const timer = window.setInterval(() => {
+      current += 1
+      setProgress(current)
+      if (current === STEPS.length) {
+        window.clearInterval(timer)
+        window.setTimeout(() => navigate(`/result/${id}`, { replace: true }), 550)
+      }
+    }, 850)
+    return () => window.clearInterval(timer)
+  }, [id, navigate])
 
   return (
-    <AppShell className="justify-between gap-10 pt-16">
-      <div className="space-y-8">
-        <div className="space-y-2">
-          <h1 className="font-display text-[2.125rem] font-extrabold tracking-[-0.5px]">
-            Sussing it out…
-          </h1>
-          <p className="text-base text-muted">Better matches = better advice.</p>
+    <div className="flex min-h-full flex-col px-6 pt-5 pb-9">
+      <BrandMark />
+      <main className="flex flex-1 flex-col justify-center">
+        <h1 className="font-display text-[42px] leading-[0.98] font-black tracking-[-0.04em] text-cream">
+          Sussing it
+          <br />
+          <span className="text-lime">out…</span>
+        </h1>
+        <div className="mt-4">
+          <ListingLine analysis={quest3512Analysis} />
         </div>
-        <AnalysisStepper steps={steps} />
-      </div>
-
-      <div className="flex items-center justify-center gap-2 text-sm text-muted">
-        <LoaderCircle className="h-4 w-4 animate-spin text-lime" />
-        This usually takes 15–30 seconds.
-      </div>
-    </AppShell>
+        <div className="mt-14 space-y-5">
+          {STEPS.map((step, index) => {
+            const complete = index < progress
+            const active = index === progress
+            return (
+              <div className="flex items-center gap-4" key={step}>
+                <span
+                  className={cn(
+                    'grid size-8 place-items-center rounded-full border',
+                    complete && 'border-lime bg-lime text-ink',
+                    active && 'border-2 border-lime text-lime',
+                    !complete && !active && 'border-white/15 text-transparent',
+                  )}
+                >
+                  {complete ? (
+                    <Check size={15} strokeWidth={3} />
+                  ) : active ? (
+                    <span className="size-2 animate-pulse rounded-full bg-lime" />
+                  ) : null}
+                </span>
+                <span
+                  className={cn(
+                    'text-[16px]',
+                    complete || active
+                      ? 'font-medium text-cream'
+                      : 'text-muted',
+                  )}
+                >
+                  {step}
+                </span>
+              </div>
+            )
+          })}
+        </div>
+      </main>
+    </div>
   )
 }

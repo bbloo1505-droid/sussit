@@ -1,29 +1,25 @@
 # Design references
 
-Visual source of truth for SussIt UI. Reference only — not production asset bundles.
+## Primary UI source of truth
 
-| File | Contents |
-|------|----------|
-| `logo.png` | Wordmark, app icon, splash, brand colours |
-| `home-flow.png` | **Primary V0 flow** — Home → Confirm → Analysing → Result → comps → offer → risks |
-| `result-flow.png` | Score / comparisons / negotiate / risks components |
-| `onboarding-flow.png` | Upload / crop / analysing variants |
-| `product-board.png` | Desktop + mobile product board |
-| `retention-board.png` | History / alerts / profile — **later**, not V0 |
+**Premium Mobile Prototype** (Figma export):
 
-## Brand tokens
+- Source folder: `Premium Mobile Prototype Design`
+- Ported reference: [`prototype/App.tsx`](prototype/App.tsx)
+- Brand board crop used for logo mark: `src/assets/brand-board.png`
 
-| Token | Hex |
-|-------|-----|
-| Almost black | `#111111` |
-| Acid lime | `#C6FF00` |
-| Warm off-white | `#F6F4EF` |
-| Dark surface | `#1A1A1A` |
-| Soft border | `#E5E2DA` |
-| Muted text | `#8A8A8A` |
-| Subtle BG | `#DAD8D1` |
+Typography: **Barlow** (display) + **Inter** (body)  
+Canvas: dark phone `#111` on cream `#FAF8F5` outer page  
+Accent: acid lime `#C6FF00`
 
-## V0 scope note
+## Screens implemented
 
-Implement screens 1–4 from `home-flow.png` (and comps/offer as sheets on Result).  
-Do **not** build History / Alerts / Profile / bottom nav from retention boards until later.
+1. Home  
+2. Confirm listing  
+3. Analysing  
+4. Result  
+5. Comparables  
+6. Offer  
+7. Risks / what to check  
+
+History / Alerts / Profile from other boards are **not** V0.
