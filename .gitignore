@@ -1,7 +1,5 @@
 # Dependencies
 node_modules
-.pnp
-.pnp.js
 
 # Build
 dist
@@ -17,18 +15,22 @@ dist-ssr
 logs
 *.log
 npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
 
 # Editor
 .DS_Store
-*.swp
-*.swo
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
 .idea
 .vscode/*
 !.vscode/extensions.json
 
-# Test / coverage
+# Tooling
 coverage
-
-# Misc
 *.tsbuildinfo
 .vercel
