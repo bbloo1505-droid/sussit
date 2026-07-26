@@ -8,7 +8,7 @@
 - Ported reference: [`prototype/App.tsx`](prototype/App.tsx)
 - Brand board: `logo.png` (interlocking SS + splash with **white** Suss / lime It)
 - Poster PNG (`logo-wordmark.png`) is charcoal-on-black — **do not** use in dark UI chrome
-- In-app mark: `SussIcon` SVG + cream/lime Barlow text (`BrandMark.tsx`)
+- In-app mark: extracted brand-board app icon (`src/assets/suss-icon.png`) + cream/lime Barlow text
 
 Typography: **Barlow** (display) + **Inter** (body)  
 Canvas: dark phone `#111` on cream `#FAF8F5` outer page  
