@@ -14,9 +14,9 @@ export function PasteListingForm({ onSubmit }: PasteListingFormProps) {
       <button
         type="button"
         onClick={() => setOpen(true)}
-        className="w-full text-center text-sm font-medium text-muted underline-offset-4 hover:text-ink hover:underline"
+        className="w-full rounded-2xl border border-white/15 bg-surface px-4 py-3.5 text-center text-sm font-semibold text-white hover:bg-[#222]"
       >
-        Paste listing text instead
+        Paste listing text
       </button>
     )
   }
@@ -31,16 +31,12 @@ export function PasteListingForm({ onSubmit }: PasteListingFormProps) {
         onSubmit(trimmed)
       }}
     >
-      <label className="block text-sm font-medium text-ink/80" htmlFor="listing-text">
-        Paste listing text
-      </label>
       <textarea
-        id="listing-text"
         value={text}
         onChange={(e) => setText(e.target.value)}
         rows={5}
         placeholder="Meta Quest 3 512GB&#10;$550&#10;Used, controllers included…"
-        className="w-full resize-none rounded-2xl border border-ink/10 bg-white px-4 py-3 text-base outline-none focus:border-ink/30"
+        className="w-full resize-none rounded-2xl border border-white/10 bg-surface px-4 py-3 text-base text-white outline-none placeholder:text-muted focus:border-lime/50"
       />
       <Button type="submit" className="w-full" disabled={!text.trim()}>
         Continue

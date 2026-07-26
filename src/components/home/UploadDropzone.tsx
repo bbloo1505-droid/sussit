@@ -12,18 +12,13 @@ export function UploadDropzone({ onFile, className }: UploadDropzoneProps) {
 
   function handleFiles(files: FileList | null) {
     const file = files?.[0]
-    if (!file) return
-    if (!file.type.startsWith('image/')) return
+    if (!file?.type.startsWith('image/')) return
     onFile(file)
   }
 
   function onDrop(event: DragEvent<HTMLButtonElement>) {
     event.preventDefault()
     handleFiles(event.dataTransfer.files)
-  }
-
-  function onChange(event: ChangeEvent<HTMLInputElement>) {
-    handleFiles(event.target.files)
   }
 
   return (
@@ -34,26 +29,26 @@ export function UploadDropzone({ onFile, className }: UploadDropzoneProps) {
         onDragOver={(e) => e.preventDefault()}
         onDrop={onDrop}
         className={cn(
-          'flex w-full flex-col items-center justify-center gap-3 rounded-2xl border border-dashed border-ink/20 bg-white px-6 py-14 text-center transition-colors hover:border-ink/40 hover:bg-white',
+          'flex w-full flex-col items-center justify-center gap-3 rounded-3xl border border-dashed border-white/25 bg-surface px-6 py-16 text-center transition-colors hover:border-lime/60 hover:bg-[#1f1f1f]',
           className,
         )}
       >
-        <span className="flex h-12 w-12 items-center justify-center rounded-full bg-surface text-lime">
+        <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-lime text-ink">
           <ImagePlus className="h-5 w-5" strokeWidth={2.25} />
         </span>
-        <span className="font-display text-lg font-bold tracking-tight">
+        <span className="font-display text-xl font-bold tracking-tight">
           Upload screenshot
         </span>
-        <span className="max-w-[16rem] text-sm text-muted">
-          Marketplace, Gumtree, eBay — drop a listing photo here
-        </span>
+        <span className="text-sm text-muted">PNG, JPG or HEIC</span>
       </button>
       <input
         ref={inputRef}
         type="file"
         accept="image/*"
         className="hidden"
-        onChange={onChange}
+        onChange={(e: ChangeEvent<HTMLInputElement>) =>
+          handleFiles(e.target.files)
+        }
       />
     </>
   )

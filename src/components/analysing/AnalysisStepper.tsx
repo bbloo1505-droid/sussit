@@ -20,8 +20,8 @@ export function AnalysisStepper({ steps }: AnalysisStepperProps) {
             className={cn(
               'flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-sm',
               step.status === 'done' && 'bg-lime text-ink',
-              step.status === 'active' && 'border-2 border-lime text-lime',
-              step.status === 'pending' && 'border border-cream/20 text-cream/30',
+              step.status === 'active' && 'border-2 border-lime',
+              step.status === 'pending' && 'border border-white/20',
             )}
           >
             {step.status === 'done' ? (
@@ -33,8 +33,9 @@ export function AnalysisStepper({ steps }: AnalysisStepperProps) {
           <span
             className={cn(
               'text-base',
-              step.status === 'pending' ? 'text-cream/35' : 'text-cream',
-              step.status === 'active' && 'font-semibold',
+              step.status === 'pending' && 'text-muted',
+              step.status === 'active' && 'font-semibold text-white',
+              step.status === 'done' && 'text-white',
             )}
           >
             {step.label}

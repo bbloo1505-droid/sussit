@@ -32,11 +32,13 @@ MacBooks and cameras come later.
 
 Use /docs/design as the visual source of truth.
 
-Brand:
+Brand (see /docs/design):
 - #C6FF00 acid lime
-- #111111 near black
-- #FAF8F5 warm off-white
-- dark surface around #101617
+- #111111 almost black (primary background)
+- #F6F4EF warm off-white (light cards)
+- #1A1A1A dark surface
+- #8A8A8A muted text
+- Core V0 screens are dark-theme; light cream cards sit on dark canvas.
 
 Design should feel:
 - premium consumer fintech

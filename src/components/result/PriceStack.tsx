@@ -1,40 +1,38 @@
 import { formatAud } from '@/lib/utils'
 
 type PriceStackProps = {
-  askingPrice: number
   comparableLow: number
   comparableHigh: number
   suggestedOffer: number
+  goodBuyPrice: number
 }
 
 export function PriceStack({
-  askingPrice,
   comparableLow,
   comparableHigh,
   suggestedOffer,
+  goodBuyPrice,
 }: PriceStackProps) {
   return (
-    <div className="space-y-5">
+    <dl className="space-y-3.5">
       <div className="flex items-baseline justify-between gap-4">
-        <span className="text-sm text-muted">Seller asking</span>
-        <span className="text-lg font-semibold tabular-nums">
-          {formatAud(askingPrice)}
-        </span>
+        <dt className="text-sm text-muted">Comparable asking range</dt>
+        <dd className="text-base font-semibold tabular-nums">
+          {formatAud(comparableLow)} – {formatAud(comparableHigh)}
+        </dd>
       </div>
       <div className="flex items-baseline justify-between gap-4">
-        <span className="text-sm text-muted">Comparable asking range</span>
-        <span className="text-lg font-semibold tabular-nums">
-          {formatAud(comparableLow)}–{formatAud(comparableHigh)}
-        </span>
+        <dt className="text-sm text-muted">Suggested opening offer</dt>
+        <dd className="font-display text-2xl font-extrabold tabular-nums text-lime">
+          {formatAud(suggestedOffer)}
+        </dd>
       </div>
-      <div className="border-t border-ink/10 pt-5">
-        <div className="flex items-baseline justify-between gap-4">
-          <span className="text-sm font-medium text-ink">Suggested offer</span>
-          <span className="font-display text-4xl font-extrabold tabular-nums tracking-tight">
-            {formatAud(suggestedOffer)}
-          </span>
-        </div>
+      <div className="flex items-baseline justify-between gap-4">
+        <dt className="text-sm text-muted">Good-buy price</dt>
+        <dd className="text-base font-semibold tabular-nums">
+          ≤ {formatAud(goodBuyPrice)}
+        </dd>
       </div>
-    </div>
+    </dl>
   )
 }

@@ -25,18 +25,18 @@ export function FixProductForm({
       }}
     >
       <div>
-        <label htmlFor="product-name" className="text-sm font-medium text-muted">
+        <label htmlFor="product-name" className="text-sm text-muted">
           Correct product
         </label>
         <input
           id="product-name"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          className="mt-2 w-full rounded-2xl border border-ink/10 bg-white px-4 py-3 text-base outline-none focus:border-ink/30"
+          className="mt-2 w-full rounded-2xl border border-white/10 bg-surface px-4 py-3 text-base text-white outline-none focus:border-lime/50"
         />
       </div>
       <div className="flex gap-3">
-        <Button type="button" variant="outline" className="flex-1" onClick={onCancel}>
+        <Button type="button" variant="secondary" className="flex-1" onClick={onCancel}>
           Cancel
         </Button>
         <Button type="submit" className="flex-1" disabled={!name.trim()}>

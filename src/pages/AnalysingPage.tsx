@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { useNavigate, useSearchParams } from 'react-router-dom'
+import { LoaderCircle } from 'lucide-react'
 import { AppShell } from '@/components/layout/AppShell'
-import { BrandMark } from '@/components/layout/BrandMark'
 import {
   AnalysisStepper,
   type AnalysisStep,
@@ -10,9 +10,10 @@ import { MOCK_ANALYSIS_ID } from '@/mocks/quest3-512'
 
 const STEP_LABELS = [
   'Identified product',
-  'Finding comparisons',
-  'Checking model',
+  'Finding comparable 512GB',
+  'Checking model & condition',
   'Calculating market range',
+  'Building your offer',
 ] as const
 
 export function AnalysingPage() {
@@ -25,13 +26,13 @@ export function AnalysingPage() {
     if (activeIndex >= STEP_LABELS.length) {
       const timer = window.setTimeout(() => {
         navigate(`/result/${id}`, { replace: true })
-      }, 400)
+      }, 350)
       return () => window.clearTimeout(timer)
     }
 
     const timer = window.setTimeout(() => {
       setActiveIndex((i) => i + 1)
-    }, 700)
+    }, 650)
 
     return () => window.clearTimeout(timer)
   }, [activeIndex, id, navigate])
@@ -52,13 +53,20 @@ export function AnalysingPage() {
   )
 
   return (
-    <AppShell dark className="justify-center gap-10">
-      <BrandMark light />
+    <AppShell className="justify-between gap-10 pt-16">
       <div className="space-y-8">
-        <h1 className="font-display text-4xl font-extrabold tracking-tight">
-          Sussing it out…
-        </h1>
+        <div className="space-y-2">
+          <h1 className="font-display text-[2.125rem] font-extrabold tracking-[-0.5px]">
+            Sussing it out…
+          </h1>
+          <p className="text-base text-muted">Better matches = better advice.</p>
+        </div>
         <AnalysisStepper steps={steps} />
+      </div>
+
+      <div className="flex items-center justify-center gap-2 text-sm text-muted">
+        <LoaderCircle className="h-4 w-4 animate-spin text-lime" />
+        This usually takes 15–30 seconds.
       </div>
     </AppShell>
   )
