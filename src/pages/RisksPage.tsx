@@ -1,13 +1,20 @@
 import { useParams } from 'react-router-dom'
 import { CircleAlert } from 'lucide-react'
 import { Header } from '@/components/layout/Header'
-import { getMockAnalysis } from '@/mocks/quest3-512'
+import { useAnalysis } from '@/hooks/useAnalysis'
+import { demoRisks } from '@/lib/analysis/viewModel'
 
 export function RisksPage() {
   const { id = '' } = useParams()
-  const analysis = getMockAnalysis(id)
+  const { loading } = useAnalysis(id)
 
-  if (!analysis) return null
+  if (loading) {
+    return (
+      <div className="flex min-h-full items-center justify-center px-6 text-muted">
+        Loading…
+      </div>
+    )
+  }
 
   return (
     <div className="px-6 pt-5 pb-9">
@@ -20,7 +27,7 @@ export function RisksPage() {
       </p>
 
       <div className="mt-8">
-        {analysis.risks.map((risk, index) => (
+        {demoRisks.map((risk, index) => (
           <div key={risk.title} className="flex gap-4 border-b border-white/10 py-5">
             <span className="mt-0.5 font-display text-[12px] font-black text-lime">
               0{index + 1}

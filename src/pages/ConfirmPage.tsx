@@ -1,20 +1,34 @@
+import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
 import { Header } from '@/components/layout/Header'
 import { PrimaryButton } from '@/components/ui/button'
 import { formatAud } from '@/lib/utils'
-import { MOCK_ANALYSIS_ID, quest3512Analysis } from '@/mocks/quest3-512'
+import { ensureDemoAnalysis } from '@/lib/analysis/ensureDemoAnalysis'
+import { QUEST_DEMO_ID, questDemoProduct } from '@/lib/analysis/questDemoProduct'
 
 export function ConfirmPage() {
   const navigate = useNavigate()
-  const a = quest3512Analysis
+  const [busy, setBusy] = useState(false)
+  const a = questDemoProduct
+  const productName = [a.brand, a.model, a.variant].filter(Boolean).join(' ')
 
   const fields = [
     ['ASKING PRICE', formatAud(a.askingPrice)],
-    ['CONDITION', a.condition],
-    ['INCLUDED', a.includes.join(', ')],
-    ['LISTED ON', a.listedOn],
+    ['CONDITION', 'Used'],
+    ['INCLUDED', 'Controllers'],
+    ['LISTED ON', 'Marketplace'],
   ] as const
+
+  async function startAnalysis() {
+    setBusy(true)
+    try {
+      await ensureDemoAnalysis(QUEST_DEMO_ID)
+      navigate(`/analysing?id=${QUEST_DEMO_ID}`)
+    } finally {
+      setBusy(false)
+    }
+  }
 
   return (
     <div className="px-6 pt-5 pb-9">
@@ -32,7 +46,7 @@ export function ConfirmPage() {
           <div className="flex justify-between gap-4">
             <div>
               <h2 className="font-display text-[21px] font-black tracking-[-0.025em] text-cream">
-                {a.productName}
+                {productName}
               </h2>
               <span className="mt-2 inline-block rounded-full bg-panel px-2 py-1 font-display text-[10px] font-bold tracking-[0.12em] text-muted">
                 USED
@@ -56,8 +70,8 @@ export function ConfirmPage() {
       </section>
 
       <div className="mt-4 space-y-2">
-        <PrimaryButton onClick={() => navigate(`/analysing?id=${MOCK_ANALYSIS_ID}`)}>
-          Looks right <ArrowRight size={18} />
+        <PrimaryButton onClick={startAnalysis} disabled={busy}>
+          {busy ? 'Preparing…' : 'Looks right'} <ArrowRight size={18} />
         </PrimaryButton>
         <button
           type="button"

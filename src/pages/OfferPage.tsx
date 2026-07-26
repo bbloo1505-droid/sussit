@@ -3,18 +3,28 @@ import { useParams } from 'react-router-dom'
 import { CheckCircle2, Copy, Tag } from 'lucide-react'
 import { Header } from '@/components/layout/Header'
 import { formatAud } from '@/lib/utils'
-import { getMockAnalysis } from '@/mocks/quest3-512'
+import { useAnalysis } from '@/hooks/useAnalysis'
+import { buildOfferMessage } from '@/lib/analysis/viewModel'
 
 export function OfferPage() {
   const { id = '' } = useParams()
-  const analysis = getMockAnalysis(id)
+  const { analysis, loading } = useAnalysis(id)
   const [copied, setCopied] = useState(false)
 
-  if (!analysis) return null
+  if (loading || !analysis) {
+    return (
+      <div className="flex min-h-full items-center justify-center px-6 text-muted">
+        Loading…
+      </div>
+    )
+  }
+
+  const message = buildOfferMessage(analysis)
+  const offer = analysis.offer?.openingOffer
 
   async function copy() {
     try {
-      await navigator.clipboard.writeText(analysis!.offerMessage)
+      await navigator.clipboard.writeText(message)
       setCopied(true)
       window.setTimeout(() => setCopied(false), 1800)
     } catch {
@@ -29,9 +39,9 @@ export function OfferPage() {
         Make an offer
       </h1>
       <p className="mt-3 text-[15px] leading-6 text-muted">
-        A {formatAud(analysis.suggestedOffer)} offer gives you room to start
-        below the {formatAud(analysis.askingPrice)} asking price while still
-        being clear and ready to act.
+        {offer != null
+          ? `A ${formatAud(offer)} offer gives you room to start below the ${formatAud(analysis.product.askingPrice)} asking price while still being clear and ready to act.`
+          : 'Not enough comparable data for a suggested offer.'}
       </p>
 
       <section className="mt-9 rounded-[22px] border border-white/10 bg-surface p-5">
@@ -42,16 +52,17 @@ export function OfferPage() {
           </span>
         </div>
         <p className="mt-2 font-display text-[40px] font-black tracking-[-0.05em] text-cream">
-          {formatAud(analysis.suggestedOffer)}
+          {offer != null ? formatAud(offer) : '—'}
         </p>
         <div className="my-5 h-px bg-white/10" />
-        <p className="text-[16px] leading-7 text-cream">{analysis.offerMessage}</p>
+        <p className="text-[16px] leading-7 text-cream">{message}</p>
       </section>
 
       <button
         type="button"
         onClick={copy}
-        className="mt-4 flex w-full items-center justify-center gap-2 rounded-2xl border border-white/15 py-4 font-display text-[15px] font-bold text-cream transition hover:border-lime hover:text-lime"
+        disabled={offer == null}
+        className="mt-4 flex w-full items-center justify-center gap-2 rounded-2xl border border-white/15 py-4 font-display text-[15px] font-bold text-cream transition hover:border-lime hover:text-lime disabled:opacity-40"
       >
         {copied ? (
           <>

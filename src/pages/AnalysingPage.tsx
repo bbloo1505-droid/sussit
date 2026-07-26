@@ -3,7 +3,8 @@ import { useNavigate, useSearchParams } from 'react-router-dom'
 import { Check } from 'lucide-react'
 import { BrandMark } from '@/components/layout/BrandMark'
 import { ListingLine } from '@/components/shared/ListingLine'
-import { MOCK_ANALYSIS_ID, quest3512Analysis } from '@/mocks/quest3-512'
+import { QUEST_DEMO_ID, questDemoProduct } from '@/lib/analysis/questDemoProduct'
+import { ensureDemoAnalysis } from '@/lib/analysis/ensureDemoAnalysis'
 import { cn } from '@/lib/utils'
 
 const STEPS = [
@@ -16,8 +17,12 @@ const STEPS = [
 export function AnalysingPage() {
   const navigate = useNavigate()
   const [params] = useSearchParams()
-  const id = params.get('id') ?? MOCK_ANALYSIS_ID
+  const id = params.get('id') ?? QUEST_DEMO_ID
   const [progress, setProgress] = useState(0)
+
+  useEffect(() => {
+    void ensureDemoAnalysis(id)
+  }, [id])
 
   useEffect(() => {
     setProgress(0)
@@ -33,6 +38,10 @@ export function AnalysingPage() {
     return () => window.clearInterval(timer)
   }, [id, navigate])
 
+  const productName = [questDemoProduct.brand, questDemoProduct.model, questDemoProduct.variant]
+    .filter(Boolean)
+    .join(' ')
+
   return (
     <div className="flex min-h-full flex-col px-6 pt-5 pb-9">
       <BrandMark size="lg" />
@@ -43,7 +52,10 @@ export function AnalysingPage() {
           <span className="text-lime">out…</span>
         </h1>
         <div className="mt-4">
-          <ListingLine analysis={quest3512Analysis} />
+          <ListingLine
+            productName={productName}
+            askingPrice={questDemoProduct.askingPrice}
+          />
         </div>
         <div className="mt-14 space-y-5">
           {STEPS.map((step, index) => {

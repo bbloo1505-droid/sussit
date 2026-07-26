@@ -1,13 +1,26 @@
+import { useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { Header } from '@/components/layout/Header'
-import { formatAud } from '@/lib/utils'
-import { getMockAnalysis } from '@/mocks/quest3-512'
+import { formatAud, cn } from '@/lib/utils'
+import { useAnalysis } from '@/hooks/useAnalysis'
+import { excludedComps, includedComps } from '@/lib/analysis/viewModel'
 
 export function ComparablesPage() {
   const { id = '' } = useParams()
-  const analysis = getMockAnalysis(id)
+  const { analysis, loading } = useAnalysis(id)
+  const [tab, setTab] = useState<'included' | 'excluded'>('included')
 
-  if (!analysis) return null
+  if (loading || !analysis) {
+    return (
+      <div className="flex min-h-full items-center justify-center px-6 text-muted">
+        Loading…
+      </div>
+    )
+  }
+
+  const included = includedComps(analysis)
+  const excluded = excludedComps(analysis)
+  const list = tab === 'included' ? included : excluded
 
   return (
     <div className="px-6 pt-5 pb-9">
@@ -16,19 +29,44 @@ export function ComparablesPage() {
         Current listings
       </h1>
       <p className="mt-3 max-w-[320px] text-[14px] leading-5 text-muted">
-        These are current asking prices on eBay Australia. They indicate market
+        These are current asking prices (fixture data). They indicate market
         positioning, not completed sale values.
       </p>
 
-      <div className="mt-8 border-t border-white/10">
-        {analysis.comps.map((comp) => (
-          <article key={comp.title} className="border-b border-white/10 py-5">
+      <div className="mt-6 flex gap-2 rounded-full bg-panel p-1">
+        <button
+          type="button"
+          onClick={() => setTab('included')}
+          className={cn(
+            'flex-1 rounded-full px-3 py-2 text-sm font-semibold',
+            tab === 'included' ? 'bg-lime text-ink' : 'text-muted',
+          )}
+        >
+          Included ({included.length})
+        </button>
+        <button
+          type="button"
+          onClick={() => setTab('excluded')}
+          className={cn(
+            'flex-1 rounded-full px-3 py-2 text-sm font-semibold',
+            tab === 'excluded' ? 'bg-lime text-ink' : 'text-muted',
+          )}
+        >
+          Excluded ({excluded.length})
+        </button>
+      </div>
+
+      <div className="mt-6 border-t border-white/10">
+        {list.map((comp) => (
+          <article key={comp.title + comp.price} className="border-b border-white/10 py-5">
             <div className="flex items-start justify-between gap-4">
               <div>
                 <p className="text-[15px] leading-5 font-medium text-cream">
                   {comp.title}
                 </p>
-                <p className="mt-2 text-[12px] text-muted">{comp.source}</p>
+                <p className="mt-2 text-[12px] text-muted">
+                  {comp.matchLabel} · {comp.source}
+                </p>
               </div>
               <strong className="shrink-0 font-display text-[22px] font-black tracking-[-0.03em] text-cream">
                 {formatAud(comp.price)}
@@ -38,17 +76,19 @@ export function ComparablesPage() {
         ))}
       </div>
 
-      <div className="mt-8 border-l-2 border-lime pl-4">
-        <p className="font-display text-[10px] font-bold tracking-[0.14em] text-lime">
-          READING THE RANGE
-        </p>
-        <p className="mt-2 text-[14px] leading-5 text-muted">
-          The {formatAud(analysis.askingPrice)} asking price is in the middle of
-          the current {formatAud(analysis.comparableLow)}–
-          {formatAud(analysis.comparableHigh)} range. Condition and included
-          accessories still matter.
-        </p>
-      </div>
+      {analysis.market ? (
+        <div className="mt-8 border-l-2 border-lime pl-4">
+          <p className="font-display text-[10px] font-bold tracking-[0.14em] text-lime">
+            READING THE RANGE
+          </p>
+          <p className="mt-2 text-[14px] leading-5 text-muted">
+            Median asking {formatAud(analysis.market.median)} from{' '}
+            {analysis.market.sampleCount} accepted comps (
+            {formatAud(analysis.market.askingLow)}–
+            {formatAud(analysis.market.askingHigh)}).
+          </p>
+        </div>
+      ) : null}
     </div>
   )
 }

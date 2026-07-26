@@ -23,13 +23,15 @@ export function PrimaryButton({ children, className, ...props }: PrimaryButtonPr
 export function TextButton({
   children,
   className,
+  disabled,
   ...props
 }: ButtonHTMLAttributes<HTMLButtonElement> & { children: ReactNode }) {
   return (
     <button
       type="button"
+      disabled={disabled}
       className={cn(
-        'flex w-full items-center justify-between border-b border-white/10 py-5 text-left font-display text-[16px] font-bold text-cream transition hover:text-lime',
+        'flex w-full items-center justify-between border-b border-white/10 py-5 text-left font-display text-[16px] font-bold text-cream transition hover:text-lime disabled:opacity-40',
         className,
       )}
       {...props}

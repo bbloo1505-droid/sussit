@@ -2,41 +2,53 @@ import { useNavigate, useParams, Link } from 'react-router-dom'
 import { ChevronRight, MessageCircle, Search, ShieldCheck } from 'lucide-react'
 import { Header } from '@/components/layout/Header'
 import { ListingLine } from '@/components/shared/ListingLine'
-import { TextButton, PrimaryButton } from '@/components/ui/button'
+import { TextButton } from '@/components/ui/button'
 import { formatAud } from '@/lib/utils'
-import { getMockAnalysis } from '@/mocks/quest3-512'
+import { useAnalysis } from '@/hooks/useAnalysis'
+import { buildExplanation } from '@/lib/analysis/viewModel'
 
 export function ResultPage() {
   const { id = '' } = useParams()
   const navigate = useNavigate()
-  const analysis = getMockAnalysis(id)
+  const { analysis, loading } = useAnalysis(id)
 
-  if (!analysis) {
+  if (loading || !analysis) {
     return (
-      <div className="flex min-h-full flex-col items-center justify-center gap-4 px-6">
-        <p className="text-muted">Analysis not found.</p>
-        <Link to="/">
-          <PrimaryButton>Start over</PrimaryButton>
-        </Link>
+      <div className="flex min-h-full items-center justify-center px-6 text-muted">
+        Loading analysis…
       </div>
     )
   }
 
+  const insufficient = analysis.deal.verdictLabel === 'INSUFFICIENT DATA'
+  const verdictLines = insufficient
+    ? ['INSUFFICIENT', 'DATA']
+    : analysis.deal.verdictLabel.split(' ')
+
+  const confidenceLabel =
+    analysis.confidence.level === 'INSUFFICIENT'
+      ? 'Low'
+      : analysis.confidence.level.charAt(0) +
+        analysis.confidence.level.slice(1).toLowerCase()
+
   return (
     <div className="px-6 pt-5 pb-9">
       <Header detail="RESULT" />
-      <ListingLine analysis={analysis} />
+      <ListingLine
+        productName={analysis.productLabel}
+        askingPrice={analysis.product.askingPrice}
+      />
       <main className="pt-10">
         <p className="font-display text-[11px] font-bold tracking-[0.16em] text-lime">
           OUR READ
         </p>
         <h1 className="mt-2 font-display text-[64px] leading-[0.84] font-black tracking-[-0.075em] text-lime">
-          GOOD
+          {verdictLines[0]}
           <br />
-          BUY
+          {verdictLines.slice(1).join(' ') || '\u00A0'}
         </h1>
         <p className="mt-6 max-w-[300px] text-[15px] leading-6 text-muted">
-          {analysis.explanation}
+          {buildExplanation(analysis)}
         </p>
 
         <div className="mt-10">
@@ -44,13 +56,15 @@ export function ResultPage() {
             SUGGESTED OFFER
           </p>
           <p className="mt-1 font-display text-[42px] leading-none font-black tracking-[-0.05em] text-cream">
-            {formatAud(analysis.suggestedOffer)}
+            {analysis.offer ? formatAud(analysis.offer.openingOffer) : '—'}
           </p>
           <p className="mt-8 font-display text-[11px] font-bold tracking-[0.14em] text-muted">
             CURRENT ASKING COMPARABLES
           </p>
           <p className="mt-1 font-display text-[30px] leading-none font-black tracking-[-0.04em] text-cream">
-            {formatAud(analysis.comparableLow)}–{formatAud(analysis.comparableHigh)}
+            {analysis.market
+              ? `${formatAud(analysis.market.askingLow)}–${formatAud(analysis.market.askingHigh)}`
+              : '—'}
           </p>
           <p className="mt-2 text-[12px] leading-5 text-muted">
             Based on current eBay Australia asking prices — not sold-price data.
@@ -63,8 +77,14 @@ export function ResultPage() {
               DEAL SCORE
             </p>
             <p className="mt-1 font-display text-[23px] font-black text-cream">
-              {analysis.mockScore.toFixed(1)}{' '}
-              <span className="text-[13px] text-muted">/ 10</span>
+              {analysis.deal.dealScore != null ? (
+                <>
+                  {analysis.deal.dealScore.toFixed(1)}{' '}
+                  <span className="text-[13px] text-muted">/ 10</span>
+                </>
+              ) : (
+                '—'
+              )}
             </p>
           </div>
           <div>
@@ -72,13 +92,16 @@ export function ResultPage() {
               CONFIDENCE
             </p>
             <p className="mt-1 font-display text-[23px] font-black text-cream">
-              {analysis.confidence}
+              {confidenceLabel}
             </p>
           </div>
         </div>
 
         <div className="mt-6">
-          <TextButton onClick={() => navigate(`/result/${id}/offer`)}>
+          <TextButton
+            onClick={() => navigate(`/result/${id}/offer`)}
+            disabled={!analysis.offer}
+          >
             <span className="flex items-center gap-3">
               <MessageCircle size={19} className="text-lime" />
               Make an offer
@@ -100,6 +123,13 @@ export function ResultPage() {
             <ChevronRight size={19} />
           </TextButton>
         </div>
+
+        <Link
+          to="/"
+          className="mt-8 inline-block text-sm text-muted underline-offset-4 hover:text-cream hover:underline"
+        >
+          Suss another listing
+        </Link>
       </main>
     </div>
   )
