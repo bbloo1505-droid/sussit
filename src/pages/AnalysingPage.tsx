@@ -35,7 +35,7 @@ export function AnalysingPage() {
 
   return (
     <div className="flex min-h-full flex-col px-6 pt-5 pb-9">
-      <BrandMark />
+      <BrandMark size="lg" />
       <main className="flex flex-1 flex-col justify-center">
         <h1 className="font-display text-[42px] leading-[0.98] font-black tracking-[-0.04em] text-cream">
           Sussing it

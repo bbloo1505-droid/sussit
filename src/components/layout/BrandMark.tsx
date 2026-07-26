@@ -1,20 +1,26 @@
 import { Link } from 'react-router-dom'
-import brandBoard from '@/assets/brand-board.png'
-import { ImageWithFallback } from '@/components/figma/ImageWithFallback'
+import logo from '@/assets/logo.png'
+import { cn } from '@/lib/utils'
 
-export function BrandMark() {
+type BrandMarkProps = {
+  className?: string
+  /** Larger lockup for home / analysing */
+  size?: 'sm' | 'md' | 'lg'
+}
+
+export function BrandMark({ className, size = 'md' }: BrandMarkProps) {
   return (
-    <Link to="/" className="flex items-center gap-2" aria-label="SussIt">
-      <span className="relative block h-7 w-7 overflow-hidden rounded-[8px] bg-ink">
-        <ImageWithFallback
-          src={brandBoard}
-          alt=""
-          className="absolute top-[-11px] left-[-125px] w-[169px] max-w-none"
-        />
-      </span>
-      <span className="font-display text-[23px] leading-none font-black tracking-[-0.055em] text-cream">
-        Suss<span className="text-lime">It</span>
-      </span>
+    <Link to="/" aria-label="SussIt" className={cn('inline-flex items-center', className)}>
+      <img
+        src={logo}
+        alt="SussIt"
+        className={cn(
+          'w-auto object-contain object-left',
+          size === 'sm' && 'h-6',
+          size === 'md' && 'h-7',
+          size === 'lg' && 'h-9',
+        )}
+      />
     </Link>
   )
 }

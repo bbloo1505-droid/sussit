@@ -6,7 +6,7 @@
 
 - Source folder: `Premium Mobile Prototype Design`
 - Ported reference: [`prototype/App.tsx`](prototype/App.tsx)
-- Brand board crop used for logo mark: `src/assets/brand-board.png`
+- Official wordmark: `src/assets/logo.png` / `docs/design/logo-wordmark.png`
 
 Typography: **Barlow** (display) + **Inter** (body)  
 Canvas: dark phone `#111` on cream `#FAF8F5` outer page  
