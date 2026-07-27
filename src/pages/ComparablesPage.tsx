@@ -29,8 +29,9 @@ export function ComparablesPage() {
         Current listings
       </h1>
       <p className="mt-3 max-w-[320px] text-[14px] leading-5 text-muted">
-        These are current asking prices (fixture data). They indicate market
-        positioning, not completed sale values.
+        {analysis.assessments.some((a) => a.comparable.source === 'ebay')
+          ? 'These are current eBay Australia asking prices — not completed sale values.'
+          : 'Showing offline fixture comps (live eBay unavailable or returned no usable matches). Asking prices only — not solds.'}
       </p>
 
       <div className="mt-6 flex gap-2 rounded-full bg-panel p-1">

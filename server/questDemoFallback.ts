@@ -6,7 +6,7 @@ export const questDemoFallback: ExtractedListing = {
   brand: 'Meta',
   model: 'Quest 3',
   variant: '512GB',
-  askingPrice: 550,
+  askingPrice: 850,
   currency: 'AUD',
   condition: 'used_good',
   location: 'Brisbane',

@@ -81,7 +81,7 @@ export function includedComps(analysis: AnalysisResult) {
       source:
         a.comparable.source === 'ebay'
           ? 'Current eBay Australia listing'
-          : 'Current eBay Australia listing (fixture)',
+          : 'Offline fixture comps (not live eBay)',
       matchLabel: a.matchLabel,
     }))
 }

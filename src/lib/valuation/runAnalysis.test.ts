@@ -13,8 +13,8 @@ describe('runAnalysis', () => {
 
     expect(result.market).not.toBeNull()
     expect(result.market!.sampleCount).toBeGreaterThanOrEqual(8)
-    expect(result.market!.median).toBeGreaterThan(500)
-    expect(result.market!.median).toBeLessThan(600)
+    expect(result.market!.median).toBeGreaterThan(680)
+    expect(result.market!.median).toBeLessThan(850)
     expect(result.confidence.level).not.toBe('INSUFFICIENT')
     expect(result.offer?.openingOffer).toBeLessThan(questDemoProduct.askingPrice)
     expect(result.assessments.some((a) => !a.included)).toBe(true)
