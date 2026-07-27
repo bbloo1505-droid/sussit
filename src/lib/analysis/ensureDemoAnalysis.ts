@@ -1,4 +1,4 @@
-import { TestPricingProvider } from '@/lib/pricing/TestPricingProvider'
+import { createPricingProvider } from '@/lib/pricing/createPricingProvider'
 import { runAnalysis } from '@/lib/valuation/runAnalysis'
 import { loadAnalysis, saveAnalysis } from '@/lib/analysis/sessionStore'
 import { loadDraft } from '@/lib/analysis/draftStore'
@@ -11,7 +11,7 @@ export async function runAndSaveAnalysis(input: {
 }): Promise<AnalysisResult> {
   const analysis = await runAnalysis({
     product: input.product,
-    pricing: new TestPricingProvider(),
+    pricing: createPricingProvider(),
     id: input.id,
   })
   saveAnalysis(analysis)

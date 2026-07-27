@@ -1,6 +1,7 @@
 import type { Plugin } from 'vite'
 import { handleExtract, type ExtractRequestBody } from './server/handleExtract.ts'
 import { handleEbayAccountDeletionRequest } from './server/handleEbayAccountDeletion.ts'
+import { handleComps, type CompsRequestBody } from './server/handleComps.ts'
 
 async function readJson(req: import('http').IncomingMessage): Promise<unknown> {
   const chunks: Buffer[] = []
@@ -35,6 +36,13 @@ export function apiPlugin(): Plugin {
           if (url === '/api/extract' && req.method === 'POST') {
             const body = (await readJson(req)) as ExtractRequestBody
             const result = await handleExtract(body)
+            sendJson(res, result.ok ? 200 : 400, result)
+            return
+          }
+
+          if (url === '/api/comps' && req.method === 'POST') {
+            const body = (await readJson(req)) as CompsRequestBody
+            const result = await handleComps(body)
             sendJson(res, result.ok ? 200 : 400, result)
             return
           }
