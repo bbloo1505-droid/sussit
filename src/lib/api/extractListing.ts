@@ -19,7 +19,12 @@ export type ExtractApiListing = {
 }
 
 export type ExtractApiResponse =
-  | { ok: true; listing: ExtractApiListing; usedFallback: boolean }
+  | {
+      ok: true
+      listing: ExtractApiListing
+      usedFallback: boolean
+      extractMode?: 'openai' | 'heuristic' | 'demo'
+    }
   | { ok: false; error: string }
 
 export async function extractListing(input: {
@@ -36,7 +41,27 @@ export async function extractListing(input: {
     }),
   })
 
-  return (await response.json()) as ExtractApiResponse
+  const raw = await response.text()
+  let data: ExtractApiResponse
+  try {
+    data = JSON.parse(raw) as ExtractApiResponse
+  } catch {
+    return {
+      ok: false,
+      error: response.ok
+        ? 'Extract returned an invalid response.'
+        : `Extract failed (${response.status}). Try again.`,
+    }
+  }
+
+  if (!response.ok && data.ok !== false) {
+    return {
+      ok: false,
+      error: `Extract failed (${response.status}). Try again.`,
+    }
+  }
+
+  return data
 }
 
 export function toIdentifiedProduct(
