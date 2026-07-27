@@ -12,16 +12,16 @@ React · TypeScript · Vite · Tailwind · shadcn-style UI
 
 ```bash
 npm install
+cp .env.example .env   # add OPENAI_API_KEY for live extraction
 npm run dev
+npm test
 ```
+
+Without `OPENAI_API_KEY`, extract falls back to Meta Quest 3 demo data so the UI still works.
 
 ## V0 scope
 
-Mock UI only for now (Meta Quest 3 512GB demo flow):
-
-- `/` Home
-- `/confirm` Product confirmation
-- `/analysing` Progress
-- `/result/:id` Evidence + suggested offer
-
-No auth, Stripe, eBay, or OpenAI wired yet.
+- Upload screenshot or paste listing text → OpenAI extract (structured JSON)
+- Confirm / fix product → valuation engine (`TestPricingProvider` fixtures)
+- Result with comps, offer, risks, outcome capture
+- No auth, Stripe, or eBay production API yet

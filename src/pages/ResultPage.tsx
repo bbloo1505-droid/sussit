@@ -6,6 +6,7 @@ import { TextButton } from '@/components/ui/button'
 import { formatAud } from '@/lib/utils'
 import { useAnalysis } from '@/hooks/useAnalysis'
 import { buildExplanation } from '@/lib/analysis/viewModel'
+import { OutcomeCapture } from '@/components/result/OutcomeCapture'
 
 export function ResultPage() {
   const { id = '' } = useParams()
@@ -123,6 +124,8 @@ export function ResultPage() {
             <ChevronRight size={19} />
           </TextButton>
         </div>
+
+        <OutcomeCapture analysisId={analysis.id} />
 
         <Link
           to="/"

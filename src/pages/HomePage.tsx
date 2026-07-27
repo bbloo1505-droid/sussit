@@ -1,15 +1,83 @@
-import { useState } from 'react'
+import { useRef, useState, type ChangeEvent } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { ArrowRight, ImagePlus } from 'lucide-react'
+import { ArrowRight, ImagePlus, LoaderCircle } from 'lucide-react'
 import { Header } from '@/components/layout/Header'
 import { PrimaryButton } from '@/components/ui/button'
+import {
+  extractListing,
+  toIdentifiedProduct,
+} from '@/lib/api/extractListing'
+import { saveDraft } from '@/lib/analysis/draftStore'
+
+function readFileAsDataUrl(file: File): Promise<string> {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader()
+    reader.onload = () => resolve(String(reader.result))
+    reader.onerror = () => reject(new Error('Could not read image'))
+    reader.readAsDataURL(file)
+  })
+}
 
 export function HomePage() {
   const navigate = useNavigate()
+  const inputRef = useRef<HTMLInputElement>(null)
   const [text, setText] = useState('')
+  const [busy, setBusy] = useState(false)
+  const [error, setError] = useState<string | null>(null)
 
-  function goConfirm() {
-    navigate('/confirm')
+  async function runExtract(input: { text?: string; imageDataUrl?: string; source: 'image' | 'text' }) {
+    setBusy(true)
+    setError(null)
+    try {
+      const result = await extractListing({
+        text: input.text,
+        imageDataUrl: input.imageDataUrl,
+      })
+
+      if (!result.ok) {
+        setError(result.error)
+        return
+      }
+
+      if (result.listing.refused) {
+        setError(
+          result.listing.refusalReason ??
+            'SussIt V0 only supports iPhones, consoles, and Meta Quest.',
+        )
+        return
+      }
+
+      const product = toIdentifiedProduct(result.listing)
+      if (!product) {
+        setError('Could not identify brand, model, or asking price. Try a clearer listing.')
+        return
+      }
+
+      saveDraft(product, {
+        usedFallback: result.usedFallback,
+        source: input.source,
+      })
+      navigate('/confirm')
+    } catch {
+      setError('Something went wrong extracting the listing.')
+    } finally {
+      setBusy(false)
+    }
+  }
+
+  async function onFile(file: File) {
+    if (!file.type.startsWith('image/')) {
+      setError('Please upload an image screenshot.')
+      return
+    }
+    const dataUrl = await readFileAsDataUrl(file)
+    await runExtract({ imageDataUrl: dataUrl, source: 'image' })
+  }
+
+  function onPick(event: ChangeEvent<HTMLInputElement>) {
+    const file = event.target.files?.[0]
+    if (file) void onFile(file)
+    event.target.value = ''
   }
 
   return (
@@ -29,11 +97,16 @@ export function HomePage() {
 
         <button
           type="button"
-          onClick={goConfirm}
-          className="mb-3 rounded-[22px] border border-dashed border-lime/30 bg-lime/[0.025] px-5 py-10 text-center transition hover:bg-lime/[0.06]"
+          disabled={busy}
+          onClick={() => inputRef.current?.click()}
+          className="mb-3 rounded-[22px] border border-dashed border-lime/30 bg-lime/[0.025] px-5 py-10 text-center transition hover:bg-lime/[0.06] disabled:opacity-50"
         >
           <span className="mx-auto mb-4 grid size-14 place-items-center rounded-2xl bg-lime/10 text-lime">
-            <ImagePlus size={27} />
+            {busy ? (
+              <LoaderCircle size={27} className="animate-spin" />
+            ) : (
+              <ImagePlus size={27} />
+            )}
           </span>
           <span className="block text-[15px] font-semibold text-cream">
             Upload screenshot
@@ -42,6 +115,13 @@ export function HomePage() {
             Tap to add it from your camera roll
           </span>
         </button>
+        <input
+          ref={inputRef}
+          type="file"
+          accept="image/*"
+          className="hidden"
+          onChange={onPick}
+        />
 
         <div className="my-1 flex items-center gap-3 text-[12px] text-muted">
           <span className="h-px flex-1 bg-white/10" />
@@ -51,13 +131,29 @@ export function HomePage() {
 
         <textarea
           value={text}
+          disabled={busy}
           onChange={(e) => setText(e.target.value)}
-          className="mb-7 min-h-28 w-full resize-none rounded-2xl border border-white/10 bg-surface p-4 text-[15px] leading-6 text-cream outline-none placeholder:text-muted focus:border-lime/50"
+          className="mb-4 min-h-28 w-full resize-none rounded-2xl border border-white/10 bg-surface p-4 text-[15px] leading-6 text-cream outline-none placeholder:text-muted focus:border-lime/50 disabled:opacity-50"
           placeholder="Paste listing text here…"
         />
 
-        <PrimaryButton onClick={goConfirm}>
-          Suss it out <ArrowRight size={18} />
+        {error ? (
+          <p className="mb-4 text-[13px] leading-5 text-[#f87171]">{error}</p>
+        ) : null}
+
+        <PrimaryButton
+          disabled={busy || !text.trim()}
+          onClick={() => runExtract({ text: text.trim(), source: 'text' })}
+        >
+          {busy ? (
+            <>
+              <LoaderCircle size={18} className="animate-spin" /> Extracting…
+            </>
+          ) : (
+            <>
+              Suss it out <ArrowRight size={18} />
+            </>
+          )}
         </PrimaryButton>
       </main>
       <p className="mt-5 text-center text-[12px] leading-5 text-muted">

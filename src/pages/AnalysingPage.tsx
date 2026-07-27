@@ -3,8 +3,10 @@ import { useNavigate, useSearchParams } from 'react-router-dom'
 import { Check } from 'lucide-react'
 import { BrandMark } from '@/components/layout/BrandMark'
 import { ListingLine } from '@/components/shared/ListingLine'
-import { QUEST_DEMO_ID, questDemoProduct } from '@/lib/analysis/questDemoProduct'
-import { ensureDemoAnalysis } from '@/lib/analysis/ensureDemoAnalysis'
+import { QUEST_DEMO_ID } from '@/lib/analysis/questDemoProduct'
+import { loadAnalysis } from '@/lib/analysis/sessionStore'
+import { loadDraft } from '@/lib/analysis/draftStore'
+import { productLabel } from '@/lib/api/extractListing'
 import { cn } from '@/lib/utils'
 
 const STEPS = [
@@ -20,9 +22,11 @@ export function AnalysingPage() {
   const id = params.get('id') ?? QUEST_DEMO_ID
   const [progress, setProgress] = useState(0)
 
-  useEffect(() => {
-    void ensureDemoAnalysis(id)
-  }, [id])
+  const analysis = loadAnalysis(id)
+  const draft = loadDraft()
+  const productName = analysis?.productLabel
+    ?? (draft ? productLabel(draft) : 'Your listing')
+  const askingPrice = analysis?.product.askingPrice ?? draft?.askingPrice ?? 0
 
   useEffect(() => {
     setProgress(0)
@@ -38,10 +42,6 @@ export function AnalysingPage() {
     return () => window.clearInterval(timer)
   }, [id, navigate])
 
-  const productName = [questDemoProduct.brand, questDemoProduct.model, questDemoProduct.variant]
-    .filter(Boolean)
-    .join(' ')
-
   return (
     <div className="flex min-h-full flex-col px-6 pt-5 pb-9">
       <BrandMark size="lg" />
@@ -52,10 +52,7 @@ export function AnalysingPage() {
           <span className="text-lime">out…</span>
         </h1>
         <div className="mt-4">
-          <ListingLine
-            productName={productName}
-            askingPrice={questDemoProduct.askingPrice}
-          />
+          <ListingLine productName={productName} askingPrice={askingPrice} />
         </div>
         <div className="mt-14 space-y-5">
           {STEPS.map((step, index) => {

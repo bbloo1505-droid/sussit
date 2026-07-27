@@ -5,10 +5,15 @@ type PrimaryButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   children: ReactNode
 }
 
-export function PrimaryButton({ children, className, ...props }: PrimaryButtonProps) {
+export function PrimaryButton({
+  children,
+  className,
+  type = 'button',
+  ...props
+}: PrimaryButtonProps) {
   return (
     <button
-      type="button"
+      type={type}
       className={cn(
         'flex w-full items-center justify-center gap-2 rounded-2xl bg-lime px-5 py-4 font-display text-[16px] font-extrabold text-ink transition hover:bg-[#d2ff36] active:scale-[.99] disabled:opacity-50',
         className,
