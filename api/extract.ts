@@ -9,15 +9,28 @@ import { z } from 'zod'
  * Local Vite middleware still uses server/handleExtract.ts.
  */
 
+const PRODUCT_CATEGORIES = [
+  'phone',
+  'console',
+  'vr_headset',
+  'camera',
+  'laptop',
+  'tablet',
+  'wearable',
+  'audio',
+  'gpu',
+  'power_tool',
+  'furniture',
+  'clothing',
+  'vehicle',
+  'jewellery',
+  'collectible',
+  'other',
+  'unknown',
+] as const
+
 const extractedListingSchema = z.object({
-  category: z.enum([
-    'phone',
-    'console',
-    'vr_headset',
-    'camera',
-    'laptop',
-    'unknown',
-  ]),
+  category: z.enum(PRODUCT_CATEGORIES),
   brand: z.string().nullable(),
   model: z.string().nullable(),
   variant: z.string().nullable(),
@@ -45,16 +58,15 @@ const extractedListingSchema = z.object({
 
 type ExtractedListing = z.infer<typeof extractedListingSchema>
 
-const V0_CATEGORIES = new Set(['phone', 'console', 'vr_headset'])
-
 const SYSTEM = `You extract structured product listing data for SussIt, an Australian second-hand buying app.
 
 Rules:
 - Identify and extract only. Never estimate market value or say if it is a good deal.
 - Unknown information must be null (or empty arrays). Do not invent accessories, condition, or price.
 - Currency is AUD when a dollar amount is shown without currency.
-- V0 supported categories: phone (iPhones), console (PlayStation, Xbox, Nintendo Switch), vr_headset (Meta Quest).
-- If the listing is clearly outside those categories (cars, furniture, cameras, Windows laptops, etc.), set refused=true and explain in refusalReason.
+- Accept ANY second-hand listing. Classify category as precisely as possible.
+- Categories: phone, console, vr_headset, camera, laptop, tablet, wearable, audio, gpu, power_tool, furniture, clothing, vehicle, jewellery, collectible, other, unknown.
+- Set refused=true ONLY if you cannot identify a product at all (no brand/model and no usable asking price). Do NOT refuse merely because the category is outside phones/gaming/VR.
 - identificationConfidence is 0–1 for how sure you are about brand/model/variant.`
 
 const questDemoFallback: ExtractedListing = {
@@ -334,20 +346,7 @@ async function identifyListing(
   const parsed = completion.choices[0]?.message.parsed
   if (!parsed) throw new Error('EMPTY_MODEL_RESPONSE')
 
-  if (
-    !parsed.refused &&
-    parsed.category !== 'unknown' &&
-    !V0_CATEGORIES.has(parsed.category)
-  ) {
-    return {
-      ...parsed,
-      refused: true,
-      refusalReason:
-        parsed.refusalReason ??
-        `SussIt V0 only supports iPhones, consoles, and Meta Quest — not ${parsed.category}.`,
-    }
-  }
-
+  // Universal intake: never force-refuse by category. Intelligence tiers gate verdicts later.
   return parsed
 }
 

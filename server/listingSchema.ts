@@ -1,14 +1,27 @@
 import { z } from 'zod'
 
+export const PRODUCT_CATEGORIES = [
+  'phone',
+  'console',
+  'vr_headset',
+  'camera',
+  'laptop',
+  'tablet',
+  'wearable',
+  'audio',
+  'gpu',
+  'power_tool',
+  'furniture',
+  'clothing',
+  'vehicle',
+  'jewellery',
+  'collectible',
+  'other',
+  'unknown',
+] as const
+
 export const extractedListingSchema = z.object({
-  category: z.enum([
-    'phone',
-    'console',
-    'vr_headset',
-    'camera',
-    'laptop',
-    'unknown',
-  ]),
+  category: z.enum(PRODUCT_CATEGORIES),
   brand: z.string().nullable(),
   model: z.string().nullable(),
   variant: z.string().nullable(),
@@ -30,10 +43,12 @@ export const extractedListingSchema = z.object({
   sellerClaims: z.array(z.string()),
   visibleIssues: z.array(z.string()),
   identificationConfidence: z.number().min(0).max(1),
+  /** Only true when brand/model/price cannot be extracted at all */
   refused: z.boolean(),
   refusalReason: z.string().nullable(),
 })
 
 export type ExtractedListing = z.infer<typeof extractedListingSchema>
 
+/** @deprecated use intelligence tiers — kept for older call sites */
 export const V0_CATEGORIES = new Set(['phone', 'console', 'vr_headset'])

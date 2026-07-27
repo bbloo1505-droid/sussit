@@ -1,4 +1,4 @@
-import type { IdentifiedProduct } from '@/types/domain'
+import type { IdentifiedProduct, IntelligenceTier } from '@/types/domain'
 
 const DRAFT_KEY = 'sussit:draft-product'
 const META_KEY = 'sussit:draft-meta'
@@ -6,6 +6,8 @@ const META_KEY = 'sussit:draft-meta'
 export type DraftMeta = {
   usedFallback: boolean
   source: 'image' | 'text' | 'demo'
+  intelligenceTier?: IntelligenceTier
+  extractMode?: 'openai' | 'heuristic' | 'demo'
 }
 
 export function saveDraft(

@@ -8,6 +8,10 @@ import {
   toIdentifiedProduct,
 } from '@/lib/api/extractListing'
 import { saveDraft } from '@/lib/analysis/draftStore'
+import {
+  intelligenceTierForCategory,
+  SUSSIT_POSITIONING,
+} from '@/lib/intelligence/supportTier'
 
 function readFileAsDataUrl(file: File): Promise<string> {
   return new Promise((resolve, reject) => {
@@ -18,6 +22,7 @@ function readFileAsDataUrl(file: File): Promise<string> {
   })
 }
 
+/** Free consumer home — Know what to pay before you buy. */
 export function HomePage() {
   const navigate = useNavigate()
   const inputRef = useRef<HTMLInputElement>(null)
@@ -25,7 +30,11 @@ export function HomePage() {
   const [busy, setBusy] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
-  async function runExtract(input: { text?: string; imageDataUrl?: string; source: 'image' | 'text' }) {
+  async function runExtract(input: {
+    text?: string
+    imageDataUrl?: string
+    source: 'image' | 'text'
+  }) {
     setBusy(true)
     setError(null)
     try {
@@ -42,20 +51,23 @@ export function HomePage() {
       if (result.listing.refused) {
         setError(
           result.listing.refusalReason ??
-            'SussIt V0 only supports iPhones, consoles, and Meta Quest.',
+            'Could not identify this listing. Try a clearer screenshot or paste more detail.',
         )
         return
       }
 
       const product = toIdentifiedProduct(result.listing)
       if (!product) {
-        setError('Could not identify brand, model, or asking price. Try a clearer listing.')
+        setError(
+          'Could not identify brand, model, or asking price. Try a clearer listing.',
+        )
         return
       }
 
       saveDraft(product, {
         usedFallback: result.usedFallback,
         source: input.source,
+        intelligenceTier: intelligenceTierForCategory(product.category),
       })
       navigate('/confirm')
     } catch {
@@ -91,7 +103,10 @@ export function HomePage() {
             buy this?
           </h1>
           <p className="mt-4 text-[16px] leading-6 text-muted">
-            Send a listing through. We&apos;ll suss the value.
+            {SUSSIT_POSITIONING.consumerHeadline}
+          </p>
+          <p className="mt-2 text-[14px] leading-5 text-muted">
+            {SUSSIT_POSITIONING.consumerSupport}
           </p>
         </div>
 
@@ -134,7 +149,7 @@ export function HomePage() {
           disabled={busy}
           onChange={(e) => setText(e.target.value)}
           className="mb-4 min-h-28 w-full resize-none rounded-2xl border border-white/10 bg-surface p-4 text-[15px] leading-6 text-cream outline-none placeholder:text-muted focus:border-lime/50 disabled:opacity-50"
-          placeholder="Paste listing text here…"
+          placeholder="Paste any Marketplace listing text…"
         />
 
         {error ? (
@@ -143,7 +158,7 @@ export function HomePage() {
 
         <PrimaryButton
           disabled={busy || !text.trim()}
-          onClick={() => runExtract({ text: text.trim(), source: 'text' })}
+          onClick={() => void runExtract({ text: text.trim(), source: 'text' })}
         >
           {busy ? (
             <>
@@ -157,7 +172,7 @@ export function HomePage() {
         </PrimaryButton>
       </main>
       <p className="mt-5 text-center text-[12px] leading-5 text-muted">
-        Works with listing screenshots and pasted listing details.
+        Paste anything — strong Buy/Offer calls where our comps are proven.
       </p>
     </div>
   )

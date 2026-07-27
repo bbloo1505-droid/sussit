@@ -2,12 +2,27 @@
 
 export type Currency = 'AUD'
 
+/**
+ * Universal intake categories.
+ * Strong Buy/Offer intelligence is concentrated on a subset — see supportTiers.
+ */
 export type ProductCategory =
   | 'phone'
   | 'console'
   | 'vr_headset'
   | 'camera'
   | 'laptop'
+  | 'tablet'
+  | 'wearable'
+  | 'audio'
+  | 'gpu'
+  | 'power_tool'
+  | 'furniture'
+  | 'clothing'
+  | 'vehicle'
+  | 'jewellery'
+  | 'collectible'
+  | 'other'
   | 'unknown'
 
 export type ProductCondition =
@@ -59,6 +74,10 @@ export type ComparableListing = {
   location: string | null
   url: string | null
   includedAccessories: string[]
+  estimatedSoldQuantity?: number | null
+  estimatedAvailableQuantity?: number | null
+  itemCreatedAt?: string | null
+  itemEndAt?: string | null
 }
 
 export type ComparableAssessment = {
@@ -108,16 +127,32 @@ export type DealResult = {
     | 'FAIR'
     | 'OVERPRICED'
     | 'INSUFFICIENT DATA'
+    | 'LIMITED MARKET DATA'
 }
+
+export type IntelligenceTier = 'full' | 'emerging' | 'basic'
 
 export type AnalysisResult = {
   id: string
   createdAt: string
   product: IdentifiedProduct
   productLabel: string
+  /** Normalized SKU id for observation grouping / curated polling */
+  productId: string
+  intelligenceTier: IntelligenceTier
   market: MarketEstimate | null
   confidence: ConfidenceResult
   deal: DealResult
   offer: OfferRecommendation | null
   assessments: ComparableAssessment[]
+  /** Optional Flip payload when sell-speed module is wired */
+  flip?: {
+    actionVerdict?: string
+    actionSummary?: string
+    maxBuy?: { maxBuy: number } | null
+    resaleLow?: number
+    resaleHigh?: number
+    pricingSweetSpot?: { low: number; high: number } | null
+    [key: string]: unknown
+  } | null
 }

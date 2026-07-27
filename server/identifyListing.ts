@@ -3,7 +3,6 @@ import { zodResponseFormat } from 'openai/helpers/zod'
 import {
   extractedListingSchema,
   type ExtractedListing,
-  V0_CATEGORIES,
 } from './listingSchema.ts'
 
 const SYSTEM = `You extract structured product listing data for SussIt, an Australian second-hand buying app.
@@ -12,8 +11,10 @@ Rules:
 - Identify and extract only. Never estimate market value or say if it is a good deal.
 - Unknown information must be null (or empty arrays). Do not invent accessories, condition, or price.
 - Currency is AUD when a dollar amount is shown without currency.
-- V0 supported categories: phone (iPhones), console (PlayStation, Xbox, Nintendo Switch), vr_headset (Meta Quest).
-- If the listing is clearly outside those categories (cars, furniture, cameras, Windows laptops, etc.), set refused=true and explain in refusalReason.
+- Accept ANY second-hand listing. Classify category as precisely as possible.
+- Categories: phone, console, vr_headset, camera, laptop, tablet, wearable, audio, gpu, power_tool, furniture, clothing, vehicle, jewellery, collectible, other, unknown.
+- High-volume resale focus examples: iPhone/Samsung/Pixel; PS5/Xbox/Switch/Steam Deck; Meta Quest; Sony/Canon/Nikon cameras; Milwaukee/Makita/DeWalt tools; iPad/MacBook/Watch/headphones/GPUs.
+- Set refused=true ONLY if you cannot identify a product at all (no brand/model and no usable asking price). Do NOT refuse merely because the category is outside phones/gaming/VR.
 - identificationConfidence is 0–1 for how sure you are about brand/model/variant.`
 
 export type IdentifyInput =
@@ -63,19 +64,6 @@ export async function identifyListing(
     throw new Error('EMPTY_MODEL_RESPONSE')
   }
 
-  if (
-    !parsed.refused &&
-    parsed.category !== 'unknown' &&
-    !V0_CATEGORIES.has(parsed.category)
-  ) {
-    return {
-      ...parsed,
-      refused: true,
-      refusalReason:
-        parsed.refusalReason ??
-        `SussIt V0 only supports iPhones, consoles, and Meta Quest — not ${parsed.category}.`,
-    }
-  }
-
+  // Universal intake: never force-refuse by category. Downstream intelligence tiers gate verdicts.
   return parsed
 }

@@ -7,6 +7,7 @@ import { formatAud } from '@/lib/utils'
 import { useAnalysis } from '@/hooks/useAnalysis'
 import { buildExplanation } from '@/lib/analysis/viewModel'
 import { OutcomeCapture } from '@/components/result/OutcomeCapture'
+import { tierLabel } from '@/lib/intelligence/supportTier'
 
 export function ResultPage() {
   const { id = '' } = useParams()
@@ -21,16 +22,22 @@ export function ResultPage() {
     )
   }
 
+  const limited = analysis.deal.verdictLabel === 'LIMITED MARKET DATA'
   const insufficient = analysis.deal.verdictLabel === 'INSUFFICIENT DATA'
-  const verdictLines = insufficient
-    ? ['INSUFFICIENT', 'DATA']
-    : analysis.deal.verdictLabel.split(' ')
+  const verdictLines =
+    limited
+      ? ['LIMITED', 'MARKET DATA']
+      : insufficient
+        ? ['INSUFFICIENT', 'DATA']
+        : analysis.deal.verdictLabel.split(' ')
 
   const confidenceLabel =
     analysis.confidence.level === 'INSUFFICIENT'
       ? 'Low'
       : analysis.confidence.level.charAt(0) +
         analysis.confidence.level.slice(1).toLowerCase()
+
+  const showStrongOffer = analysis.intelligenceTier === 'full' && analysis.offer
 
   return (
     <div className="px-6 pt-5 pb-9">
@@ -51,13 +58,16 @@ export function ResultPage() {
         <p className="mt-6 max-w-[300px] text-[15px] leading-6 text-muted">
           {buildExplanation(analysis)}
         </p>
+        <p className="mt-3 text-[12px] text-muted">
+          {tierLabel(analysis.intelligenceTier)}
+        </p>
 
         <div className="mt-10">
           <p className="font-display text-[11px] font-bold tracking-[0.14em] text-muted">
             SUGGESTED OFFER
           </p>
           <p className="mt-1 font-display text-[42px] leading-none font-black tracking-[-0.05em] text-cream">
-            {analysis.offer ? formatAud(analysis.offer.openingOffer) : '—'}
+            {showStrongOffer ? formatAud(analysis.offer!.openingOffer) : '—'}
           </p>
           <p className="mt-8 font-display text-[11px] font-bold tracking-[0.14em] text-muted">
             CURRENT ASKING COMPARABLES
@@ -101,7 +111,7 @@ export function ResultPage() {
         <div className="mt-6">
           <TextButton
             onClick={() => navigate(`/result/${id}/offer`)}
-            disabled={!analysis.offer}
+            disabled={!showStrongOffer}
           >
             <span className="flex items-center gap-3">
               <MessageCircle size={19} className="text-lime" />
