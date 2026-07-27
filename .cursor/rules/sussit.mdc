@@ -1,96 +1,77 @@
 ---
-description: SussIt engineering rules — valuation accuracy first; AI is interface only
+description: SussIt engineering rules — accuracy + ground truth first; AI is interface only
 alwaysApply: true
 ---
 
 # SussIt Engineering Rules
 
-SussIt is an Australian mobile-first second-hand buying decision app.
+SussIt is an Australian mobile-first second-hand buying app.
+
+**Strategy source of truth:** `docs/strategy.md` (locked Jul 2026).
+
+**Positioning:** Before I buy anything off Marketplace, I SussIt.
+
+**Free consumer:** “Should I buy this?” / “Know what to pay before you buy.” — screenshot or paste.
+
+**Flip / Pro / Hunter:** later. Do **not** build paywall, Hunter alerts, inventory CRM, or Facebook scraping unless explicitly requested. Next milestone is accuracy + ~20–50 real flippers + ground-truth outcomes.
 
 Core principle:
 
 AI identifies and explains.
-Deterministic application code determines prices, scores and confidence.
+Deterministic application code determines prices, Max Buy, scores and confidence.
 
-Never allow an LLM to invent or calculate the fundamental valuation.
+Never allow an LLM to invent or calculate the fundamental valuation or Max Buy.
 
-## V0 Audience
+## Intelligence tiers
 
-Australian second-hand buyers.
+- **full:** phone, console, vr_headset — strong Buy/Offer allowed
+- **emerging:** camera, laptop, tablet, wearable, audio, gpu, power_tool — limited framing
+- **basic:** furniture, clothing, vehicles, etc. — LIMITED MARKET DATA only
 
-## V0 Categories
+Universal intake; narrow high-confidence verdicts. See `docs/intelligence-tiers.md`.
 
-- iPhones
-- PlayStation
-- Xbox
-- Nintendo Switch
-- Meta Quest
+## Obsess over
 
-MacBooks and cameras come later.
+% of recommendations users later mark correct — not registrations or scans.
+
+Capture ground truth when possible: contact → buy → purchase price → resell → resale price → time to resale.
 
 ## Design
 
 Use /docs/design as the visual source of truth.
 
-Brand (see /docs/design + Premium Mobile Prototype):
+Brand:
 - #C6FF00 acid lime
 - #111111 almost black (phone canvas)
 - #FAF8F5 cream (outer page + text)
 - #1A1A1A dark surface / #222 panel
 - #888888 muted text
 - Fonts: Barlow (display), Inter (body)
-- UI source of truth: docs/design/prototype/App.tsx (Figma Premium Mobile Prototype)
+- UI source of truth: docs/design/prototype/App.tsx
 
-Design should feel:
-- premium consumer fintech
-- minimal
-- modern
-- youthful
-- mobile-first
-
-Avoid:
-- gradients
-- glassmorphism
-- excessive shadows
-- generic SaaS layouts
-- AI sparkles
-- cluttered dashboards
+Avoid: gradients, glassmorphism, excessive shadows, generic SaaS, AI sparkles, cluttered dashboards.
 
 ## Technical stack
 
-- React
-- TypeScript
-- Vite
-- Tailwind
-- shadcn/ui
-- Supabase
-- Vercel
-- OpenAI
+- React, TypeScript, Vite, Tailwind, Supabase, Vercel, OpenAI
+- eBay Browse for current AU asking comps (not solds until Insights)
 
 ## Architecture
 
-Core valuation logic lives in:
-
-src/lib/valuation/
-
-Pricing sources implement a PricingProvider interface.
-
-Never couple valuation logic directly to eBay.
+Core valuation: `src/lib/valuation/`
+Intelligence tiers / product graph: `src/lib/intelligence/`
+Pricing sources implement `PricingProvider` — never couple valuation directly to eBay.
 
 ## Product philosophy
 
 Trust > fake precision.
 
-When data is insufficient, return INSUFFICIENT_DATA.
+When data is insufficient, return INSUFFICIENT DATA / LIMITED MARKET DATA.
 
-Never fabricate:
-- accessories
-- product variants
-- condition
-- market prices
-- seller claims
-- confidence
+Never fabricate accessories, variants, condition, market prices, seller claims, confidence, or days-to-sell.
 
 Unknown values remain null.
+
+Do not claim sold averages until Marketplace Insights or user-confirmed sales backs them.
 
 Do not add features that were not requested.
