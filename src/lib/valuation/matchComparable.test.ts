@@ -124,17 +124,58 @@ describe('matchComparable', () => {
     expect(result.reasons.join(' ')).toMatch(/bundle/i)
   })
 
-  it('penalises headset only', () => {
+  it('rejects charging dock accessory', () => {
     const result = matchComparable(
       questDemoProduct,
       listing({
-        id: '8',
-        title: 'Meta Quest 3 512GB headset only — no controllers',
-        price: 390,
+        id: '9',
+        title: 'META Quest 3 Charging Dock',
+        price: 159,
         includedAccessories: [],
       }),
     )
     expect(result.included).toBe(false)
-    expect(result.reasons.join(' ')).toMatch(/Headset only/i)
+    expect(result.rejectionReason).toMatch(/Accessory|parts|Not a full headset/i)
+  })
+
+  it('rejects elite strap accessory', () => {
+    const result = matchComparable(
+      questDemoProduct,
+      listing({
+        id: '10',
+        title: 'Meta Quest 3 Elite strap with battery',
+        price: 158,
+        includedAccessories: [],
+      }),
+    )
+    expect(result.included).toBe(false)
+    expect(result.rejectionReason).toMatch(/Accessory|parts|Not a full headset/i)
+  })
+
+  it('rejects spare controller parts', () => {
+    const result = matchComparable(
+      questDemoProduct,
+      listing({
+        id: '11',
+        title: 'Meta Quest 3 Controller Side Grip Cover (Left)',
+        price: 54,
+        includedAccessories: [],
+      }),
+    )
+    expect(result.included).toBe(false)
+    expect(result.rejectionReason).toMatch(/Accessory|parts|Not a full headset/i)
+  })
+
+  it('includes bare storage Quest title without the word headset', () => {
+    const result = matchComparable(
+      questDemoProduct,
+      listing({
+        id: '12',
+        title: 'Meta Quest 3 512 GB',
+        price: 690,
+        includedAccessories: [],
+      }),
+    )
+    expect(result.included).toBe(true)
   })
 })

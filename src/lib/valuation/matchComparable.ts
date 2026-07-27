@@ -30,6 +30,98 @@ function targetStorageGb(product: IdentifiedProduct): number | null {
   return extractStorageGb(norm(product.variant))
 }
 
+/** Docks, straps, spare parts, cases — not sellable full headsets. */
+function isVrAccessoryOrPart(title: string): boolean {
+  return hasAny(title, [
+    'charging dock',
+    'charge dock',
+    'charging station',
+    'charger dock',
+    'magnetic charger',
+    'elite strap',
+    'head strap',
+    'headstrap',
+    'battery strap',
+    'pro headstrap',
+    'carrying case',
+    'carry case',
+    'travel case',
+    'link cable',
+    'attachment',
+    'side grip',
+    'grip cover',
+    'faceplate',
+    'facial interface',
+    'motherboard',
+    'mainboard',
+    'pcb',
+    'joystick',
+    'thumbstick',
+    'vibration motor',
+    'ribbon cable',
+    'housing shell',
+    'battery cover',
+    'battery terminal',
+    'button set',
+    'trigger button',
+    'wrist strap',
+    'led array',
+    'holster',
+    'tactsuit',
+    'haptic',
+    'controller only',
+    'controllers only',
+    'right controller',
+    'left controller',
+    'spare part',
+    'oem part',
+    'replacement part',
+    'repair',
+  ])
+}
+
+/** Positive evidence this row is a complete headset unit. */
+function isFullVrHeadsetListing(title: string): boolean {
+  if (hasAny(title, ['headset', 'standalone', 'virtual reality', 'vr headset'])) {
+    return true
+  }
+  // Storage capacity in title usually means the full unit, not a strap/dock
+  if (/\b(128|256|512)\s*gb\b/.test(title)) return true
+  if (
+    hasAny(title, ['with controllers', 'touch plus', 'controllers included']) &&
+    !hasAny(title, ['controller only', 'controllers only', 'right controller', 'left controller'])
+  ) {
+    return true
+  }
+  return false
+}
+
+/** Short titles like "Meta Quest 3" / "meta quest 3" with no accessory words. */
+function isBareHeadsetTitle(
+  title: string,
+  brand: string,
+  model: string,
+): boolean {
+  if (isVrAccessoryOrPart(title)) return false
+  let rest = ` ${title} `
+  for (const token of [
+    ...brand.split(/\s+/),
+    ...model.split(/\s+/),
+    'meta',
+    'oculus',
+    'used',
+    'white',
+    'black',
+    'grey',
+    'gray',
+  ]) {
+    if (!token) continue
+    rest = rest.replaceAll(` ${norm(token)} `, ' ')
+  }
+  rest = rest.replace(/\s+/g, ' ').trim()
+  return rest.length <= 8
+}
+
 /**
  * Deterministic comparable matcher.
  * AI must not set prices — this decides include/exclude + match score.
@@ -60,6 +152,8 @@ export function matchComparable(
       'accessories only',
       'strap only',
       'case only',
+      'right controller only',
+      'left controller only',
     ])
   ) {
     return reject(comparable, 'Parts / accessories only', reasons)
@@ -85,20 +179,16 @@ export function matchComparable(
     return reject(comparable, 'Model not matched', reasons)
   }
 
-  // Accessory / peripheral listings that mention the product name
-  if (
-    hasAny(title, [
-      'charging dock',
-      'charge dock',
-      'tactsuit',
-      'haptic',
-      'holster',
-      'link cable only',
-      'carrying case only',
-      'head strap only',
-    ])
-  ) {
-    return reject(comparable, 'Accessory listing', reasons)
+  // VR: accessories/parts that merely mention the headset name
+  const isVr =
+    product.category === 'vr_headset' ||
+    model.includes('quest') ||
+    model.includes('vision pro')
+  if (isVr && isVrAccessoryOrPart(title) && !isFullVrHeadsetListing(title)) {
+    return reject(comparable, 'Accessory / parts listing', reasons)
+  }
+  if (isVr && !isFullVrHeadsetListing(title) && !isBareHeadsetTitle(title, brand, model)) {
+    return reject(comparable, 'Not a full headset listing', reasons)
   }
 
   // Exact model required (+ common AU marketplace aliases)
