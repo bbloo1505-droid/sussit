@@ -1,5 +1,6 @@
 import type { Plugin } from 'vite'
 import { handleExtract, type ExtractRequestBody } from './server/handleExtract.ts'
+import { handleEbayAccountDeletionRequest } from './server/handleEbayAccountDeletion.ts'
 
 async function readJson(req: import('http').IncomingMessage): Promise<unknown> {
   const chunks: Buffer[] = []
@@ -27,19 +28,42 @@ export function apiPlugin(): Plugin {
     name: 'sussit-api',
     configureServer(server) {
       server.middlewares.use(async (req, res, next) => {
-        if (!req.url?.startsWith('/api/extract') || req.method !== 'POST') {
-          next()
+        const fullUrl = req.url ?? ''
+        const url = fullUrl.split('?')[0] ?? ''
+
+        try {
+          if (url === '/api/extract' && req.method === 'POST') {
+            const body = (await readJson(req)) as ExtractRequestBody
+            const result = await handleExtract(body)
+            sendJson(res, result.ok ? 200 : 400, result)
+            return
+          }
+
+          if (
+            url === '/api/ebay/account-deletion' &&
+            (req.method === 'GET' || req.method === 'POST')
+          ) {
+            const challengeCode = new URL(
+              fullUrl,
+              'http://localhost',
+            ).searchParams.get('challenge_code')
+            const body =
+              req.method === 'POST' ? await readJson(req) : undefined
+            const result = await handleEbayAccountDeletionRequest({
+              method: req.method,
+              challengeCode,
+              body,
+            })
+            sendJson(res, result.status, result.body)
+            return
+          }
+        } catch (error) {
+          console.error('[api]', error)
+          sendJson(res, 500, { ok: false, error: 'Server error' })
           return
         }
 
-        try {
-          const body = (await readJson(req)) as ExtractRequestBody
-          const result = await handleExtract(body)
-          sendJson(res, result.ok ? 200 : 400, result)
-        } catch (error) {
-          console.error('[api/extract]', error)
-          sendJson(res, 500, { ok: false, error: 'Server error' })
-        }
+        next()
       })
     },
   }
