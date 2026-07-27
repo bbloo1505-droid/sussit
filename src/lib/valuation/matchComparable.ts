@@ -72,16 +72,45 @@ export function matchComparable(
     return reject(comparable, 'Brand new — rejected for used benchmark', reasons)
   }
 
-  // Wrong generation (Quest-specific + generic)
-  if (model.includes('quest 3') && hasAny(title, ['quest 2', 'quest2', 'quest pro'])) {
+  // Wrong generation / adjacent SKUs (Quest-specific + generic)
+  if (
+    model.includes('quest 3') &&
+    !model.includes('quest 3s') &&
+    (hasAny(title, ['quest 2', 'quest2', 'quest pro']) ||
+      /\bquest\s*3s\b/.test(title))
+  ) {
     return reject(comparable, 'Wrong generation', reasons)
   }
   if (model.includes('quest 3') && !hasAny(title, ['quest 3', 'quest3'])) {
     return reject(comparable, 'Model not matched', reasons)
   }
 
-  // Exact model required
-  if (model && hasAny(title, [model, model.replace(' ', '')])) {
+  // Accessory / peripheral listings that mention the product name
+  if (
+    hasAny(title, [
+      'charging dock',
+      'charge dock',
+      'tactsuit',
+      'haptic',
+      'holster',
+      'link cable only',
+      'carrying case only',
+      'head strap only',
+    ])
+  ) {
+    return reject(comparable, 'Accessory listing', reasons)
+  }
+
+  // Exact model required (+ common AU marketplace aliases)
+  const modelAliases = [model, model.replaceAll(' ', '')]
+  if (model.includes('playstation 5') || model === 'ps5') {
+    modelAliases.push('ps5', 'playstation 5', 'play station 5')
+  }
+  if (model.includes('switch oled')) {
+    modelAliases.push('switch oled', 'oled switch')
+  }
+
+  if (model && hasAny(title, modelAliases)) {
     score += 40
     reasons.push('Exact model')
   } else if (brand && title.includes(brand) && model.split(' ').some((p) => title.includes(p))) {
@@ -91,9 +120,25 @@ export function matchComparable(
     return reject(comparable, 'Exact model required', reasons)
   }
 
+  // Reject digital when hunting disc (and vice versa)
+  if (
+    (model.includes('playstation 5') || model.includes('ps5')) &&
+    norm(product.variant ?? '').includes('disc') &&
+    hasAny(title, ['digital'])
+  ) {
+    return reject(comparable, 'Wrong PS5 edition (digital)', reasons)
+  }
+
   // Storage
   const targetGb = targetStorageGb(product)
   const listingGb = extractStorageGb(title)
+  const looksLikeFullHeadset = hasAny(title, [
+    'headset',
+    'standalone',
+    'vr headset',
+    'with controllers',
+    'touch plus',
+  ])
   if (targetGb != null && listingGb != null) {
     if (listingGb === targetGb) {
       score += 25
@@ -103,8 +148,18 @@ export function matchComparable(
       reasons.push(`Different storage (${listingGb}GB vs ${targetGb}GB)`)
     }
   } else if (targetGb != null && listingGb == null) {
-    score -= 10
-    reasons.push('Storage unclear')
+    // Live eBay titles often omit GB on otherwise valid headsets
+    if (looksLikeFullHeadset) {
+      score += 15
+      reasons.push('Storage omitted on headset listing')
+    } else {
+      score -= 10
+      reasons.push('Storage unclear')
+    }
+  } else if (targetGb == null) {
+    // Required so used + model clears the include threshold without a GB variant
+    score += 25
+    reasons.push('No storage variant required')
   }
 
   // Used condition
