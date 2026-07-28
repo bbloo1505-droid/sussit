@@ -1,0 +1,88 @@
+{
+  "savedAt": "2026-07-27T00:00:00.000Z",
+  "query": "Meta Quest 3 512GB",
+  "marketplaceId": "EBAY_AU",
+  "note": "Synthetic Browse API-shaped fixture for offline replay. Not live eBay data.",
+  "itemSummaries": [
+    {
+      "itemId": "v1|1001|0",
+      "title": "Meta Quest 3 512GB VR Headset with Controllers",
+      "price": { "value": "749.00", "currency": "AUD" },
+      "condition": "Used",
+      "conditionId": "3000",
+      "itemWebUrl": "https://www.ebay.com.au/itm/1001"
+    },
+    {
+      "itemId": "v1|1002|0",
+      "title": "Meta Quest 3 512GB lightly used Melbourne",
+      "price": { "value": "780.00", "currency": "AUD" },
+      "condition": "Used",
+      "conditionId": "3000",
+      "itemWebUrl": "https://www.ebay.com.au/itm/1002"
+    },
+    {
+      "itemId": "v1|1003|0",
+      "title": "Meta Quest 3 Elite Strap only",
+      "price": { "value": "69.00", "currency": "AUD" },
+      "condition": "New",
+      "conditionId": "1000",
+      "itemWebUrl": "https://www.ebay.com.au/itm/1003"
+    },
+    {
+      "itemId": "v1|1004|0",
+      "title": "Quest 3 charging dock station",
+      "price": { "value": "45.00", "currency": "AUD" },
+      "condition": "New",
+      "conditionId": "1000",
+      "itemWebUrl": "https://www.ebay.com.au/itm/1004"
+    },
+    {
+      "itemId": "v1|1005|0",
+      "title": "Meta Quest 3 128GB VR Headset with Controllers",
+      "price": { "value": "620.00", "currency": "AUD" },
+      "condition": "Used",
+      "conditionId": "3000",
+      "itemWebUrl": "https://www.ebay.com.au/itm/1005"
+    },
+    {
+      "itemId": "v1|1006|0",
+      "title": "Meta Quest 3S 128GB VR Headset with Controllers",
+      "price": { "value": "449.00", "currency": "AUD" },
+      "condition": "Used",
+      "conditionId": "3000",
+      "itemWebUrl": "https://www.ebay.com.au/itm/1006"
+    },
+    {
+      "itemId": "v1|1007|0",
+      "title": "Meta Quest 3 512GB for parts broken screen",
+      "price": { "value": "180.00", "currency": "AUD" },
+      "condition": "For parts or not working",
+      "conditionId": "7000",
+      "itemWebUrl": "https://www.ebay.com.au/itm/1007"
+    },
+    {
+      "itemId": "v1|1008|0",
+      "title": "Empty box only for Meta Quest 3",
+      "price": { "value": "25.00", "currency": "AUD" },
+      "condition": "Used",
+      "conditionId": "3000",
+      "itemWebUrl": "https://www.ebay.com.au/itm/1008"
+    },
+    {
+      "itemId": "v1|1009|0",
+      "title": "Meta Quest 3 512GB headset only — no controllers",
+      "price": { "value": "520.00", "currency": "AUD" },
+      "condition": "Used",
+      "conditionId": "3000",
+      "itemWebUrl": "https://www.ebay.com.au/itm/1009"
+    },
+    {
+      "itemId": "v1|1010|0",
+      "title": "Oculus Quest 3 512GB with Controllers used",
+      "price": { "value": "735.00", "currency": "AUD" },
+      "condition": "Used",
+      "conditionId": "3000",
+      "itemWebUrl": "https://www.ebay.com.au/itm/1010"
+    }
+  ]
+}

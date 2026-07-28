@@ -1,0 +1,38 @@
+{
+  "name": "golden-identification-core",
+  "description": "Hand-authored identification expectations for core SKUs",
+  "cases": [
+    {
+      "id": "golden-id-quest3-512",
+      "inputText": "Meta Quest 3 512GB lightly used $750 Melbourne",
+      "expected": {
+        "category": "vr_headset",
+        "brand": "Meta",
+        "model": "Quest 3",
+        "variant": "512GB",
+        "storageGb": 512
+      }
+    },
+    {
+      "id": "golden-id-ps5-disc",
+      "inputText": "PS5 Disc Edition with controller $550 Sydney",
+      "expected": {
+        "category": "console",
+        "brand": "Sony",
+        "model": "PlayStation 5",
+        "variant": "Disc"
+      }
+    },
+    {
+      "id": "golden-id-iphone15",
+      "inputText": "iPhone 15 128GB unlocked used $720 Brisbane",
+      "expected": {
+        "category": "phone",
+        "brand": "Apple",
+        "model": "iPhone 15",
+        "variant": "128GB",
+        "storageGb": 128
+      }
+    }
+  ]
+}

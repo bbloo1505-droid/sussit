@@ -1,0 +1,115 @@
+{
+  "savedAt": "2026-07-28T11:25:10.353Z",
+  "query": "Galaxy S24 128GB -case -cover -charger -cable -tempered -protector -magsafe -wallet -glass -holder -pouch",
+  "skuKey": "galaxy-s24",
+  "product": {
+    "skuKey": "galaxy-s24",
+    "brand": "Samsung",
+    "model": "Galaxy S24",
+    "variant": "128GB",
+    "category": "phone",
+    "typicalAsk": 750
+  },
+  "marketplaceId": "EBAY_AU",
+  "itemSummaries": [
+    {
+      "itemId": "v1|257644222145|0",
+      "title": "Samsung Galaxy S24 FE - 128GB/8GB - Blue - Great Condition - Unlocked",
+      "price": {
+        "value": "582.7",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/257644222145?_skw=Galaxy+S24+128GB&hash=item3bfccad6c1:g:w2YAAeSwf79qZrdj",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|227433383140|0",
+      "title": "Samsung Galaxy S24 FE - SM-S721B - 128GB (FOR PARTS)",
+      "price": {
+        "value": "350",
+        "currency": "AUD"
+      },
+      "condition": "for_parts",
+      "itemWebUrl": "https://www.ebay.com.au/itm/227433383140?_skw=Galaxy+S24+128GB&hash=item34f41604e4:g:pSQAAeSw7dlqXWZg",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|137551961691|0",
+      "title": "Samsung Galaxy S24 - 128GB - (Unlocked) Glass Cracks",
+      "price": {
+        "value": "1206.7",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/137551961691?_skw=Galaxy+S24+128GB&hash=item2006bc5e5b:g:0IgAAeSwSgNqSgW6",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|158040047578|0",
+      "title": "Samsung Galaxy S24 FE 128GB Graphite",
+      "price": {
+        "value": "655.1",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/158040047578?_skw=Galaxy+S24+128GB&hash=item24cbebbfda:g:SlEAAeSwW~xqQivc",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|336595464496|0",
+      "title": "Samsung Galaxy S24 FE - 128GB/8GB - Graphite (Samsung AU Warranty 4/27) As New.",
+      "price": {
+        "value": "599",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/336595464496?_skw=Galaxy+S24+128GB&hash=item4e5ea73130:g:GBwAAeSwe3dpxHtV",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|236432097120|536978429678",
+      "title": "Samsung Galaxy S24 FE 128/256GB Pristine Unlocked(AU) with Warranty",
+      "price": {
+        "value": "849",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/236432097120?_skw=Galaxy+S24+128GB&hash=item370c737f60:g:nj8AAeSwf5JpCAgP",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|176783318989|476493687683",
+      "title": "Samsung Galaxy S24 FE 5G 128GB | Pristine Condition | 12 Month Warranty",
+      "price": {
+        "value": "619",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/176783318989?_skw=Galaxy+S24+128GB&hash=item29291b5fcd:g:gHMAAOSwJpdngQl8",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    }
+  ],
+  "total": 7
+}

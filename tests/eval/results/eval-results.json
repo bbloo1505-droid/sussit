@@ -1,0 +1,248 @@
+{
+  "generatedAt": "2026-07-28T11:24:19.707Z",
+  "mode": "offline",
+  "seed": 20260727,
+  "totalCases": 10875,
+  "totalPassed": 10875,
+  "totalFailed": 0,
+  "totalWarned": 0,
+  "overallScore": 100,
+  "runtimeMs": 1236,
+  "suites": [
+    {
+      "suite": "identification",
+      "total": 203,
+      "passed": 203,
+      "failed": 0,
+      "warned": 0,
+      "score": 100,
+      "metrics": {}
+    },
+    {
+      "suite": "matching",
+      "total": 7850,
+      "passed": 7850,
+      "failed": 0,
+      "warned": 0,
+      "score": 100,
+      "metrics": {}
+    },
+    {
+      "suite": "adversarial",
+      "total": 2760,
+      "passed": 2760,
+      "failed": 0,
+      "warned": 0,
+      "score": 100,
+      "metrics": {}
+    },
+    {
+      "suite": "valuation",
+      "total": 34,
+      "passed": 34,
+      "failed": 0,
+      "warned": 0,
+      "score": 100,
+      "metrics": {}
+    },
+    {
+      "suite": "verdict",
+      "total": 17,
+      "passed": 17,
+      "failed": 0,
+      "warned": 0,
+      "score": 100,
+      "metrics": {}
+    },
+    {
+      "suite": "low_info",
+      "total": 10,
+      "passed": 10,
+      "failed": 0,
+      "warned": 0,
+      "score": 100,
+      "metrics": {}
+    },
+    {
+      "suite": "ebay_replay",
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "warned": 0,
+      "score": 100,
+      "metrics": {}
+    }
+  ],
+  "byCategory": {
+    "vr_headset": {
+      "total": 2608,
+      "passed": 2608,
+      "failed": 0,
+      "score": 100
+    },
+    "console": {
+      "total": 4461,
+      "passed": 4461,
+      "failed": 0,
+      "score": 100
+    },
+    "phone": {
+      "total": 3796,
+      "passed": 3796,
+      "failed": 0,
+      "score": 100
+    },
+    "ambiguous": {
+      "total": 10,
+      "passed": 10,
+      "failed": 0,
+      "score": 100
+    }
+  },
+  "byModel": {
+    "quest-2": {
+      "total": 642,
+      "passed": 642,
+      "failed": 0,
+      "score": 100
+    },
+    "quest-3": {
+      "total": 659,
+      "passed": 659,
+      "failed": 0,
+      "score": 100
+    },
+    "quest-3-128": {
+      "total": 657,
+      "passed": 657,
+      "failed": 0,
+      "score": 100
+    },
+    "quest-3s": {
+      "total": 649,
+      "passed": 649,
+      "failed": 0,
+      "score": 100
+    },
+    "ps5": {
+      "total": 647,
+      "passed": 647,
+      "failed": 0,
+      "score": 100
+    },
+    "ps5-slim": {
+      "total": 639,
+      "passed": 639,
+      "failed": 0,
+      "score": 100
+    },
+    "ps5-pro": {
+      "total": 630,
+      "passed": 630,
+      "failed": 0,
+      "score": 100
+    },
+    "ps5-digital": {
+      "total": 646,
+      "passed": 646,
+      "failed": 0,
+      "score": 100
+    },
+    "switch": {
+      "total": 630,
+      "passed": 630,
+      "failed": 0,
+      "score": 100
+    },
+    "switch-oled": {
+      "total": 638,
+      "passed": 638,
+      "failed": 0,
+      "score": 100
+    },
+    "switch-lite": {
+      "total": 630,
+      "passed": 630,
+      "failed": 0,
+      "score": 100
+    },
+    "iphone-13-128": {
+      "total": 639,
+      "passed": 639,
+      "failed": 0,
+      "score": 100
+    },
+    "iphone-14-128": {
+      "total": 632,
+      "passed": 632,
+      "failed": 0,
+      "score": 100
+    },
+    "iphone-15-128": {
+      "total": 632,
+      "passed": 632,
+      "failed": 0,
+      "score": 100
+    },
+    "iphone-15-pro": {
+      "total": 631,
+      "passed": 631,
+      "failed": 0,
+      "score": 100
+    },
+    "iphone-15-pro-max": {
+      "total": 630,
+      "passed": 630,
+      "failed": 0,
+      "score": 100
+    },
+    "iphone-16": {
+      "total": 631,
+      "passed": 631,
+      "failed": 0,
+      "score": 100
+    },
+    "quest3-512": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "score": 100
+    },
+    "ps5-disc": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "score": 100
+    },
+    "iphone15": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "score": 100
+    },
+    "low-info": {
+      "total": 10,
+      "passed": 10,
+      "failed": 0,
+      "score": 100
+    }
+  },
+  "failures": [],
+  "previous": {
+    "overallScore": 100,
+    "totalFailed": 0,
+    "generatedAt": "2026-07-28T11:11:53.485Z"
+  },
+  "regressions": [],
+  "highlights": {
+    "identificationAccuracy": 100,
+    "comparablePrecision": 100,
+    "comparableRecall": 100,
+    "badCompRejectionRate": 100,
+    "wrongModelContamination": 0,
+    "accessoryContamination": 0,
+    "valuationFailures": 0,
+    "verdictConsistencyFailures": 0,
+    "lowConfidenceFailures": 0
+  }
+}

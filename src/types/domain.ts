@@ -1,5 +1,7 @@
 /** Core SussIt domain types. Unknown extracted fields stay null. */
 
+import type { FlipResult } from '@/types/sellSpeed'
+
 export type Currency = 'AUD'
 
 /**
@@ -146,13 +148,5 @@ export type AnalysisResult = {
   offer: OfferRecommendation | null
   assessments: ComparableAssessment[]
   /** Optional Flip payload when sell-speed module is wired */
-  flip?: {
-    actionVerdict?: string
-    actionSummary?: string
-    maxBuy?: { maxBuy: number } | null
-    resaleLow?: number
-    resaleHigh?: number
-    pricingSweetSpot?: { low: number; high: number } | null
-    [key: string]: unknown
-  } | null
+  flip?: FlipResult | null
 }

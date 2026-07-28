@@ -1,0 +1,87 @@
+{
+  "savedAt": "2026-07-28T11:24:47.622Z",
+  "query": "Quest 3S 128GB headset -dock -bobovr -stand -skin -grip -facial -faceplate",
+  "skuKey": "quest-3s",
+  "product": {
+    "skuKey": "quest-3s",
+    "brand": "Meta",
+    "model": "Quest 3S",
+    "variant": "128GB",
+    "category": "vr_headset",
+    "typicalAsk": 450
+  },
+  "marketplaceId": "EBAY_AU",
+  "itemSummaries": [
+    {
+      "itemId": "v1|407067491748|0",
+      "title": "Meta Quest 3S 128GB VR Headset with Controllers Charger & Cable Included",
+      "price": {
+        "value": "499",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/407067491748?_skw=Quest+3S+128GB&hash=item5ec71cfda4:g:mOUAAeSwCkVqU4yR",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|127907842582|0",
+      "title": "meta quest 3s 128gb",
+      "price": {
+        "value": "477.7",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/127907842582?_skw=Quest+3S+128GB&hash=item1dc7e6ca16:g:IPAAAeSwv8dqJOYZ",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|236901064753|0",
+      "title": "Meta Quest 3S 128 GB",
+      "price": {
+        "value": "424.7",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/236901064753?_skw=Quest+3S+128GB&hash=item3728676031:g:NQ0AAeSwukVqIrgA",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|336612609459|0",
+      "title": "Meta Quest 3S 128GB Virtual Reality Headset White with Controllers Carry Case",
+      "price": {
+        "value": "459",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/336612609459?_skw=Quest+3S+128GB&hash=item4e5faccdb3:g:xEIAAeSw4NdqZ8F6",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|397910023215|0",
+      "title": "Meta Quest 3S 128gb white, used, from meta",
+      "price": {
+        "value": "424.7",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/397910023215?_skw=Quest+3S+128GB&hash=item5ca5491c2f:g:zW8AAeSwe5lp-GKv",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    }
+  ],
+  "total": 5
+}

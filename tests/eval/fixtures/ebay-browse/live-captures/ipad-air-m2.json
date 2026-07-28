@@ -1,0 +1,143 @@
+{
+  "savedAt": "2026-07-28T11:25:21.654Z",
+  "query": "Apple iPad Air M2 128GB -case -cover -pencil -keyboard -folio -charger -stylus",
+  "skuKey": "ipad-air-m2",
+  "product": {
+    "skuKey": "ipad-air-m2",
+    "brand": "Apple",
+    "model": "iPad Air",
+    "variant": "M2 128GB",
+    "category": "tablet",
+    "typicalAsk": 750
+  },
+  "marketplaceId": "EBAY_AU",
+  "itemSummaries": [
+    {
+      "itemId": "v1|236959730594|0",
+      "title": "iPad Air M2 - 128gb - WiFi + Cellular - Great Condition - Touch ID Not Working",
+      "price": {
+        "value": "599",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/236959730594?_skw=Apple+iPad+Air+M2+128GB&hash=item372be68ba2:g:3K8AAeSwo4NqYs6-",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|206413484034|0",
+      "title": "Apple iPad Air 11-inch M2 (128GB) + Magic Keyboard",
+      "price": {
+        "value": "899",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/206413484034?_skw=Apple+iPad+Air+M2+128GB&hash=item300f33d002:g:-fAAAeSwo9lqVbQt",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|800301006241|0",
+      "title": "iPad Air 13” M2 Blue Cellular 128gb+ Apple Pencil Pro+ ESR Magic Keyboard",
+      "price": {
+        "value": "998.7",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/800301006241?_skw=Apple+iPad+Air+M2+128GB&hash=itemba55a83da1:g:0m0AAeSwKZRqTHbj",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|800250724125|0",
+      "title": "Apple iPad Air 11-inch (M2) 128 GB, Wi-Fi, Magic keyboard, Pencil Pro.",
+      "price": {
+        "value": "1061.1",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/800250724125?_skw=Apple+iPad+Air+M2+128GB&hash=itemba52a8ff1d:g:cuwAAeSweFNqP5Om",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|198256319810|0",
+      "title": "Apple iPad Air 11\" M2 128GB Wi-Fi",
+      "price": {
+        "value": "850",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/198256319810?_skw=Apple+iPad+Air+M2+128GB&hash=item2e28ff5d42:g:q3MAAeSw3JRp0enD",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|397393181132|0",
+      "title": "Apple iPad Air M2 11\" WIFI 128GB Space Gray AU STOCK - AS NEW condition",
+      "price": {
+        "value": "859",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/397393181132?_skw=Apple+iPad+Air+M2+128GB&hash=item5c867ab9cc:g:tT8AAeSwa5ppO58S",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|197852908515|0",
+      "title": "Ipad Air ( M2, 128GB Wifi only)",
+      "price": {
+        "value": "842.7",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/197852908515?_skw=Apple+iPad+Air+M2+128GB&hash=item2e10f3cbe3:g:loYAAeSwsttpFM3s",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|397202066501|0",
+      "title": "Apple iPad Air M2 13\" WIFI+CELLULAR Purple 128GB AU STOCK - AS NEW condition",
+      "price": {
+        "value": "1049",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/397202066501?_skw=Apple+iPad+Air+M2+128GB&hash=item5c7b168c45:g:XvMAAeSwiwtpAFVH",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|135139594227|0",
+      "title": "iPad Air 11-Inch (M2) Wi-Fi 128GB Packaging Box ONLY",
+      "price": {
+        "value": "18",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/135139594227?_skw=Apple+iPad+Air+M2+128GB&hash=item1f76f28ff3:g:PYkAAOSwU6pmjOKx",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    }
+  ],
+  "total": 9
+}

@@ -1,0 +1,285 @@
+{
+  "report": {
+    "generatedAt": "2026-07-28T11:25:39.833Z",
+    "mode": "live",
+    "seed": 20260727,
+    "totalCases": 30,
+    "totalPassed": 30,
+    "totalFailed": 0,
+    "totalWarned": 0,
+    "overallScore": 100,
+    "runtimeMs": 56226,
+    "suites": [
+      {
+        "suite": "ebay_replay",
+        "total": 30,
+        "passed": 30,
+        "failed": 0,
+        "warned": 0,
+        "score": 100,
+        "metrics": {
+          "calls": 30,
+          "maxCalls": 30
+        }
+      }
+    ],
+    "byCategory": {},
+    "byModel": {},
+    "failures": [],
+    "previous": null,
+    "regressions": [],
+    "highlights": {
+      "identificationAccuracy": 0,
+      "comparablePrecision": 0,
+      "comparableRecall": 0,
+      "badCompRejectionRate": 0,
+      "wrongModelContamination": 0,
+      "accessoryContamination": 0,
+      "valuationFailures": 0,
+      "verdictConsistencyFailures": 0,
+      "lowConfidenceFailures": 0
+    }
+  },
+  "captures": [
+    {
+      "query": "Quest 3 512GB headset -dock -bobovr -stand -skin -grip -facial -faceplate -3S -3s",
+      "skuKey": "quest-3",
+      "category": "vr_headset",
+      "total": 4,
+      "saved": "C:\\Users\\bbloo\\sussit\\tests\\eval\\fixtures\\ebay-browse\\live-captures\\quest-3.json",
+      "itemCount": 4
+    },
+    {
+      "query": "Quest 3S 128GB headset -dock -bobovr -stand -skin -grip -facial -faceplate",
+      "skuKey": "quest-3s",
+      "category": "vr_headset",
+      "total": 5,
+      "saved": "C:\\Users\\bbloo\\sussit\\tests\\eval\\fixtures\\ebay-browse\\live-captures\\quest-3s.json",
+      "itemCount": 5
+    },
+    {
+      "query": "Quest 2 128GB headset -dock -bobovr -stand -skin -grip -facial -faceplate -3S -3s -Pro",
+      "skuKey": "quest-2",
+      "category": "vr_headset",
+      "total": 4,
+      "saved": "C:\\Users\\bbloo\\sussit\\tests\\eval\\fixtures\\ebay-browse\\live-captures\\quest-2.json",
+      "itemCount": 4
+    },
+    {
+      "query": "PS5 Slim Disc console -stand -cooling -skin -silicone -thumb -charging -preorder -cover -custom -battlebeaver -Pro -Digital",
+      "skuKey": "ps5-slim",
+      "category": "console",
+      "total": 6,
+      "saved": "C:\\Users\\bbloo\\sussit\\tests\\eval\\fixtures\\ebay-browse\\live-captures\\ps5-slim.json",
+      "itemCount": 6
+    },
+    {
+      "query": "PS5 Pro console -stand -cooling -skin -silicone -thumb -charging -preorder -cover -custom -battlebeaver -Slim -Hawk -Skater -Tony -Fanatec -Magazine -Enhanced",
+      "skuKey": "ps5-pro",
+      "category": "console",
+      "total": 20,
+      "saved": "C:\\Users\\bbloo\\sussit\\tests\\eval\\fixtures\\ebay-browse\\live-captures\\ps5-pro.json",
+      "itemCount": 20
+    },
+    {
+      "query": "PS5 Digital console -stand -cooling -skin -silicone -thumb -charging -preorder -cover -custom -battlebeaver -Slim -Pro -Disc",
+      "skuKey": "ps5-digital",
+      "category": "console",
+      "total": 20,
+      "saved": "C:\\Users\\bbloo\\sussit\\tests\\eval\\fixtures\\ebay-browse\\live-captures\\ps5-digital.json",
+      "itemCount": 20
+    },
+    {
+      "query": "Switch OLED console -stand -cooling -skin -silicone -thumb -charging -preorder -cover -custom -battlebeaver -Lite",
+      "skuKey": "switch-oled",
+      "category": "console",
+      "total": 20,
+      "saved": "C:\\Users\\bbloo\\sussit\\tests\\eval\\fixtures\\ebay-browse\\live-captures\\switch-oled.json",
+      "itemCount": 20
+    },
+    {
+      "query": "Switch Lite console -stand -cooling -skin -silicone -thumb -charging -preorder -cover -custom -battlebeaver -OLED",
+      "skuKey": "switch-lite",
+      "category": "console",
+      "total": 20,
+      "saved": "C:\\Users\\bbloo\\sussit\\tests\\eval\\fixtures\\ebay-browse\\live-captures\\switch-lite.json",
+      "itemCount": 20
+    },
+    {
+      "query": "Xbox Series X console -stand -cooling -skin -silicone -thumb -charging -preorder -cover -custom -battlebeaver",
+      "skuKey": "xbox-series-x",
+      "category": "console",
+      "total": 20,
+      "saved": "C:\\Users\\bbloo\\sussit\\tests\\eval\\fixtures\\ebay-browse\\live-captures\\xbox-series-x.json",
+      "itemCount": 20
+    },
+    {
+      "query": "iPhone 15 128GB -case -cover -charger -cable -tempered -protector -magsafe -wallet -glass -holder -pouch -Pro -Plus -Max",
+      "skuKey": "iphone-15-128",
+      "category": "phone",
+      "total": 20,
+      "saved": "C:\\Users\\bbloo\\sussit\\tests\\eval\\fixtures\\ebay-browse\\live-captures\\iphone-15-128.json",
+      "itemCount": 20
+    },
+    {
+      "query": "iPhone 15 Pro 256GB -case -cover -charger -cable -tempered -protector -magsafe -wallet -glass -holder -pouch -Max",
+      "skuKey": "iphone-15-pro",
+      "category": "phone",
+      "total": 20,
+      "saved": "C:\\Users\\bbloo\\sussit\\tests\\eval\\fixtures\\ebay-browse\\live-captures\\iphone-15-pro.json",
+      "itemCount": 20
+    },
+    {
+      "query": "iPhone 16 128GB -case -cover -charger -cable -tempered -protector -magsafe -wallet -glass -holder -pouch -Pro -Plus -Max",
+      "skuKey": "iphone-16",
+      "category": "phone",
+      "total": 20,
+      "saved": "C:\\Users\\bbloo\\sussit\\tests\\eval\\fixtures\\ebay-browse\\live-captures\\iphone-16.json",
+      "itemCount": 20
+    },
+    {
+      "query": "Galaxy S24 128GB -case -cover -charger -cable -tempered -protector -magsafe -wallet -glass -holder -pouch",
+      "skuKey": "galaxy-s24",
+      "category": "phone",
+      "total": 7,
+      "saved": "C:\\Users\\bbloo\\sussit\\tests\\eval\\fixtures\\ebay-browse\\live-captures\\galaxy-s24.json",
+      "itemCount": 7
+    },
+    {
+      "query": "Pixel 8 128GB -case -cover -charger -cable -tempered -protector -magsafe -wallet -glass -holder -pouch",
+      "skuKey": "pixel-8",
+      "category": "phone",
+      "total": 20,
+      "saved": "C:\\Users\\bbloo\\sussit\\tests\\eval\\fixtures\\ebay-browse\\live-captures\\pixel-8.json",
+      "itemCount": 20
+    },
+    {
+      "query": "Sony A7 III body -lens -strap -bag -battery -charger -grip -cage -filter -hood -card",
+      "skuKey": "sony-a7iii",
+      "category": "camera",
+      "total": 20,
+      "saved": "C:\\Users\\bbloo\\sussit\\tests\\eval\\fixtures\\ebay-browse\\live-captures\\sony-a7iii.json",
+      "itemCount": 20
+    },
+    {
+      "query": "Canon EOS R6 body -lens -strap -bag -battery -charger -grip -cage -filter -hood -card",
+      "skuKey": "canon-r6",
+      "category": "camera",
+      "total": 8,
+      "saved": "C:\\Users\\bbloo\\sussit\\tests\\eval\\fixtures\\ebay-browse\\live-captures\\canon-r6.json",
+      "itemCount": 8
+    },
+    {
+      "query": "Apple MacBook Air M2 8GB 256GB -case -sleeve -charger -adapter -battery -keyboard -screen -parts",
+      "skuKey": "macbook-air-m2",
+      "category": "laptop",
+      "total": 20,
+      "saved": "C:\\Users\\bbloo\\sussit\\tests\\eval\\fixtures\\ebay-browse\\live-captures\\macbook-air-m2.json",
+      "itemCount": 20
+    },
+    {
+      "query": "Lenovo ThinkPad T14 -case -sleeve -charger -adapter -battery -keyboard -screen -parts",
+      "skuKey": "thinkpad-t14",
+      "category": "laptop",
+      "total": 20,
+      "saved": "C:\\Users\\bbloo\\sussit\\tests\\eval\\fixtures\\ebay-browse\\live-captures\\thinkpad-t14.json",
+      "itemCount": 20
+    },
+    {
+      "query": "Apple iPad Air M2 128GB -case -cover -pencil -keyboard -folio -charger -stylus",
+      "skuKey": "ipad-air-m2",
+      "category": "tablet",
+      "total": 9,
+      "saved": "C:\\Users\\bbloo\\sussit\\tests\\eval\\fixtures\\ebay-browse\\live-captures\\ipad-air-m2.json",
+      "itemCount": 9
+    },
+    {
+      "query": "Apple Watch Series 9 45mm GPS -band -strap -case -charger -protector -screen",
+      "skuKey": "apple-watch-series-9",
+      "category": "wearable",
+      "total": 9,
+      "saved": "C:\\Users\\bbloo\\sussit\\tests\\eval\\fixtures\\ebay-browse\\live-captures\\apple-watch-series-9.json",
+      "itemCount": 9
+    },
+    {
+      "query": "Apple AirPods Pro 2 -eartips -tips -cushion -earpad -single -replacement",
+      "skuKey": "airpods-pro-2",
+      "category": "audio",
+      "total": 20,
+      "saved": "C:\\Users\\bbloo\\sussit\\tests\\eval\\fixtures\\ebay-browse\\live-captures\\airpods-pro-2.json",
+      "itemCount": 20
+    },
+    {
+      "query": "Sony WH-1000XM5 -eartips -tips -cushion -earpad -single -replacement",
+      "skuKey": "sony-wh1000xm5",
+      "category": "audio",
+      "total": 20,
+      "saved": "C:\\Users\\bbloo\\sussit\\tests\\eval\\fixtures\\ebay-browse\\live-captures\\sony-wh1000xm5.json",
+      "itemCount": 20
+    },
+    {
+      "query": "RTX 4070 -bracket -support -cable -riser -box -fan -laptop -notebook -blade -prebuilt -PC -Ti -SUPER -Super",
+      "skuKey": "rtx-4070",
+      "category": "gpu",
+      "total": 12,
+      "saved": "C:\\Users\\bbloo\\sussit\\tests\\eval\\fixtures\\ebay-browse\\live-captures\\rtx-4070.json",
+      "itemCount": 12
+    },
+    {
+      "query": "Makita DTD172 18V -battery -charger -bit -bits -case -bag -only",
+      "skuKey": "makita-impact",
+      "category": "power_tool",
+      "total": 6,
+      "saved": "C:\\Users\\bbloo\\sussit\\tests\\eval\\fixtures\\ebay-browse\\live-captures\\makita-impact.json",
+      "itemCount": 6
+    },
+    {
+      "query": "IKEA Kivik -parts -broken -damaged -scrap",
+      "skuKey": "ikea-kivik",
+      "category": "furniture",
+      "total": 9,
+      "saved": "C:\\Users\\bbloo\\sussit\\tests\\eval\\fixtures\\ebay-browse\\live-captures\\ikea-kivik.json",
+      "itemCount": 9
+    },
+    {
+      "query": "IKEA Malm -parts -broken -damaged -scrap",
+      "skuKey": "ikea-malm",
+      "category": "furniture",
+      "total": 17,
+      "saved": "C:\\Users\\bbloo\\sussit\\tests\\eval\\fixtures\\ebay-browse\\live-captures\\ikea-malm.json",
+      "itemCount": 17
+    },
+    {
+      "query": "Nike Air Force 1 -lot -bundle -wholesale -sample",
+      "skuKey": "nike-air-force-1",
+      "category": "clothing",
+      "total": 20,
+      "saved": "C:\\Users\\bbloo\\sussit\\tests\\eval\\fixtures\\ebay-browse\\live-captures\\nike-air-force-1.json",
+      "itemCount": 20
+    },
+    {
+      "query": "Adidas Samba -lot -bundle -wholesale -sample",
+      "skuKey": "adidas-samba",
+      "category": "clothing",
+      "total": 20,
+      "saved": "C:\\Users\\bbloo\\sussit\\tests\\eval\\fixtures\\ebay-browse\\live-captures\\adidas-samba.json",
+      "itemCount": 20
+    },
+    {
+      "query": "LEGO 75192 Millennium Falcon -proxy -fake -reproduction -minifigure -minifig -figure",
+      "skuKey": "lego-75192",
+      "category": "collectible",
+      "total": 10,
+      "saved": "C:\\Users\\bbloo\\sussit\\tests\\eval\\fixtures\\ebay-browse\\live-captures\\lego-75192.json",
+      "itemCount": 10
+    },
+    {
+      "query": "Pandora Charm -box -empty -display",
+      "skuKey": "pandora-charm",
+      "category": "jewellery",
+      "total": 20,
+      "saved": "C:\\Users\\bbloo\\sussit\\tests\\eval\\fixtures\\ebay-browse\\live-captures\\pandora-charm.json",
+      "itemCount": 20
+    }
+  ]
+}

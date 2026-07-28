@@ -1,0 +1,129 @@
+{
+  "savedAt": "2026-07-28T11:25:16.396Z",
+  "query": "Canon EOS R6 body -lens -strap -bag -battery -charger -grip -cage -filter -hood -card",
+  "skuKey": "canon-r6",
+  "product": {
+    "skuKey": "canon-r6",
+    "brand": "Canon",
+    "model": "EOS R6",
+    "variant": "body",
+    "category": "camera",
+    "typicalAsk": 1800
+  },
+  "marketplaceId": "EBAY_AU",
+  "itemSummaries": [
+    {
+      "itemId": "v1|257640784881|0",
+      "title": "Canon R6 w/ EF 16-35 & EF 10-16 & Accessories",
+      "price": {
+        "value": "2090.7",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/257640784881?_skw=Canon+EOS+R6+body&hash=item3bfc9663f1:g:evIAAeSw6QhqY97x",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|188701880177|0",
+      "title": "Canon EOS R6 Body Camera_Shutter Counts 3,000",
+      "price": {
+        "value": "1466.7",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/188701880177?_skw=Canon+EOS+R6+body&hash=item2bef822f71:g:3eQAAeSw75ZqXFi3",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|158118074388|0",
+      "title": "Canon EOS R6 Body Only Mirrorless Full Frame Digital Camera w Box",
+      "price": {
+        "value": "2340.3",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/158118074388?_skw=Canon+EOS+R6+body&hash=item24d0925814:g:gOAAAeSwN~dqSwV-",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|158111915293|0",
+      "title": "Canon EOS R6 Body Mirrorless Digital Camera - Immaculate condition only 10K SC",
+      "price": {
+        "value": "2038.7",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/158111915293?_skw=Canon+EOS+R6+body&hash=item24d0345d1d:g:n2gAAeSwcLlqNxM6",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|287369084231|0",
+      "title": "Canon EOS R6 Body Only Mirrorless Full Frame Digital Camera 30k Shuttercount",
+      "price": {
+        "value": "1699",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/287369084231?_skw=Canon+EOS+R6+body&hash=item42e8883d47:g:SycAAeSwrWBqHotD",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|188699766939|0",
+      "title": "Canon EOS R6: Body Only",
+      "price": {
+        "value": "2418",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/188699766939?_skw=Canon+EOS+R6+body&hash=item2bef61f09b:g:Aj0AAeSwZqJqF75o",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|188687690685|0",
+      "title": "Canon EOS R6: Body Only",
+      "price": {
+        "value": "2444",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/188687690685?_skw=Canon+EOS+R6+body&hash=item2beea9abbd:g:DOAAAeSwx~FpnRNS",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|136997292954|0",
+      "title": "Canon EOS R6 Mark II 24.2MP Mirrorless Digital Camera Body -Near Mint- #103",
+      "price": {
+        "value": "2662.7",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/136997292954?_skw=Canon+EOS+R6+body&hash=item1fe5accb9a:g:GYQAAeSwrE5pfCLP",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    }
+  ],
+  "total": 8
+}

@@ -1,0 +1,255 @@
+{
+  "savedAt": "2026-07-28T11:25:33.479Z",
+  "query": "IKEA Malm -parts -broken -damaged -scrap",
+  "skuKey": "ikea-malm",
+  "product": {
+    "skuKey": "ikea-malm",
+    "brand": "IKEA",
+    "model": "Malm",
+    "variant": null,
+    "category": "furniture",
+    "typicalAsk": 180
+  },
+  "marketplaceId": "EBAY_AU",
+  "itemSummaries": [
+    {
+      "itemId": "v1|117322531944|0",
+      "title": "IKEA MALM Chest of 2 drawers (Set of 2)  Black-Brown Colour ",
+      "price": {
+        "value": "106.7",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/117322531944?_skw=IKEA+Malm+-parts+-broken+-damaged+-scrap&hash=item1b50f7c468:g:~3kAAeSwsHRqZb~2",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|800408011910|0",
+      "title": "IKEA MALM White Dressing Table with Makeup Mirror & 1 Drawer 120.3x41cm",
+      "price": {
+        "value": "318.7",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/800408011910?_skw=IKEA+Malm+-parts+-broken+-damaged+-scrap&hash=itemba5c090486:g:x54AAeSwfVNqZXwa",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|377357384541|0",
+      "title": "IKEA MALM oak veneer double bed frame  with two storage drawers",
+      "price": {
+        "value": "140",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/377357384541?_skw=IKEA+Malm+-parts+-broken+-damaged+-scrap&hash=item57dc40bb5d:g:4nMAAeSwmaVqXpRk",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|178303426313|0",
+      "title": "Ikea Malm - Queen Bed, with storage",
+      "price": {
+        "value": "477.7",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/178303426313?_skw=IKEA+Malm+-parts+-broken+-damaged+-scrap&hash=item2983b65f09:g:FxgAAeSwoi5qUxNi",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|117285876198|0",
+      "title": "IKEA MALM Series Desk Black-Brown Colour  140 cm x 65 cm x 73 cm",
+      "price": {
+        "value": "138.49",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/117285876198?_skw=IKEA+Malm+-parts+-broken+-damaged+-scrap&hash=item1b4ec871e6:g:UwcAAeSwcdpqSms9",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|168515488659|0",
+      "title": "IKEA MALM Single Bed Frame – White with LURÖY Slats",
+      "price": {
+        "value": "133.2",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/168515488659?_skw=IKEA+Malm+-parts+-broken+-damaged+-scrap&hash=item273c4e4b93:g:IIsAAeSwFQVqSk3-",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|178283105404|0",
+      "title": "2 x Glass Top - Fits IKEA Malm Drawer Unit",
+      "price": {
+        "value": "32.5",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/178283105404?_skw=IKEA+Malm+-parts+-broken+-damaged+-scrap&hash=item2982804c7c:g:74gAAeSwHt1qSdqN",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|278127345942|0",
+      "title": "IKEA MALM Chest of 2 drawers, white, 40x55 cm (3 pieces)",
+      "price": {
+        "value": "59",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/278127345942?_skw=IKEA+Malm+-parts+-broken+-damaged+-scrap&hash=item40c1ae8116:g:xdgAAeSw2hxqPl8p",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|336611355927|0",
+      "title": "Ikea Malm Floating Nightstand Bedside Table With Drawer (Read the description)",
+      "price": {
+        "value": "69.6",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/336611355927?_skw=IKEA+Malm+-parts+-broken+-damaged+-scrap&hash=item4e5f99ad17:g:SgMAAeSwkRRqG8Mv",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|236825843530|0",
+      "title": "IKEA WHITE 6 MALM DRAWERS - HAS MINOR MARKS ON SURFACE BUT WORKS PERFECTLY",
+      "price": {
+        "value": "106.7",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/236825843530?_skw=IKEA+Malm+-parts+-broken+-damaged+-scrap&hash=item3723eb974a:g:3LAAAeSwX8RqDNAF",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|389969202110|0",
+      "title": "Ikea Malm Queen Bed & Mattress",
+      "price": {
+        "value": "529.64",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/389969202110?_skw=IKEA+Malm+-parts+-broken+-damaged+-scrap&hash=item5acbf9cbbe:g:qLAAAeSwl6Zp9yqP",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|168328841597|0",
+      "title": "IKEA MALM black double bedframe with mattress and two storage drawers",
+      "price": {
+        "value": "292.2",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/168328841597?_skw=IKEA+Malm+-parts+-broken+-damaged+-scrap&hash=item27312e497d:g:j-EAAeSw6oxp6uvX",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|197943096442|0",
+      "title": "IKEA Malm single bed frame with one slide under storage draw. Optional mattress",
+      "price": {
+        "value": "159.7",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/197943096442?_skw=IKEA+Malm+-parts+-broken+-damaged+-scrap&hash=item2e1653f47a:g:qRcAAeSw27JpO8S0",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|365777016883|0",
+      "title": "Ikea Malm bed frame with Mattress and 2 storage drawers",
+      "price": {
+        "value": "308.1",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/365777016883?_skw=IKEA+Malm+-parts+-broken+-damaged+-scrap&hash=item552a025833:g:HH0AAeSwupZokIIh",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|205568795492|0",
+      "title": "IKEA MALM Desk (Pick Up Only)",
+      "price": {
+        "value": "214.53",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/205568795492?_skw=IKEA+Malm+-parts+-broken+-damaged+-scrap&hash=item2fdcdae364:g:-vwAAOSwW2xoUhwf",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|175925153376|0",
+      "title": "ikea malm drawers",
+      "price": {
+        "value": "53.7",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/175925153376?_skw=IKEA+Malm+-parts+-broken+-damaged+-scrap&hash=item28f5f4ce60:g:mDMAAOSwOgJlE6nW",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|225339794901|0",
+      "title": "Freedom Nimbus double Mattress and Ikea Malm bed set",
+      "price": {
+        "value": "1154.7",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/225339794901?_skw=IKEA+Malm+-parts+-broken+-damaged+-scrap&hash=item34774c65d5:g:R-QAAOSwExJju14O",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    }
+  ],
+  "total": 17
+}

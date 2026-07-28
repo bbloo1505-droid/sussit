@@ -37,7 +37,7 @@ export async function extractListing(input: {
     body: JSON.stringify({
       text: input.text,
       imageDataUrl: input.imageDataUrl,
-      allowDemoFallback: true,
+      allowDemoFallback: false,
     }),
   })
 
@@ -68,14 +68,17 @@ export function toIdentifiedProduct(
   listing: ExtractApiListing,
 ): IdentifiedProduct | null {
   if (listing.refused) return null
-  if (!listing.brand || !listing.model || listing.askingPrice == null) {
-    return null
-  }
+  if (listing.askingPrice == null) return null
+
+  // Universal intake: allow weak brand/model with low confidence rather than hard-stop.
+  const brand = listing.brand?.trim() || 'Unbranded'
+  const model = listing.model?.trim()
+  if (!model) return null
 
   return {
-    category: listing.category,
-    brand: listing.brand,
-    model: listing.model,
+    category: listing.category === 'unknown' ? 'other' : listing.category,
+    brand,
+    model,
     variant: listing.variant,
     askingPrice: listing.askingPrice,
     currency: listing.currency ?? 'AUD',

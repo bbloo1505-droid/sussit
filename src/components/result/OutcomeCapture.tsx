@@ -20,6 +20,7 @@ type OutcomeCaptureProps = {
 
 export function OutcomeCapture({ analysisId }: OutcomeCaptureProps) {
   const existing = loadOutcome(analysisId)
+  const [open, setOpen] = useState(Boolean(existing))
   const [decision, setDecision] = useState<OutcomeDecision | null>(
     existing?.decision ?? null,
   )
@@ -80,10 +81,22 @@ export function OutcomeCapture({ analysisId }: OutcomeCaptureProps) {
     }
   }
 
+  if (!open) {
+    return (
+      <button
+        type="button"
+        onClick={() => setOpen(true)}
+        className="mt-8 w-full rounded-2xl border border-white/10 bg-surface/80 px-4 py-3.5 text-left text-[13px] text-muted transition hover:border-white/20 hover:text-cream"
+      >
+        Help improve SussIt — optional 30-second feedback
+      </button>
+    )
+  }
+
   if (!decision) {
     return (
       <section className="mt-8 space-y-4 rounded-[22px] border border-white/10 bg-surface p-5">
-        <Header />
+        <FormHeader onClose={() => setOpen(false)} />
         <div className="space-y-2">
           {DECISIONS.map((item) => (
             <button
@@ -117,7 +130,7 @@ export function OutcomeCapture({ analysisId }: OutcomeCaptureProps) {
 
   return (
     <section className="mt-8 space-y-4 rounded-[22px] border border-white/10 bg-surface p-5">
-      <Header />
+      <FormHeader onClose={() => setOpen(false)} />
 
       <YesNo
         label="Did you contact the seller?"
@@ -285,23 +298,30 @@ export function OutcomeCapture({ analysisId }: OutcomeCaptureProps) {
       />
 
       {saved ? (
-        <p className="text-[12px] text-muted">
-          Saved — this trains the ground-truth loop (not paywall metrics).
-        </p>
+        <p className="text-[12px] text-muted">Thanks — saved.</p>
       ) : null}
     </section>
   )
 }
 
-function Header() {
+function FormHeader({ onClose }: { onClose: () => void }) {
   return (
-    <div>
-      <p className="font-display text-[10px] font-bold tracking-[0.14em] text-lime">
-        GROUND TRUTH
-      </p>
-      <h2 className="mt-2 font-display text-[22px] font-black tracking-[-0.03em] text-cream">
-        Did this change what you&apos;ll do?
-      </h2>
+    <div className="flex items-start justify-between gap-3">
+      <div>
+        <p className="font-display text-[10px] font-bold tracking-[0.14em] text-lime">
+          OPTIONAL
+        </p>
+        <h2 className="mt-2 font-display text-[22px] font-black tracking-[-0.03em] text-cream">
+          Did this change what you&apos;ll do?
+        </h2>
+      </div>
+      <button
+        type="button"
+        onClick={onClose}
+        className="shrink-0 text-[12px] text-muted hover:text-cream"
+      >
+        Hide
+      </button>
     </div>
   )
 }

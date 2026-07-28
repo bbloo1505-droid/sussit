@@ -23,6 +23,7 @@ export class ApiPricingProvider implements PricingProvider {
           brand: product.brand,
           model: product.model,
           variant: product.variant,
+          category: product.category,
           limit: 50,
         }),
       })

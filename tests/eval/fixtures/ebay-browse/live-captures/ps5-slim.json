@@ -1,0 +1,101 @@
+{
+  "savedAt": "2026-07-28T11:24:52.238Z",
+  "query": "PS5 Slim Disc console -stand -cooling -skin -silicone -thumb -charging -preorder -cover -custom -battlebeaver -Pro -Digital",
+  "skuKey": "ps5-slim",
+  "product": {
+    "skuKey": "ps5-slim",
+    "brand": "Sony",
+    "model": "PlayStation 5 Slim",
+    "variant": "Disc",
+    "category": "console",
+    "typicalAsk": 580
+  },
+  "marketplaceId": "EBAY_AU",
+  "itemSummaries": [
+    {
+      "itemId": "v1|267739382992|0",
+      "title": "PS5 Slim Disc Drive Used",
+      "price": {
+        "value": "127.9",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/267739382992?_skw=PS5+Slim+Disc&hash=item3e5682c4d0:g:92sAAeSwDB5qZeas",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|267739150455|0",
+      "title": "Sony PlayStation 5 PS5 Console - 1TB Slim Disc Edition - LOW FIRMWARE (FW 12.70)",
+      "price": {
+        "value": "790.7",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/267739150455?_skw=PS5+Slim+Disc&hash=item3e567f3877:g:5EsAAeSwPGtqZZYg",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|327276081027|0",
+      "title": "Playstation 5 Slim Digital Edition PREOWNED No disc Tray, Working",
+      "price": {
+        "value": "700",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/327276081027?_skw=PS5+Slim+Disc&hash=item4c332caf83:g:svcAAeSwxUxqYyX4",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|318622593384|0",
+      "title": "Sony PlayStation 5 PS5 Slim Disc Console CFI-2002 W Controller Tested Works",
+      "price": {
+        "value": "730",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/318622593384?_skw=PS5+Slim+Disc&hash=item4a2f62f168:g:AkQAAeSw6rFqYZe0",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|257636563422|0",
+      "title": "PlayStation 5 Slim Disc Edition console CFI-2102A - PS5",
+      "price": {
+        "value": "789",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/257636563422?_skw=PS5+Slim+Disc&hash=item3bfc55f9de:g:~P4AAeSw8EFqYOA7",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|147193648167|0",
+      "title": "PlayStation 5 Disc Drive For PS5 Digital Consoles Slim And Pro Free Post",
+      "price": {
+        "value": "179.95",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/147193648167?_skw=PS5+Slim+Disc&hash=item22456cd427:g:xi0AAeSwI0FprU72",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    }
+  ],
+  "total": 6
+}

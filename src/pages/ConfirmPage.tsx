@@ -8,6 +8,7 @@ import { loadDraft, loadDraftMeta, saveDraft } from '@/lib/analysis/draftStore'
 import { runAndSaveAnalysis } from '@/lib/analysis/ensureDemoAnalysis'
 import { questDemoProduct } from '@/lib/analysis/questDemoProduct'
 import { conditionLabel, productLabel } from '@/lib/api/extractListing'
+import { categoryLabel } from '@/lib/intelligence/supportTier'
 import type { IdentifiedProduct } from '@/types/domain'
 
 export function ConfirmPage() {
@@ -25,7 +26,6 @@ export function ConfirmPage() {
   const name = useMemo(() => productLabel(product), [product])
 
   const fields = [
-    ['ASKING PRICE', formatAud(product.askingPrice)],
     ['CONDITION', conditionLabel(product.condition)],
     [
       'INCLUDED',
@@ -34,6 +34,7 @@ export function ConfirmPage() {
         : '—',
     ],
     ['LOCATION', product.location ?? '—'],
+    ['CATEGORY', categoryLabel(product.category)],
   ] as const
 
   function applyFix() {
@@ -71,9 +72,9 @@ export function ConfirmPage() {
       </h1>
       <p className="mt-2 text-[15px] text-muted">Is this the right product?</p>
 
-      {meta?.usedFallback ? (
-        <p className="mt-3 rounded-xl border border-fair/40 bg-fair/10 px-3 py-2 text-[12px] text-fair">
-          Demo fallback — add OPENAI_API_KEY to .env for live extraction.
+      {meta?.extractMode === 'heuristic' ? (
+        <p className="mt-3 text-[12px] leading-5 text-muted">
+          Parsed from your paste — double-check brand, model, and price.
         </p>
       ) : null}
 
@@ -110,39 +111,37 @@ export function ConfirmPage() {
       ) : (
         <>
           <section className="mt-7 overflow-hidden rounded-[22px] border border-white/10 bg-surface">
-            <div className="grid h-36 place-items-center border-b border-white/10 bg-[#161616] text-[66px]">
-              {product.category === 'vr_headset'
-                ? '🥽'
-                : product.category === 'phone'
-                  ? '📱'
-                  : '🎮'}
-            </div>
-            <div className="p-5">
-              <div className="flex justify-between gap-4">
-                <div>
-                  <h2 className="font-display text-[21px] font-black tracking-[-0.025em] text-cream">
-                    {name}
-                  </h2>
-                  <span className="mt-2 inline-block rounded-full bg-panel px-2 py-1 font-display text-[10px] font-bold tracking-[0.12em] text-muted">
-                    {conditionLabel(product.condition).toUpperCase()}
-                  </span>
-                </div>
-                <strong className="font-display text-[28px] font-black tracking-[-0.04em] text-cream">
+            <div className="relative border-b border-white/10 px-5 py-7">
+              <div
+                aria-hidden
+                className="pointer-events-none absolute inset-0 bg-[radial-gradient(80%_120%_at_100%_0%,rgba(198,255,0,0.12),transparent_60%)]"
+              />
+              <p className="relative font-display text-[10px] font-bold tracking-[0.14em] text-lime">
+                {categoryLabel(product.category).toUpperCase()}
+              </p>
+              <div className="relative mt-3 flex items-start justify-between gap-4">
+                <h2 className="font-display text-[24px] leading-[1.05] font-black tracking-[-0.03em] text-cream">
+                  {name}
+                </h2>
+                <strong className="shrink-0 font-display text-[28px] font-black tracking-[-0.04em] text-cream">
                   {formatAud(product.askingPrice)}
                 </strong>
               </div>
-              <div className="mt-5 grid grid-cols-2 gap-2">
-                {fields.map(([label, value]) => (
-                  <div key={label} className="rounded-xl bg-panel px-3 py-3">
-                    <p className="font-display text-[9px] font-bold tracking-[0.11em] text-muted">
-                      {label}
-                    </p>
-                    <p className="mt-1 text-[14px] font-semibold text-cream">
-                      {value}
-                    </p>
-                  </div>
-                ))}
-              </div>
+              <span className="relative mt-3 inline-block rounded-full bg-panel px-2.5 py-1 font-display text-[10px] font-bold tracking-[0.12em] text-muted">
+                {conditionLabel(product.condition).toUpperCase()}
+              </span>
+            </div>
+            <div className="grid grid-cols-2 gap-px bg-white/5 p-px">
+              {fields.map(([label, value]) => (
+                <div key={label} className="bg-surface px-4 py-3.5">
+                  <p className="font-display text-[9px] font-bold tracking-[0.11em] text-muted">
+                    {label}
+                  </p>
+                  <p className="mt-1 text-[14px] font-semibold text-cream">
+                    {value}
+                  </p>
+                </div>
+              ))}
             </div>
           </section>
 

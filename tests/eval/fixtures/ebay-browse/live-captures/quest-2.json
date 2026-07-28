@@ -1,0 +1,73 @@
+{
+  "savedAt": "2026-07-28T11:24:49.622Z",
+  "query": "Quest 2 128GB headset -dock -bobovr -stand -skin -grip -facial -faceplate -3S -3s -Pro",
+  "skuKey": "quest-2",
+  "product": {
+    "skuKey": "quest-2",
+    "brand": "Meta",
+    "model": "Quest 2",
+    "variant": "128GB",
+    "category": "vr_headset",
+    "typicalAsk": 280
+  },
+  "marketplaceId": "EBAY_AU",
+  "itemSummaries": [
+    {
+      "itemId": "v1|317210068095|0",
+      "title": "Meta Quest 2 Oculus Advanced All-In-One VR Virtual Reality Headset 128 GB USED",
+      "price": {
+        "value": "690",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/317210068095?_skw=Quest+2+128GB+headset+-dock+-bobovr+-stand+-skin+-grip+-facial+-faceplate+-3S+-3s+-Pro&hash=item49db31847f:g:TLgAAeSw-JFodKEt",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|156390760018|0",
+      "title": "Meta Oculus Quest 2 All-In-One VR Headset White 128GB Bundle (Preowned)",
+      "price": {
+        "value": "512.1",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/156390760018?_skw=Quest+2+128GB+headset+-dock+-bobovr+-stand+-skin+-grip+-facial+-faceplate+-3S+-3s+-Pro&hash=item24699d9e52:g:B10AAOSwCXxm2FDY",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|156390759527|0",
+      "title": "Meta Oculus Quest 2 VR Headset White 128GB No Controllers (Preowned)",
+      "price": {
+        "value": "269.1",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/156390759527?_skw=Quest+2+128GB+headset+-dock+-bobovr+-stand+-skin+-grip+-facial+-faceplate+-3S+-3s+-Pro&hash=item24699d9c67:g:orAAAOSwNIFm2FC3",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|186105710000|0",
+      "title": "Meta Oculus Quest 2 128GB VR Headset - Bonus Elite Headstrap",
+      "price": {
+        "value": "665.89",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/186105710000?_skw=Quest+2+128GB+headset+-dock+-bobovr+-stand+-skin+-grip+-facial+-faceplate+-3S+-3s+-Pro&hash=item2b54c3c5b0:g:vdEAAOSwZLRlG~Z7",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    }
+  ],
+  "total": 4
+}

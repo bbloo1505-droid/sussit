@@ -1,0 +1,38 @@
+{
+  "name": "adversarial-seed-manifest",
+  "seed": 20260727,
+  "families": [
+    "accessories",
+    "replacement_parts",
+    "broken_items",
+    "for_parts",
+    "empty_boxes",
+    "wrong_generations",
+    "neighbouring_models",
+    "bundles",
+    "missing_controllers",
+    "different_storage",
+    "spelling_variations",
+    "abbreviations",
+    "noisy_titles"
+  ],
+  "targets": [
+    "Meta Quest 2",
+    "Meta Quest 3",
+    "Meta Quest 3S",
+    "PS5",
+    "PS5 Slim",
+    "PS5 Pro",
+    "PS5 Digital",
+    "Nintendo Switch",
+    "Switch OLED",
+    "Switch Lite",
+    "iPhone 13",
+    "iPhone 14",
+    "iPhone 15",
+    "iPhone 15 Pro",
+    "iPhone 15 Pro Max",
+    "iPhone 16"
+  ],
+  "note": "Cases are generated deterministically by tests/eval/generate/cases.ts — this manifest documents coverage."
+}

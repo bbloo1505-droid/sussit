@@ -34,13 +34,15 @@ export function ComparablesPage() {
           : 'Showing offline fixture comps (live eBay unavailable or returned no usable matches). Asking prices only — not solds.'}
       </p>
 
-      <div className="mt-6 flex gap-2 rounded-full bg-panel p-1">
+      <div className="mt-6 flex gap-6 border-b border-white/10">
         <button
           type="button"
           onClick={() => setTab('included')}
           className={cn(
-            'flex-1 rounded-full px-3 py-2 text-sm font-semibold',
-            tab === 'included' ? 'bg-lime text-ink' : 'text-muted',
+            'border-b-2 pb-3 text-sm font-semibold transition',
+            tab === 'included'
+              ? 'border-lime text-cream'
+              : 'border-transparent text-muted',
           )}
         >
           Included ({included.length})
@@ -49,8 +51,10 @@ export function ComparablesPage() {
           type="button"
           onClick={() => setTab('excluded')}
           className={cn(
-            'flex-1 rounded-full px-3 py-2 text-sm font-semibold',
-            tab === 'excluded' ? 'bg-lime text-ink' : 'text-muted',
+            'border-b-2 pb-3 text-sm font-semibold transition',
+            tab === 'excluded'
+              ? 'border-lime text-cream'
+              : 'border-transparent text-muted',
           )}
         >
           Excluded ({excluded.length})

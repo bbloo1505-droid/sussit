@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>SussIt Eval Lab</title>
+  <style>
+    body { font-family: ui-sans-serif, system-ui, sans-serif; background:#111; color:#f5f5f5; margin:0; padding:24px; }
+    h1 { color:#c6ff00; }
+    .grid { display:grid; grid-template-columns: repeat(auto-fit,minmax(180px,1fr)); gap:12px; }
+    .card { background:#1a1a1a; border:1px solid #333; border-radius:12px; padding:14px; }
+    .muted { color:#888; }
+    .fail { color:#f87171; }
+    .pass { color:#86efac; }
+    table { width:100%; border-collapse:collapse; margin-top:16px; font-size:13px; }
+    th, td { border-bottom:1px solid #333; padding:8px; text-align:left; vertical-align:top; }
+    th { color:#c6ff00; }
+  </style>
+</head>
+<body>
+  <h1>SussIt Eval Lab</h1>
+  <p class="muted">2026-07-28T11:24:19.707Z · offline · seed 20260727 · 1236ms</p>
+  <div class="grid">
+    <div class="card"><div class="muted">Overall</div><div style="font-size:28px">100</div></div>
+    <div class="card"><div class="muted">Cases</div><div style="font-size:28px">10875</div></div>
+    <div class="card"><div class="muted">Failures</div><div style="font-size:28px" class="fail">0</div></div>
+    <div class="card"><div class="muted">Δ vs previous</div><div style="font-size:28px">0.00</div></div>
+  </div>
+
+  <h2>Highlights</h2>
+  <div class="grid">
+    <div class="card"><div class="muted">identificationAccuracy</div><div>100</div></div><div class="card"><div class="muted">comparablePrecision</div><div>100</div></div><div class="card"><div class="muted">comparableRecall</div><div>100</div></div><div class="card"><div class="muted">badCompRejectionRate</div><div>100</div></div><div class="card"><div class="muted">wrongModelContamination</div><div>0</div></div><div class="card"><div class="muted">accessoryContamination</div><div>0</div></div><div class="card"><div class="muted">valuationFailures</div><div>0</div></div><div class="card"><div class="muted">verdictConsistencyFailures</div><div>0</div></div><div class="card"><div class="muted">lowConfidenceFailures</div><div>0</div></div>
+  </div>
+
+  <h2>Suites</h2>
+  <table>
+    <tr><th>Suite</th><th>Total</th><th>Passed</th><th>Failed</th><th>Score</th></tr>
+    <tr><td>identification</td><td>203</td><td class="pass">203</td><td class="fail">0</td><td>100</td></tr><tr><td>matching</td><td>7850</td><td class="pass">7850</td><td class="fail">0</td><td>100</td></tr><tr><td>adversarial</td><td>2760</td><td class="pass">2760</td><td class="fail">0</td><td>100</td></tr><tr><td>valuation</td><td>34</td><td class="pass">34</td><td class="fail">0</td><td>100</td></tr><tr><td>verdict</td><td>17</td><td class="pass">17</td><td class="fail">0</td><td>100</td></tr><tr><td>low_info</td><td>10</td><td class="pass">10</td><td class="fail">0</td><td>100</td></tr><tr><td>ebay_replay</td><td>1</td><td class="pass">1</td><td class="fail">0</td><td>100</td></tr>
+  </table>
+
+  <h2>Worst failures</h2>
+  <table>
+    <tr><th>ID</th><th>Suite</th><th>Model</th><th>Why</th></tr>
+    
+  </table>
+
+  <p class="muted">No regressions vs previous run.</p>
+</body>
+</html>

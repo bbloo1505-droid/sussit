@@ -93,6 +93,6 @@ export function categoryLabel(category: ProductCategory): string {
 export const SUSSIT_POSITIONING = {
   consumerHeadline: 'Know what to pay before you buy.',
   consumerSupport:
-    'Paste any listing or upload a screenshot. Strong Buy/Offer calls where our data is good — honest limits everywhere else.',
+    'Paste a listing. Strong Buy/Offer where our comps are proven — honest limits everywhere else.',
   flipHeadline: 'Know what will flip — and what to pay.',
 } as const

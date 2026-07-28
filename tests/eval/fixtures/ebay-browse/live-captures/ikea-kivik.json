@@ -1,0 +1,143 @@
+{
+  "savedAt": "2026-07-28T11:25:31.918Z",
+  "query": "IKEA Kivik -parts -broken -damaged -scrap",
+  "skuKey": "ikea-kivik",
+  "product": {
+    "skuKey": "ikea-kivik",
+    "brand": "IKEA",
+    "model": "Kivik",
+    "variant": null,
+    "category": "furniture",
+    "typicalAsk": 450
+  },
+  "marketplaceId": "EBAY_AU",
+  "itemSummaries": [
+    {
+      "itemId": "v1|267717238118|0",
+      "title": "Ikea Kivik Cushion Covers For 3 Seat Lounge Grey",
+      "price": {
+        "value": "43.61",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/267717238118?_skw=IKEA+Kivik+-parts+-broken+-damaged+-scrap&hash=item3e5530dd66:g:jAEAAeSwQD1qSJR~",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|327240952143|0",
+      "title": "Ikea 4 seater Sofa kivik with chaise longue and ottoman with storage",
+      "price": {
+        "value": "250",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/327240952143?_skw=IKEA+Kivik+-parts+-broken+-damaged+-scrap&hash=item4c3114a94f:g:p-cAAeSwQ2tqRJzj",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|318510618565|0",
+      "title": "IKEA KIVIK Storage Ottoman (Dark Blue-Grey Fabric)",
+      "price": {
+        "value": "240",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/318510618565?_skw=IKEA+Kivik+-parts+-broken+-damaged+-scrap&hash=item4a28b657c5:g:o6UAAeSwbyJqO8AU",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|206219605398|0",
+      "title": "IKEA KIVIK 3 Seater Sofa with chaise lounge grey",
+      "price": {
+        "value": "572.08",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/206219605398?_skw=IKEA+Kivik+-parts+-broken+-damaged+-scrap&hash=item3003a57596:g:ZnQAAeSwe5tp5Lw2",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|357842078380|0",
+      "title": " Chaise lounge IKEA KIVIK Sofa, sand colour",
+      "price": {
+        "value": "106.7",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/357842078380?_skw=IKEA+Kivik+-parts+-broken+-damaged+-scrap&hash=item53510ccaac:g:x4EAAeSwJQhpBUBy",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|405989877697|0",
+      "title": "IKEA KIVIK 3-Seater Sofa - Tibbleby Beige/Grey - Excellent Condition!",
+      "price": {
+        "value": "424.7",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/405989877697?_skw=IKEA+Kivik+-parts+-broken+-damaged+-scrap&hash=item5e86e1e7c1:g:rbEAAOSw2t1oWA5~",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|306044514824|0",
+      "title": "IKEA KIVIK 3 Seater Sofa",
+      "price": {
+        "value": "371.7",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/306044514824?_skw=IKEA+Kivik+-parts+-broken+-damaged+-scrap&hash=item4741acb208:g:MJAAAOSw1h5niKNF",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|135347840644|0",
+      "title": "IKEA KIVIK Sofa grey",
+      "price": {
+        "value": "106.7",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/135347840644?_skw=IKEA+Kivik+-parts+-broken+-damaged+-scrap&hash=item1f835c2684:g:fKIAAOSwT19nKtXm",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|256545167785|0",
+      "title": "IKEA KIVIK - Footstool with storage",
+      "price": {
+        "value": "180.9",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/256545167785?_skw=IKEA+Kivik+-parts+-broken+-damaged+-scrap&hash=item3bbb4899a9:g:d3sAAOSwN0Fmbr5i",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    }
+  ],
+  "total": 9
+}

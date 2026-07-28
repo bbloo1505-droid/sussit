@@ -1,0 +1,101 @@
+{
+  "savedAt": "2026-07-28T11:25:30.390Z",
+  "query": "Makita DTD172 18V -battery -charger -bit -bits -case -bag -only",
+  "skuKey": "makita-impact",
+  "product": {
+    "skuKey": "makita-impact",
+    "brand": "Makita",
+    "model": "DTD172",
+    "variant": "18V",
+    "category": "power_tool",
+    "typicalAsk": 220
+  },
+  "marketplaceId": "EBAY_AU",
+  "itemSummaries": [
+    {
+      "itemId": "v1|168557466211|0",
+      "title": "Makita DTD172Z 18V Brushless Impact Driver, Body Only, very good Condition",
+      "price": {
+        "value": "165",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/168557466211?_skw=Makita+DTD172+18V&hash=item273eced263:g:LQEAAeSwpx9qYd-H",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|327185373788|0",
+      "title": "MAKITA DTD172 BRUSHLESS 4 STAGE IMPACT DRIVER SKIN",
+      "price": {
+        "value": "99",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/327185373788?_skw=Makita+DTD172+18V&hash=item4c2dc49a5c:g:pm0AAeSwpZlqGjBq",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|336408216273|0",
+      "title": "Makita DTD172 18V Cordless Brushless Impact Driver with Drill Bolt",
+      "price": {
+        "value": "179",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/336408216273?_skw=Makita+DTD172+18V&hash=item4e537e02d1:g:d6AAAeSwms5qZ8tc",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|397321663149|0",
+      "title": "Makita DTD172 Skin Only",
+      "price": {
+        "value": "79",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/397321663149?_skw=Makita+DTD172+18V&hash=item5c823772ad:g:80IAAeSwTklpJp3i",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|397278693468|0",
+      "title": "Makita DTD172 Combo Impact Driver w/Case, Battery and Charger",
+      "price": {
+        "value": "199",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/397278693468?_skw=Makita+DTD172+18V&hash=item5c7fa7c85c:g:Fu4AAeSw9WRpGrFf",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|166540315723|0",
+      "title": "Makita DTD172 18V Li-ion Cordless Brushless 4-Stage Impact Driver",
+      "price": {
+        "value": "279",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/166540315723?_skw=Makita+DTD172+18V&hash=item26c6938c4b:g:-UIAAOSwLPdlm0kJ",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    }
+  ],
+  "total": 6
+}

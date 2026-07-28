@@ -8,10 +8,7 @@ import {
   toIdentifiedProduct,
 } from '@/lib/api/extractListing'
 import { saveDraft } from '@/lib/analysis/draftStore'
-import {
-  intelligenceTierForCategory,
-  SUSSIT_POSITIONING,
-} from '@/lib/intelligence/supportTier'
+import { intelligenceTierForCategory } from '@/lib/intelligence/supportTier'
 
 function readFileAsDataUrl(file: File): Promise<string> {
   return new Promise((resolve, reject) => {
@@ -96,17 +93,14 @@ export function HomePage() {
     <div className="flex min-h-full flex-col px-6 pt-5 pb-9">
       <Header />
       <main className="flex flex-1 flex-col">
-        <div className="mb-10">
+        <div className="mb-9">
           <h1 className="font-display text-[48px] leading-[0.96] font-black tracking-[-0.045em] text-cream">
             Should I
             <br />
             buy this?
           </h1>
-          <p className="mt-4 text-[16px] leading-6 text-muted">
-            {SUSSIT_POSITIONING.consumerHeadline}
-          </p>
-          <p className="mt-2 text-[14px] leading-5 text-muted">
-            {SUSSIT_POSITIONING.consumerSupport}
+          <p className="mt-4 max-w-[20rem] text-[16px] leading-6 text-muted">
+            Know what to pay before you buy.
           </p>
         </div>
 
@@ -114,7 +108,7 @@ export function HomePage() {
           type="button"
           disabled={busy}
           onClick={() => inputRef.current?.click()}
-          className="mb-3 rounded-[22px] border border-dashed border-lime/30 bg-lime/[0.025] px-5 py-10 text-center transition hover:bg-lime/[0.06] disabled:opacity-50"
+          className="mb-3 rounded-[22px] border border-dashed border-lime/30 bg-lime/[0.03] px-5 py-10 text-center transition hover:bg-lime/[0.07] disabled:opacity-50"
         >
           <span className="mx-auto mb-4 grid size-14 place-items-center rounded-2xl bg-lime/10 text-lime">
             {busy ? (
@@ -127,7 +121,7 @@ export function HomePage() {
             Upload screenshot
           </span>
           <span className="mt-1 block text-[13px] text-muted">
-            Tap to add it from your camera roll
+            From Marketplace, eBay, or Gumtree
           </span>
         </button>
         <input
@@ -149,7 +143,7 @@ export function HomePage() {
           disabled={busy}
           onChange={(e) => setText(e.target.value)}
           className="mb-4 min-h-28 w-full resize-none rounded-2xl border border-white/10 bg-surface p-4 text-[15px] leading-6 text-cream outline-none placeholder:text-muted focus:border-lime/50 disabled:opacity-50"
-          placeholder="Paste any Marketplace listing text…"
+          placeholder="Paste listing text with a $ price…"
         />
 
         {error ? (
@@ -171,9 +165,6 @@ export function HomePage() {
           )}
         </PrimaryButton>
       </main>
-      <p className="mt-5 text-center text-[12px] leading-5 text-muted">
-        Paste anything — strong Buy/Offer calls where our comps are proven.
-      </p>
     </div>
   )
 }

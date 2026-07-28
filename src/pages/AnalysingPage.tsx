@@ -1,20 +1,15 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { useNavigate, useSearchParams } from 'react-router-dom'
 import { Check } from 'lucide-react'
 import { BrandMark } from '@/components/layout/BrandMark'
 import { ListingLine } from '@/components/shared/ListingLine'
 import { QUEST_DEMO_ID } from '@/lib/analysis/questDemoProduct'
+import { analysingSteps } from '@/lib/analysis/viewModel'
 import { loadAnalysis } from '@/lib/analysis/sessionStore'
 import { loadDraft } from '@/lib/analysis/draftStore'
 import { productLabel } from '@/lib/api/extractListing'
+import { intelligenceTierForCategory } from '@/lib/intelligence/supportTier'
 import { cn } from '@/lib/utils'
-
-const STEPS = [
-  'Finding current eBay Australia listings',
-  'Checking listing quality',
-  'Calculating a fair offer',
-  'Assessing this listing',
-] as const
 
 export function AnalysingPage() {
   const navigate = useNavigate()
@@ -24,9 +19,14 @@ export function AnalysingPage() {
 
   const analysis = loadAnalysis(id)
   const draft = loadDraft()
-  const productName = analysis?.productLabel
-    ?? (draft ? productLabel(draft) : 'Your listing')
+  const productName =
+    analysis?.productLabel ?? (draft ? productLabel(draft) : 'Your listing')
   const askingPrice = analysis?.product.askingPrice ?? draft?.askingPrice ?? 0
+  const category = analysis?.product.category ?? draft?.category ?? 'other'
+  const steps = useMemo(
+    () => analysingSteps(intelligenceTierForCategory(category)),
+    [category],
+  )
 
   useEffect(() => {
     setProgress(0)
@@ -34,13 +34,13 @@ export function AnalysingPage() {
     const timer = window.setInterval(() => {
       current += 1
       setProgress(current)
-      if (current === STEPS.length) {
+      if (current === steps.length) {
         window.clearInterval(timer)
         window.setTimeout(() => navigate(`/result/${id}`, { replace: true }), 550)
       }
     }, 850)
     return () => window.clearInterval(timer)
-  }, [id, navigate])
+  }, [id, navigate, steps.length])
 
   return (
     <div className="flex min-h-full flex-col px-6 pt-5 pb-9">
@@ -55,7 +55,7 @@ export function AnalysingPage() {
           <ListingLine productName={productName} askingPrice={askingPrice} />
         </div>
         <div className="mt-14 space-y-5">
-          {STEPS.map((step, index) => {
+          {steps.map((step, index) => {
             const complete = index < progress
             const active = index === progress
             return (

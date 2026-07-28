@@ -2,26 +2,29 @@
 
 Know before you buy.
 
-Australian mobile-first second-hand buying decision app. Upload a Marketplace listing screenshot — SussIt identifies the product, compares current asking prices, and helps you decide what to offer.
+Australian mobile-first second-hand buying app.
 
-## Stack
+- **Free:** homepage screenshot / paste → “Should I buy this?”
+- **SussIt Flip (subscription):** `/flip` hunt catalogue, Max Buy, sell speed — *Find it cheap. Flip it fast.*
 
-React · TypeScript · Vite · Tailwind · shadcn-style UI
+Works **without API keys** (fixtures + paste heuristic). See [docs/without-keys.md](docs/without-keys.md).
+
+Demo unlock Flip locally via **Activate Flip (demo)** on `/flip` (Stripe later).
 
 ## Develop
 
 ```bash
 npm install
-cp .env.example .env   # add OPENAI_API_KEY for live extraction
+cp .env.example .env   # optional until keys arrive
 npm run dev
 npm test
+npm run test:benchmark
 ```
 
-Without `OPENAI_API_KEY`, extract falls back to Meta Quest 3 demo data so the UI still works.
+| Variable | Needed for |
+|----------|------------|
+| `OPENAI_API_KEY` | Live screenshot extract (paste works free) |
+| `EBAY_CLIENT_ID` / `EBAY_CLIENT_SECRET` | Live AU comps |
+| Supabase keys | Cloud persistence (optional) |
 
-## V0 scope
-
-- Upload screenshot or paste listing text → OpenAI extract (structured JSON)
-- Confirm / fix product → valuation engine (`TestPricingProvider` fixtures)
-- Result with comps, offer, risks, outcome capture
-- No auth, Stripe, or eBay production API yet
+See [docs/ebay-browse.md](docs/ebay-browse.md). Without eBay keys, comps use fixtures.

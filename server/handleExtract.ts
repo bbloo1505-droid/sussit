@@ -1,9 +1,10 @@
 import { identifyListing, type IdentifyInput } from './identifyListing.ts'
-import { questDemoFallback } from './questDemoFallback.ts'
+import { heuristicExtractFromText } from './heuristicExtract.ts'
 
 export type ExtractRequestBody = {
   text?: string
   imageDataUrl?: string
+  /** Explicit demo only — never silently substitute a Quest listing. */
   allowDemoFallback?: boolean
 }
 
@@ -12,6 +13,7 @@ export type ExtractResponse =
       ok: true
       listing: Awaited<ReturnType<typeof identifyListing>>
       usedFallback: boolean
+      extractMode: 'openai' | 'heuristic' | 'demo'
     }
   | { ok: false; error: string }
 
@@ -31,22 +33,27 @@ export async function handleExtract(
 
   try {
     const listing = await identifyListing(input)
-    return { ok: true, listing, usedFallback: false }
+    return { ok: true, listing, usedFallback: false, extractMode: 'openai' }
   } catch (error) {
     const message = error instanceof Error ? error.message : 'EXTRACT_FAILED'
 
-    if (message === 'MISSING_OPENAI_KEY' && body.allowDemoFallback !== false) {
-      return {
-        ok: true,
-        listing: questDemoFallback,
-        usedFallback: true,
-      }
-    }
-
     if (message === 'MISSING_OPENAI_KEY') {
+      if (text) {
+        const heuristic = heuristicExtractFromText(text)
+        if (heuristic) {
+          return {
+            ok: true,
+            listing: heuristic,
+            usedFallback: false,
+            extractMode: 'heuristic',
+          }
+        }
+      }
+
       return {
         ok: false,
-        error: 'OpenAI API key is not configured. Add OPENAI_API_KEY to .env.',
+        error:
+          'Could not identify this listing offline. Paste text that includes a $ price and product name, or add OPENAI_API_KEY for screenshots / harder titles.',
       }
     }
 

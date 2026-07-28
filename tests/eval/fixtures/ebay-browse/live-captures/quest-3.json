@@ -1,0 +1,73 @@
+{
+  "savedAt": "2026-07-28T11:24:45.072Z",
+  "query": "Quest 3 512GB headset -dock -bobovr -stand -skin -grip -facial -faceplate -3S -3s",
+  "skuKey": "quest-3",
+  "product": {
+    "skuKey": "quest-3",
+    "brand": "Meta",
+    "model": "Quest 3",
+    "variant": "512GB",
+    "category": "vr_headset",
+    "typicalAsk": 750
+  },
+  "marketplaceId": "EBAY_AU",
+  "itemSummaries": [
+    {
+      "itemId": "v1|188706113769|0",
+      "title": "Meta Quest 3 512GB VR Headset with extras",
+      "price": {
+        "value": "676.3",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/188706113769?_skw=Quest+3+512GB+headset+-dock+-bobovr+-stand+-skin+-grip+-facial+-faceplate+-3S+-3s&hash=item2befc2c8e9:g:RjQAAeSwKs5qaE4f",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|800413346933|0",
+      "title": "Meta Quest 3 512GB Standalone VR Headset White with Controllers & USB-C Charger",
+      "price": {
+        "value": "801.1",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/800413346933?_skw=Quest+3+512GB+headset+-dock+-bobovr+-stand+-skin+-grip+-facial+-faceplate+-3S+-3s&hash=itemba5c5a6c75:g:YxsAAeSwmaVqZrbu",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|198520291290|0",
+      "title": "Meta Quest 3 512GB VR Headset Bundle Case Active Straps Link Cable Barely Used",
+      "price": {
+        "value": "737.66",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/198520291290?_skw=Quest+3+512GB+headset+-dock+-bobovr+-stand+-skin+-grip+-facial+-faceplate+-3S+-3s&hash=item2e38bb3fda:g:a5EAAeSwfE5qYv9e",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|278174812125|0",
+      "title": "Meta Quest 3 512GB Bundle – Headset, Case, Elite Strap + Accessories",
+      "price": {
+        "value": "1153.66",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/278174812125?_skw=Quest+3+512GB+headset+-dock+-bobovr+-stand+-skin+-grip+-facial+-faceplate+-3S+-3s&hash=item40c482c7dd:g:vtEAAeSw4VJqUtno",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    }
+  ],
+  "total": 4
+}
