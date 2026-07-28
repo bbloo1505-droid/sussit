@@ -34,3 +34,7 @@ pnpm-debug.log*
 coverage
 *.tsbuildinfo
 .vercel
+
+# Supabase CLI local state
+supabase/.temp/
+
