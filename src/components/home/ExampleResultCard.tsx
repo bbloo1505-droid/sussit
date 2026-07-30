@@ -3,20 +3,14 @@ import { cn } from '@/lib/utils'
 
 type ExampleResultCardProps = {
   className?: string
-  /** Desktop: slight overlap / offset under the upload card */
-  layered?: boolean
 }
 
 /** Compact product-proof card for the landing page. */
-export function ExampleResultCard({
-  className,
-  layered = false,
-}: ExampleResultCardProps) {
+export function ExampleResultCard({ className }: ExampleResultCardProps) {
   return (
     <aside
       className={cn(
         'rounded-[18px] border border-white/10 bg-surface p-4',
-        layered && 'desk:-mt-3 desk:relative desk:z-10',
         className,
       )}
     >

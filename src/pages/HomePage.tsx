@@ -328,7 +328,7 @@ export function HomePage() {
           <div className="w-full desk:max-w-[480px] desk:justify-self-end">
             {uploadCard}
             {intakeActions}
-            <ExampleResultCard layered className="mt-5" />
+            <ExampleResultCard className="mt-6" />
             <Link
               to="/flip"
               className="mt-5 block text-center text-[13px] text-muted underline-offset-4 transition hover:text-cream hover:underline"
