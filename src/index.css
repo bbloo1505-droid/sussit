@@ -1,15 +1,16 @@
 @import "tailwindcss";
 
 @theme {
-  --color-lime: #c4ff00;
-  --color-ink: #090b09;
+  --color-lime: #c7ff00;
+  --color-ink: #070907;
   --color-cream: #f7f7f2;
-  --color-surface: #11140f;
-  --color-panel: #171a15;
-  --color-muted: #969c91;
+  --color-surface: #10130e;
+  --color-panel: #151913;
+  --color-muted: #9da398;
   --color-fair: #facc15;
   --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --breakpoint-desk: 900px;
 }
 
 @layer base {

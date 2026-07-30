@@ -15,7 +15,10 @@ export function PrimaryButton({
     <button
       type={type}
       className={cn(
-        'flex w-full items-center justify-center gap-2 rounded-2xl bg-lime px-5 py-4 text-[15px] font-bold tracking-[-0.01em] text-ink transition hover:brightness-105 active:scale-[.99] disabled:opacity-40',
+        'flex w-full items-center justify-center gap-2 rounded-2xl bg-lime px-5 text-[16px] font-bold tracking-[-0.015em] text-ink transition',
+        'hover:brightness-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lime',
+        'active:scale-[.99] disabled:cursor-not-allowed disabled:opacity-35 disabled:hover:brightness-100',
+        'min-h-[58px]',
         className,
       )}
       {...props}
@@ -46,7 +49,6 @@ export function TextButton({
   )
 }
 
-/** Kept for any leftover imports */
 export function Button(props: PrimaryButtonProps) {
   return <PrimaryButton {...props} />
 }

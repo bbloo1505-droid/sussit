@@ -1,5 +1,5 @@
-import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
-import { PhoneFrame } from '@/components/layout/PhoneFrame'
+import { BrowserRouter, Navigate, Outlet, Route, Routes } from 'react-router-dom'
+import { AppColumn, PhoneFrame } from '@/components/layout/PhoneFrame'
 import { HomePage } from '@/pages/HomePage'
 import { FlipHuntPage } from '@/pages/FlipHuntPage'
 import { ConfirmPage } from '@/pages/ConfirmPage'
@@ -13,24 +13,34 @@ import { RelistPage } from '@/pages/RelistPage'
 import { FlipHistoryPage } from '@/pages/FlipHistoryPage'
 import { FlipAssistantPage } from '@/pages/FlipAssistantPage'
 
+function AppFlow() {
+  return (
+    <AppColumn>
+      <Outlet />
+    </AppColumn>
+  )
+}
+
 export default function App() {
   return (
     <BrowserRouter>
       <PhoneFrame>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/flip" element={<FlipHuntPage />} />
-          <Route path="/flip/history" element={<FlipHistoryPage />} />
-          <Route path="/flip/assistant" element={<FlipAssistantPage />} />
-          <Route path="/analyse" element={<Navigate to="/" replace />} />
-          <Route path="/confirm" element={<ConfirmPage />} />
-          <Route path="/analysing" element={<AnalysingPage />} />
-          <Route path="/result/:id" element={<ResultPage />} />
-          <Route path="/result/:id/comparables" element={<ComparablesPage />} />
-          <Route path="/result/:id/offer" element={<OfferPage />} />
-          <Route path="/result/:id/risks" element={<RisksPage />} />
-          <Route path="/result/:id/flip" element={<FlipPage />} />
-          <Route path="/result/:id/relist" element={<RelistPage />} />
+          <Route element={<AppFlow />}>
+            <Route path="/flip" element={<FlipHuntPage />} />
+            <Route path="/flip/history" element={<FlipHistoryPage />} />
+            <Route path="/flip/assistant" element={<FlipAssistantPage />} />
+            <Route path="/analyse" element={<Navigate to="/" replace />} />
+            <Route path="/confirm" element={<ConfirmPage />} />
+            <Route path="/analysing" element={<AnalysingPage />} />
+            <Route path="/result/:id" element={<ResultPage />} />
+            <Route path="/result/:id/comparables" element={<ComparablesPage />} />
+            <Route path="/result/:id/offer" element={<OfferPage />} />
+            <Route path="/result/:id/risks" element={<RisksPage />} />
+            <Route path="/result/:id/flip" element={<FlipPage />} />
+            <Route path="/result/:id/relist" element={<RelistPage />} />
+          </Route>
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </PhoneFrame>
