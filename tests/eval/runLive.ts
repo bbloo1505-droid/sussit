@@ -188,11 +188,20 @@ async function main() {
   }
   console.log('Scoring captures…')
   const { spawnSync } = await import('node:child_process')
-  spawnSync(
+  const score = spawnSync(
     process.platform === 'win32' ? 'npm.cmd' : 'npm',
     ['run', 'eval:live:score'],
-    { stdio: 'inherit', cwd: process.cwd() },
+    {
+      stdio: 'inherit',
+      cwd: process.cwd(),
+      shell: process.platform === 'win32',
+      env: process.env,
+    },
   )
+  if (score.status !== 0) {
+    console.error('eval:live:score failed — run npm run eval:live:score manually')
+    process.exit(score.status ?? 1)
+  }
 }
 
 main().catch((err) => {

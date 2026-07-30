@@ -443,7 +443,7 @@ function genericExtract(
     model = cleaned.slice(0, 48).trim()
   }
 
-  const confidence = brand === 'Unbranded' ? 0.35 : 0.48
+  const confidence = brand === 'Unbranded' ? 0.42 : 0.58
 
   return finish(
     cleaned,

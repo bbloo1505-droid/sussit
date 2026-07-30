@@ -1,0 +1,297 @@
+{
+  "savedAt": "2026-07-28T23:23:17.856Z",
+  "query": "RTX 4060 -bracket -support -cable -riser -box -fan -laptop -notebook -blade -prebuilt -PC",
+  "skuKey": "rtx-4060",
+  "product": {
+    "skuKey": "rtx-4060",
+    "brand": "NVIDIA",
+    "model": "RTX 4060",
+    "variant": null,
+    "category": "gpu",
+    "typicalAsk": 450
+  },
+  "marketplaceId": "EBAY_AU",
+  "itemSummaries": [
+    {
+      "itemId": "v1|257647245330|0",
+      "title": "Lenovo Yoga Pro Ultra 9i - 32GB Ram - RTX 4060 - 1TB M.2 SSD + 4TB M.2 SSD",
+      "price": {
+        "value": "3650.7",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/257647245330?_skw=RTX+4060+-bracket+-support+-cable+-riser+-box+-fan+-laptop+-notebook+-blade+-prebuilt+-PC&hash=item3bfcf8f812:g:410AAeSwrndqaLjn",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|358852488720|0",
+      "title": "MSI Stealth 16 Studio A13V 16in i7 13th Gen 32GB 954GB SSD RTX 4060 W11 Black",
+      "price": {
+        "value": "1523.4",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/358852488720?_skw=RTX+4060+-bracket+-support+-cable+-riser+-box+-fan+-laptop+-notebook+-blade+-prebuilt+-PC&hash=item538d466e10:g:SXcAAeSwt4FqaCSe",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|398216286076|0",
+      "title": "PNY NVIDIA GeForce RTX 4060 Ti GDDR6 8GB GPU Graphics Card",
+      "price": {
+        "value": "430",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/398216286076?_skw=RTX+4060+-bracket+-support+-cable+-riser+-box+-fan+-laptop+-notebook+-blade+-prebuilt+-PC&hash=item5cb78a4f7c:g:2-QAAeSwlOZqZemC",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|137548999247|0",
+      "title": "Acer Predator Helios Neo 16 (PHN16-72) i9-14900HX RTX 4060 (48GB DDR5) 3TB 165Hz",
+      "price": {
+        "value": "2797.9",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/137548999247?_skw=RTX+4060+-bracket+-support+-cable+-riser+-box+-fan+-laptop+-notebook+-blade+-prebuilt+-PC&hash=item20068f2a4f:g:tr8AAeSwbG9qZBNQ",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|407095428224|0",
+      "title": "Gigabyte RTX 4060 Ti 16GB Windforce OC Graphics Card | Excellent Condition",
+      "price": {
+        "value": "850",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/407095428224?_skw=RTX+4060+-bracket+-support+-cable+-riser+-box+-fan+-laptop+-notebook+-blade+-prebuilt+-PC&hash=item5ec8c74480:g:lAYAAeSwN09qZC9B",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|188687986724|0",
+      "title": "Asus HN7306W ProArt PX13 Ryzen AI 9 HX370 32GB RAM 1TB SSD 13.3\" 3K OLED RTX4060",
+      "price": {
+        "value": "2899",
+        "currency": "AUD"
+      },
+      "condition": "used_like_new",
+      "itemWebUrl": "https://www.ebay.com.au/itm/188687986724?_skw=RTX+4060+-bracket+-support+-cable+-riser+-box+-fan+-laptop+-notebook+-blade+-prebuilt+-PC&hash=item2beeae3024:g:excAAeSwJcxor8OW",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|366560108993|0",
+      "title": "Dell G16 7630 16\" WQXGA RTX4060 i9-13900HX 32Gb Ram 1Tb Ssd",
+      "price": {
+        "value": "1674.7",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/366560108993?_skw=RTX+4060+-bracket+-support+-cable+-riser+-box+-fan+-laptop+-notebook+-blade+-prebuilt+-PC&hash=item5558af61c1:g:wcIAAeSw8KJqYcR~",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|358828275987|0",
+      "title": "Gigabyte Aorus 7 9KF 17.3in FHD 360Hz i5-12500H RTX 4060 512GB SSD 16GB RAM W11H",
+      "price": {
+        "value": "1570.7",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/358828275987?_skw=RTX+4060+-bracket+-support+-cable+-riser+-box+-fan+-laptop+-notebook+-blade+-prebuilt+-PC&hash=item538bd4f913:g:dhYAAeSw2~5qYDV5",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|137524980915|0",
+      "title": "MSI Cyborg 15 A13V I713620H RTX 4060",
+      "price": {
+        "value": "1362.7",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/137524980915?_skw=RTX+4060+-bracket+-support+-cable+-riser+-box+-fan+-laptop+-notebook+-blade+-prebuilt+-PC&hash=item200520acb3:g:FAwAAeSw4VVqW1dT",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|318590432092|0",
+      "title": "ASUS Dual EVO OC GEFORCE RTX 4060 8GB Graphics Card",
+      "price": {
+        "value": "450",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/318590432092?_skw=RTX+4060+-bracket+-support+-cable+-riser+-box+-fan+-laptop+-notebook+-blade+-prebuilt+-PC&hash=item4a2d78335c:g:DikAAeSwlktqWJ86",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|178312163062|0",
+      "title": "MSI GeForce RTX 4060 Ventus 2x Black",
+      "price": {
+        "value": "456.5",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/178312163062?_skw=RTX+4060+-bracket+-support+-cable+-riser+-box+-fan+-laptop+-notebook+-blade+-prebuilt+-PC&hash=item29843baef6:g:QYAAAeSwcGlqVxX5",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|318581160434|0",
+      "title": "MSI B760 GAMING PLUS WIFI Gaming Desktop i5-14400F 32GB RTX 4060 Ti SSD",
+      "price": {
+        "value": "1882.7",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/318581160434?_skw=RTX+4060+-bracket+-support+-cable+-riser+-box+-fan+-laptop+-notebook+-blade+-prebuilt+-PC&hash=item4a2ceab9f2:g:vvkAAeSwIoZqVjf1",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|127973180820|0",
+      "title": "Acer Nitro 5 144hz i7 12650h RTX 4060 16GB Ram 2TB SSD",
+      "price": {
+        "value": "1500",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/127973180820?_skw=RTX+4060+-bracket+-support+-cable+-riser+-box+-fan+-laptop+-notebook+-blade+-prebuilt+-PC&hash=item1dcbcbc594:g:t3YAAeSwwrlqVXAa",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|407067620404|0",
+      "title": "Acer Predator PO3-650 Intel i7-13700F 16Gb RAM 512GB SSD 2TB HDD 8GB RTX 4060",
+      "price": {
+        "value": "1399",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/407067620404?_skw=RTX+4060+-bracket+-support+-cable+-riser+-box+-fan+-laptop+-notebook+-blade+-prebuilt+-PC&hash=item5ec71ef434:g:5EAAAOSwYSFnyY1-",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|358782379462|0",
+      "title": "MSI GeForce RTX 4060 Ti VENTUS 2X BLACK 8G OC",
+      "price": {
+        "value": "479",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/358782379462?_skw=RTX+4060+-bracket+-support+-cable+-riser+-box+-fan+-laptop+-notebook+-blade+-prebuilt+-PC&hash=item538918a5c6:g:ggsAAeSwEz5qUa6-",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|800322837663|0",
+      "title": "MSI RTX 4060 Ti 8GB VENTUS 2X OC Graphics Card",
+      "price": {
+        "value": "541.1",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/800322837663?_skw=RTX+4060+-bracket+-support+-cable+-riser+-box+-fan+-laptop+-notebook+-blade+-prebuilt+-PC&hash=itemba56f55c9f:g:2TwAAeSwWc5qUb4d",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|398161070970|0",
+      "title": "MSI Katana 15 B13VFK i9-13900H RTX 4060 32GB RAM 2.5TB SSD Win 11 Pro ⭐",
+      "price": {
+        "value": "1570.7",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/398161070970?_skw=RTX+4060+-bracket+-support+-cable+-riser+-box+-fan+-laptop+-notebook+-blade+-prebuilt+-PC&hash=item5cb43fcb7a:g:oD0AAeSwEp9qUOIM",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|407054561133|0",
+      "title": "Asus GeForce RTX 4060 Dual 8G V2 OC Graphics Card (DUAL-RTX4060-O8G-V2)",
+      "price": {
+        "value": "424.7",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/407054561133?_skw=RTX+4060+-bracket+-support+-cable+-riser+-box+-fan+-laptop+-notebook+-blade+-prebuilt+-PC&hash=item5ec657af6d:g:PkAAAeSwrLtqTI7r",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|257598198204|0",
+      "title": "MSI RTX 4060 Ti 8GB VENTUS 2X OC Graphics Card",
+      "price": {
+        "value": "489.99",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/257598198204?_skw=RTX+4060+-bracket+-support+-cable+-riser+-box+-fan+-laptop+-notebook+-blade+-prebuilt+-PC&hash=item3bfa0c91bc:g:ZNQAAeSwknpqRPTL",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|236908861454|0",
+      "title": "Asus ROG Flow X13 RTX 4060 Ryzen 9 7940HS 16GB RAM 1TB SSD",
+      "price": {
+        "value": "2142.7",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/236908861454?_skw=RTX+4060+-bracket+-support+-cable+-riser+-box+-fan+-laptop+-notebook+-blade+-prebuilt+-PC&hash=item3728de580e:g:i-8AAeSwKAVqRHlO",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    }
+  ],
+  "total": 20
+}

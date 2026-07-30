@@ -1,5 +1,5 @@
 {
-  "savedAt": "2026-07-28T11:25:19.513Z",
+  "savedAt": "2026-07-28T23:23:05.868Z",
   "query": "Lenovo ThinkPad T14 -case -sleeve -charger -adapter -battery -keyboard -screen -parts",
   "skuKey": "thinkpad-t14",
   "product": {
@@ -118,21 +118,7 @@
         "currency": "AUD"
       },
       "condition": "used_good",
-      "itemWebUrl": "https://www.ebay.com.au/itm/227428863290?_skw=Lenovo+ThinkPad+T14+-case+-sleeve+-charger+-adapter+-battery+-keyboard+-screen+-parts&hash=item34f3d10d3a:g:Es8AAeSwWEBqXZop",
-      "itemLocation": {
-        "city": "AU",
-        "country": "AU"
-      }
-    },
-    {
-      "itemId": "v1|336685384338|0",
-      "title": "Lenovo ThinkPad T14 Gen 4 14\" i5-1335U 16GB RAM 512GB SSD Win 11 Pro",
-      "price": {
-        "value": "729",
-        "currency": "AUD"
-      },
-      "condition": "used_good",
-      "itemWebUrl": "https://www.ebay.com.au/itm/336685384338?_skw=Lenovo+ThinkPad+T14+-case+-sleeve+-charger+-adapter+-battery+-keyboard+-screen+-parts&hash=item4e64034292:g:iqkAAeSwsFZqVEFs",
+      "itemWebUrl": "https://www.ebay.com.au/itm/227428863290?_skw=Lenovo+ThinkPad+T14+-case+-sleeve+-charger+-adapter+-battery+-keyboard+-screen+-parts&hash=item34f3d10d3a:g:ploAAeSwDCFqaJtv",
       "itemLocation": {
         "city": "AU",
         "country": "AU"
@@ -287,6 +273,20 @@
       },
       "condition": "used_good",
       "itemWebUrl": "https://www.ebay.com.au/itm/157992262710?_skw=Lenovo+ThinkPad+T14+-case+-sleeve+-charger+-adapter+-battery+-keyboard+-screen+-parts&hash=item24c9129c36:g:f3kAAeSw4iBqK47T",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|137405450465|0",
+      "title": "Lenovo ThinkPad T14 Gen 2i i7-1165G7 16GB RAM 512GB SSD",
+      "price": {
+        "value": "719",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/137405450465?_skw=Lenovo+ThinkPad+T14+-case+-sleeve+-charger+-adapter+-battery+-keyboard+-screen+-parts&hash=item1ffe00c8e1:g:j5EAAeSwxhdqWzVB",
       "itemLocation": {
         "city": "AU",
         "country": "AU"

@@ -1,5 +1,5 @@
 {
-  "savedAt": "2026-07-28T11:25:04.890Z",
+  "savedAt": "2026-07-28T23:22:44.213Z",
   "query": "iPhone 15 128GB -case -cover -charger -cable -tempered -protector -magsafe -wallet -glass -holder -pouch -Pro -Plus -Max",
   "skuKey": "iphone-15-128",
   "product": {
@@ -97,20 +97,6 @@
       }
     },
     {
-      "itemId": "v1|206447125942|0",
-      "title": "Apple iPhone 15 128GB Black Unlocked Grade C Tested Warranty Smartphone",
-      "price": {
-        "value": "572.3",
-        "currency": "AUD"
-      },
-      "condition": "used_good",
-      "itemWebUrl": "https://www.ebay.com.au/itm/206447125942?_skw=iPhone+15+128GB+-case+-cover+-charger+-cable+-tempered+-protector+-magsafe+-wallet+-glass+-holder+-pouch+-Pro+-Plus+-Max&hash=item30113525b6:g:j8IAAeSwYexqXW4x",
-      "itemLocation": {
-        "city": "AU",
-        "country": "AU"
-      }
-    },
-    {
       "itemId": "v1|198524672446|0",
       "title": "iphone 15 | Black | good condition | 128 gb ",
       "price": {
@@ -156,7 +142,7 @@
       "itemId": "v1|800310961196|0",
       "title": "iPhone 15 128gb Excellent Condition (Unlocked)",
       "price": {
-        "value": "676.3",
+        "value": "665.9",
         "currency": "AUD"
       },
       "condition": "used_good",
@@ -287,6 +273,20 @@
       },
       "condition": "used_good",
       "itemWebUrl": "https://www.ebay.com.au/itm/298341670003?_skw=iPhone+15+128GB+-case+-cover+-charger+-cable+-tempered+-protector+-magsafe+-wallet+-glass+-holder+-pouch+-Pro+-Plus+-Max&hash=item45768c9c73:g:ZtoAAeSwtppqD-hB",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|336512189209|0",
+      "title": "iPhone 15 128gb Black",
+      "price": {
+        "value": "604.63",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/336512189209?_skw=iPhone+15+128GB+-case+-cover+-charger+-cable+-tempered+-protector+-magsafe+-wallet+-glass+-holder+-pouch+-Pro+-Plus+-Max&hash=item4e59b08319:g:6sIAAeSwOh5pzMmm",
       "itemLocation": {
         "city": "AU",
         "country": "AU"

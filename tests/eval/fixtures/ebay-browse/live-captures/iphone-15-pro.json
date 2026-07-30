@@ -1,5 +1,5 @@
 {
-  "savedAt": "2026-07-28T11:25:06.464Z",
+  "savedAt": "2026-07-28T23:22:45.768Z",
   "query": "iPhone 15 Pro 256GB -case -cover -charger -cable -tempered -protector -magsafe -wallet -glass -holder -pouch -Max",
   "skuKey": "iphone-15-pro",
   "product": {
@@ -12,6 +12,20 @@
   },
   "marketplaceId": "EBAY_AU",
   "itemSummaries": [
+    {
+      "itemId": "v1|377375802712|0",
+      "title": "Apple iPhone 15 Pro - 256GB -MTV53ZP/A-Natural-(Unlocked)-Dual SIM-Premium-89%BH",
+      "price": {
+        "value": "980",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/377375802712?_skw=iPhone+15+Pro+256GB+-case+-cover+-charger+-cable+-tempered+-protector+-magsafe+-wallet+-glass+-holder+-pouch+-Max&hash=item57dd59c558:g:nKoAAeSw0sdqaJb1",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
     {
       "itemId": "v1|178346918590|0",
       "title": "Apple iPhone 15 Pro - 256GB - Natural Titanium (Unlocked) - Good Condition",
@@ -273,20 +287,6 @@
       },
       "condition": "used_good",
       "itemWebUrl": "https://www.ebay.com.au/itm/406359221972?_skw=iPhone+15+Pro+256GB+-case+-cover+-charger+-cable+-tempered+-protector+-magsafe+-wallet+-glass+-holder+-pouch+-Max&hash=item5e9ce5a6d4:g:LwsAAeSwMOppDa4F",
-      "itemLocation": {
-        "city": "AU",
-        "country": "AU"
-      }
-    },
-    {
-      "itemId": "v1|406359221932|0",
-      "title": "iPhone 15 Pro Refurbished 256GB - Blue |  Excellent Condition | 1-Year Warranty",
-      "price": {
-        "value": "1163.03",
-        "currency": "AUD"
-      },
-      "condition": "used_good",
-      "itemWebUrl": "https://www.ebay.com.au/itm/406359221932?_skw=iPhone+15+Pro+256GB+-case+-cover+-charger+-cable+-tempered+-protector+-magsafe+-wallet+-glass+-holder+-pouch+-Max&hash=item5e9ce5a6ac:g:0nUAAeSwznBpDa4B",
       "itemLocation": {
         "city": "AU",
         "country": "AU"

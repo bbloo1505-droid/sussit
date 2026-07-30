@@ -1,5 +1,5 @@
 {
-  "savedAt": "2026-07-28T11:25:01.454Z",
+  "savedAt": "2026-07-28T23:22:35.503Z",
   "query": "Switch Lite console -stand -cooling -skin -silicone -thumb -charging -preorder -cover -custom -battlebeaver -OLED",
   "skuKey": "switch-lite",
   "product": {
@@ -12,6 +12,34 @@
   },
   "marketplaceId": "EBAY_AU",
   "itemSummaries": [
+    {
+      "itemId": "v1|800424002729|0",
+      "title": "Nintendo Switch Lite Gold Hyrule Edition Triforce Handheld Console HDH-001",
+      "price": {
+        "value": "212.7",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/800424002729?_skw=Switch+Lite&hash=itemba5cfd04a9:g:DpAAAeSw17BqaSQN",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|188708965815|0",
+      "title": "Nintendo Switch Lite Pokemon Dialga and Palkia w/ Pikachu 025 Carry Case",
+      "price": {
+        "value": "318.7",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/188708965815?_skw=Switch+Lite&hash=item2befee4db7:g:o0QAAeSwfRBqaROL",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
     {
       "itemId": "v1|318645778625|0",
       "title": "PowerA Protection Case for Nintendo Switch Lite Pokemon Checkerboard Yellow",
@@ -104,7 +132,7 @@
         "currency": "AUD"
       },
       "condition": "used_good",
-      "itemWebUrl": "https://www.ebay.com.au/itm/198526496653?_skw=Switch+Lite&hash=item2e3919ef8d:g:FJEAAeSw8QJqZzbZ",
+      "itemWebUrl": "https://www.ebay.com.au/itm/198526496653?_skw=Switch+Lite&hash=item2e3919ef8d:g:nV0AAeSwvdxqaJH1",
       "itemLocation": {
         "city": "AU",
         "country": "AU"
@@ -259,34 +287,6 @@
       },
       "condition": "used_good",
       "itemWebUrl": "https://www.ebay.com.au/itm/227445195739?_skw=Switch+Lite&hash=item34f4ca43db:g:71MAAeSwrndqYwWL",
-      "itemLocation": {
-        "city": "AU",
-        "country": "AU"
-      }
-    },
-    {
-      "itemId": "v1|407094574633|0",
-      "title": "Nintendo Switch Lite Game Console Model HDH-001 Ref#510623",
-      "price": {
-        "value": "199",
-        "currency": "AUD"
-      },
-      "condition": "used_good",
-      "itemWebUrl": "https://www.ebay.com.au/itm/407094574633?_skw=Switch+Lite&hash=item5ec8ba3e29:g:kXYAAeSwizZqYtjQ",
-      "itemLocation": {
-        "city": "AU",
-        "country": "AU"
-      }
-    },
-    {
-      "itemId": "v1|117319126761|0",
-      "title": "AS NEW! Coral - 32GB - HDH-001 - Nintendo Switch Lite Console - PAL - FREE POST!",
-      "price": {
-        "value": "239.99",
-        "currency": "AUD"
-      },
-      "condition": "used_good",
-      "itemWebUrl": "https://www.ebay.com.au/itm/117319126761?_skw=Switch+Lite&hash=item1b50c3cee9:g:UlUAAeSwBrpqYbX9",
       "itemLocation": {
         "city": "AU",
         "country": "AU"

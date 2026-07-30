@@ -6,8 +6,9 @@ import type {
 } from '@/types/domain'
 
 /**
- * Conservative confidence. Thresholds will be tuned from the benchmark set.
- * Thin comps → INSUFFICIENT (no deal score).
+ * Comps-first confidence.
+ * Identification confidence softens the score but does not hard-kill a solid
+ * comparable set — important for heuristic / generic extracts (~0.35–0.55).
  */
 export function calculateConfidence(input: {
   product: IdentifiedProduct
@@ -25,7 +26,7 @@ export function calculateConfidence(input: {
   const identificationConfidence = input.product.identificationConfidence
   const reasons: string[] = []
 
-  if (acceptedCount < 5) {
+  if (acceptedCount < 4) {
     reasons.push(`Only ${acceptedCount} reliable comparisons found`)
     return {
       level: 'INSUFFICIENT',
@@ -37,25 +38,24 @@ export function calculateConfidence(input: {
     }
   }
 
-  if (identificationConfidence < 0.7) {
+  if (identificationConfidence < 0.45) {
     reasons.push('Product identification is uncertain')
   }
-  if (averageMatchQuality < 85) {
+  if (averageMatchQuality < 78) {
     reasons.push('Average comparable match quality is moderate')
   }
-  if (priceDispersion > 0.2) {
+  if (priceDispersion > 0.28) {
     reasons.push('Comparable prices are widely spread')
   }
-  if (!input.product.variant) {
+  if (!input.product.variant && identificationConfidence < 0.7) {
     reasons.push('Variant not confirmed')
   }
 
   const strong =
-    identificationConfidence >= 0.9 &&
+    identificationConfidence >= 0.85 &&
     acceptedCount >= 8 &&
-    averageMatchQuality >= 88 &&
-    priceDispersion <= 0.15 &&
-    Boolean(input.product.variant)
+    averageMatchQuality >= 85 &&
+    priceDispersion <= 0.18
 
   if (strong && reasons.length === 0) {
     reasons.push(`${acceptedCount} strong comparisons with a tight asking range`)
@@ -69,12 +69,24 @@ export function calculateConfidence(input: {
     }
   }
 
-  if (acceptedCount >= 5 && identificationConfidence >= 0.75) {
+  // Solid comps win even when ID is heuristic / brand+model only
+  if (acceptedCount >= 4 && averageMatchQuality >= 70) {
     if (reasons.length === 0) {
       reasons.push(`${acceptedCount} comparisons available`)
     }
+
+    const level =
+      acceptedCount >= 8 &&
+      averageMatchQuality >= 82 &&
+      priceDispersion <= 0.22 &&
+      identificationConfidence >= 0.55
+        ? 'MEDIUM'
+        : acceptedCount >= 6 && averageMatchQuality >= 78
+          ? 'MEDIUM'
+          : 'LOW'
+
     return {
-      level: acceptedCount >= 8 ? 'MEDIUM' : 'LOW',
+      level,
       reasons,
       identificationConfidence,
       acceptedCount,

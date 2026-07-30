@@ -77,10 +77,10 @@ export const LIVE_EVAL_PRODUCTS: LiveEvalProduct[] = [
   {
     skuKey: 'ps5-digital',
     brand: 'Sony',
-    model: 'PlayStation 5',
+    model: 'PlayStation 5 Slim',
     variant: 'Digital',
     category: 'console',
-    typicalAsk: 480,
+    typicalAsk: 550,
   },
   {
     skuKey: 'switch-oled',
@@ -105,6 +105,30 @@ export const LIVE_EVAL_PRODUCTS: LiveEvalProduct[] = [
     variant: null,
     category: 'console',
     typicalAsk: 520,
+  },
+  {
+    skuKey: 'xbox-series-s',
+    brand: 'Microsoft',
+    model: 'Xbox Series S',
+    variant: null,
+    category: 'console',
+    typicalAsk: 320,
+  },
+  {
+    skuKey: 'steam-deck',
+    brand: 'Valve',
+    model: 'Steam Deck',
+    variant: '512GB',
+    category: 'console',
+    typicalAsk: 550,
+  },
+  {
+    skuKey: 'ps4-pro',
+    brand: 'Sony',
+    model: 'PlayStation 4 Pro',
+    variant: null,
+    category: 'console',
+    typicalAsk: 250,
   },
 
   // --- full: phones ---
@@ -148,6 +172,22 @@ export const LIVE_EVAL_PRODUCTS: LiveEvalProduct[] = [
     category: 'phone',
     typicalAsk: 580,
   },
+  {
+    skuKey: 'iphone-14',
+    brand: 'Apple',
+    model: 'iPhone 14',
+    variant: '128GB',
+    category: 'phone',
+    typicalAsk: 580,
+  },
+  {
+    skuKey: 'galaxy-s23',
+    brand: 'Samsung',
+    model: 'Galaxy S23',
+    variant: '128GB',
+    category: 'phone',
+    typicalAsk: 520,
+  },
 
   // --- emerging: camera ---
   {
@@ -165,6 +205,22 @@ export const LIVE_EVAL_PRODUCTS: LiveEvalProduct[] = [
     variant: 'body',
     category: 'camera',
     typicalAsk: 1800,
+  },
+  {
+    skuKey: 'gopro-hero12',
+    brand: 'GoPro',
+    model: 'Hero 12',
+    variant: null,
+    category: 'camera',
+    typicalAsk: 380,
+  },
+  {
+    skuKey: 'dji-mini-3',
+    brand: 'DJI',
+    model: 'Mini 3',
+    variant: null,
+    category: 'camera',
+    typicalAsk: 550,
   },
 
   // --- emerging: laptop ---
@@ -222,6 +278,14 @@ export const LIVE_EVAL_PRODUCTS: LiveEvalProduct[] = [
     category: 'audio',
     typicalAsk: 320,
   },
+  {
+    skuKey: 'bose-qc45',
+    brand: 'Bose',
+    model: 'QuietComfort 45',
+    variant: null,
+    category: 'audio',
+    typicalAsk: 250,
+  },
 
   // --- emerging: gpu ---
   {
@@ -231,6 +295,22 @@ export const LIVE_EVAL_PRODUCTS: LiveEvalProduct[] = [
     variant: null,
     category: 'gpu',
     typicalAsk: 750,
+  },
+  {
+    skuKey: 'rtx-4060',
+    brand: 'NVIDIA',
+    model: 'RTX 4060',
+    variant: null,
+    category: 'gpu',
+    typicalAsk: 450,
+  },
+  {
+    skuKey: 'rtx-3080',
+    brand: 'NVIDIA',
+    model: 'RTX 3080',
+    variant: null,
+    category: 'gpu',
+    typicalAsk: 550,
   },
 
   // --- emerging: power tool ---
@@ -277,6 +357,14 @@ export const LIVE_EVAL_PRODUCTS: LiveEvalProduct[] = [
     typicalAsk: 100,
   },
   {
+    skuKey: 'jordan-1',
+    brand: 'Nike',
+    model: 'Air Jordan 1',
+    variant: null,
+    category: 'clothing',
+    typicalAsk: 220,
+  },
+  {
     skuKey: 'lego-75192',
     brand: 'LEGO',
     model: '75192',
@@ -285,11 +373,27 @@ export const LIVE_EVAL_PRODUCTS: LiveEvalProduct[] = [
     typicalAsk: 900,
   },
   {
+    skuKey: 'lego-75313',
+    brand: 'LEGO',
+    model: '75313',
+    variant: 'AT-AT',
+    category: 'collectible',
+    typicalAsk: 220,
+  },
+  {
     skuKey: 'pandora-charm',
     brand: 'Pandora',
     model: 'Charm',
     variant: null,
     category: 'jewellery',
     typicalAsk: 80,
+  },
+  {
+    skuKey: 'dyson-v8',
+    brand: 'Dyson',
+    model: 'V8',
+    variant: null,
+    category: 'other',
+    typicalAsk: 280,
   },
 ]

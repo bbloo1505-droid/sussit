@@ -1,5 +1,5 @@
 {
-  "savedAt": "2026-07-28T11:25:08.107Z",
+  "savedAt": "2026-07-28T23:22:47.348Z",
   "query": "iPhone 16 128GB -case -cover -charger -cable -tempered -protector -magsafe -wallet -glass -holder -pouch -Pro -Plus -Max",
   "skuKey": "iphone-16",
   "product": {
@@ -12,20 +12,6 @@
   },
   "marketplaceId": "EBAY_AU",
   "itemSummaries": [
-    {
-      "itemId": "v1|178350196343|0",
-      "title": "Apple iPhone 16e Black (Unlocked) - 128GB Very Good Condition",
-      "price": {
-        "value": "619.99",
-        "currency": "AUD"
-      },
-      "condition": "used_good",
-      "itemWebUrl": "https://www.ebay.com.au/itm/178350196343?_skw=iPhone+16+128GB+-case+-cover+-charger+-cable+-tempered+-protector+-magsafe+-wallet+-glass+-holder+-pouch+-Pro+-Plus+-Max&hash=item2986800677:g:YMwAAeSwXf5qDYVy",
-      "itemLocation": {
-        "city": "AU",
-        "country": "AU"
-      }
-    },
     {
       "itemId": "v1|206440391513|0",
       "title": "iPhone 16 128GB - Pink - Amazing Condition - Unlocked",
@@ -156,7 +142,7 @@
       "itemId": "v1|800328233689|0",
       "title": "iPhone 16e 128gb White Slate AUS 100% batt health (Unlocked) ",
       "price": {
-        "value": "686.7",
+        "value": "676.3",
         "currency": "AUD"
       },
       "condition": "used_good",
@@ -287,6 +273,20 @@
       },
       "condition": "used_good",
       "itemWebUrl": "https://www.ebay.com.au/itm/377369175594?_skw=iPhone+16+128GB+-case+-cover+-charger+-cable+-tempered+-protector+-magsafe+-wallet+-glass+-holder+-pouch+-Pro+-Plus+-Max&hash=item57dcf4a62a:g:ZgoAAeSwXCJqNq7Y",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|198405756603|0",
+      "title": "Box for Apple iPhone 16 128GB, Black, Box Only",
+      "price": {
+        "value": "16.5",
+        "currency": "AUD"
+      },
+      "condition": "for_parts",
+      "itemWebUrl": "https://www.ebay.com.au/itm/198405756603?_skw=iPhone+16+128GB+-case+-cover+-charger+-cable+-tempered+-protector+-magsafe+-wallet+-glass+-holder+-pouch+-Pro+-Plus+-Max&hash=item2e31e796bb:g:0v0AAeSw7cNqI7RP",
       "itemLocation": {
         "city": "AU",
         "country": "AU"

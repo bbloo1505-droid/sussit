@@ -1,0 +1,101 @@
+{
+  "savedAt": "2026-07-28T23:22:41.076Z",
+  "query": "Valve Steam Deck 512GB console -stand -cooling -skin -silicone -thumb -charging -preorder -cover -custom -battlebeaver",
+  "skuKey": "steam-deck",
+  "product": {
+    "skuKey": "steam-deck",
+    "brand": "Valve",
+    "model": "Steam Deck",
+    "variant": "512GB",
+    "category": "console",
+    "typicalAsk": 550
+  },
+  "marketplaceId": "EBAY_AU",
+  "itemSummaries": [
+    {
+      "itemId": "v1|318645837497|0",
+      "title": "VALVE Steam Deck OLED 512GB with Screen Protector, Travel Case, and USB C Cable",
+      "price": {
+        "value": "1079",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/318645837497?_skw=Valve+Steam+Deck+512GB+console&hash=item4a30c59eb9:g:pfkAAeSwFuJqaH0I",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|137555340417|0",
+      "title": "Steam Deck Oled 512GB (Upgraded to 2TB SSD) + Accessories",
+      "price": {
+        "value": "1362.7",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/137555340417?_skw=Valve+Steam+Deck+512GB+console&hash=item2006efec81:g:0RMAAeSwgblqZwCZ",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|366517703462|0",
+      "title": "Valve Steam Deck 512GB Handheld Console - Black",
+      "price": {
+        "value": "1102.7",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/366517703462?_skw=Valve+Steam+Deck+512GB+console&hash=item5556285326:g:~AcAAeSwkUFqRlQd",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|178280643704|0",
+      "title": "512GB Steam Deck Oled with JSAUX cover, case, power supply and fan",
+      "price": {
+        "value": "1100",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/178280643704?_skw=Valve+Steam+Deck+512GB+console&hash=item29825abc78:g:qLAAAeSwCDpqROOg",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|398107171692|0",
+      "title": "Valve Steam Deck 512GB Handheld Console - Black",
+      "price": {
+        "value": "842.7",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/398107171692?_skw=Valve+Steam+Deck+512GB+console&hash=item5cb1095b6c:g:f40AAeSwCPVqPY4I",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|307080330378|0",
+      "title": "Valve Steam Deck 512GB Handheld Console - Black",
+      "price": {
+        "value": "801.1",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/307080330378?_skw=Valve+Steam+Deck+512GB+console&hash=item477f69fc8a:g:TDMAAeSwxORqI97O",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    }
+  ],
+  "total": 6
+}

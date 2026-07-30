@@ -457,6 +457,104 @@ describe('matchComparable', () => {
     ).toBe(false)
   })
 
+  it('accepts used PS5 Pro with Brand New DualSense in title', () => {
+    const pro = {
+      ...questDemoProduct,
+      category: 'console' as const,
+      brand: 'Sony',
+      model: 'PlayStation 5 Pro',
+      variant: null,
+      includedAccessories: [],
+    }
+    expect(
+      matchComparable(
+        pro,
+        listing({
+          id: '26b',
+          title:
+            'PS5 Pro Bundle – Disc Edition + Brand New Red DualSense + 7 Games – immaculate.',
+          price: 1200,
+          condition: 'used_good',
+          includedAccessories: [],
+        }),
+      ).included,
+    ).toBe(true)
+  })
+
+  it('rejects PS5 Slim disc drive accessory and Digital game codes', () => {
+    const slimDisc = {
+      ...questDemoProduct,
+      category: 'console' as const,
+      brand: 'Sony',
+      model: 'PlayStation 5 Slim',
+      variant: 'Disc',
+      includedAccessories: [],
+    }
+    expect(
+      matchComparable(
+        slimDisc,
+        listing({
+          id: '26c',
+          title: 'PS5 Slim Disc Drive Used',
+          price: 128,
+          includedAccessories: [],
+        }),
+      ).included,
+    ).toBe(false)
+
+    const slimDigital = {
+      ...slimDisc,
+      variant: 'Digital',
+    }
+    expect(
+      matchComparable(
+        slimDigital,
+        listing({
+          id: '26d',
+          title:
+            'Call of Duty: Black Ops 6 PS5 Game Digital Code DLC',
+          price: 60,
+          includedAccessories: [],
+        }),
+      ).included,
+    ).toBe(false)
+    expect(
+      matchComparable(
+        slimDigital,
+        listing({
+          id: '26e',
+          title:
+            'The Talos Principle 2 - PlayStation 5 (PS5, 2024 PAL) Devolver Digital Adventure',
+          price: 150,
+          includedAccessories: [],
+        }),
+      ).included,
+    ).toBe(false)
+    expect(
+      matchComparable(
+        slimDigital,
+        listing({
+          id: '26f',
+          title: 'Sony Playstation 5 PS5 Slim Digital Edition Console CFI-2002',
+          price: 510,
+          includedAccessories: [],
+        }),
+      ).included,
+    ).toBe(true)
+    expect(
+      matchComparable(
+        slimDigital,
+        listing({
+          id: '26g',
+          title:
+            'Sony Playstation 5 PS5 Slim Digital Edition Console CFI-2002 - Console Only',
+          price: 510,
+          includedAccessories: [],
+        }),
+      ).included,
+    ).toBe(true)
+  })
+
   it('rejects LEGO minifigures when hunting a set number', () => {
     const lego = {
       ...questDemoProduct,

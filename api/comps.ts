@@ -217,11 +217,17 @@ function buildSearchQuery(product: {
   let tuned = core
   const model = (product.model ?? '').toLowerCase()
   if (model.includes('playstation 5')) {
-    tuned = core
-      .replace(/Sony\s+/i, '')
-      .replace(/PlayStation\s*5/i, 'PS5')
-      .replace(/\s+/g, ' ')
-      .trim()
+    if (model.includes('pro')) {
+      tuned = ['PlayStation 5 Pro', product.variant].filter(Boolean).join(' ')
+    } else if (model.includes('slim')) {
+      tuned = ['PS5 Slim', product.variant].filter(Boolean).join(' ')
+    } else {
+      tuned = core
+        .replace(/Sony\s+/i, '')
+        .replace(/PlayStation\s*5/i, 'PS5')
+        .replace(/\s+/g, ' ')
+        .trim()
+    }
   }
   if (model.includes('quest')) {
     tuned = core.replace(/^Meta\s+/i, '').replace(/\s+/g, ' ').trim()
@@ -249,10 +255,13 @@ function relaxBrowseQuery(query: string): string {
       '-Pro',
       '-Digital',
       '-Disc',
+      '-Drive',
       '-Lite',
       '-OLED',
       '-Max',
       '-Plus',
+      '-PS2',
+      '-PES',
     ].map((t) => t.toLowerCase()),
   )
   return query
@@ -487,15 +496,27 @@ function modelSpecificNegations(query: string): string[] {
   }
   if (/\bps5\b|playstation\s*5/.test(q)) {
     if (/\bslim\b/.test(q)) {
-      out.push('-Pro')
+      out.push('-Pro', '-Drive')
       if (/\bdisc\b/.test(q)) out.push('-Digital')
       if (/\bdigital\b/.test(q)) out.push('-Disc')
     } else if (/\bpro\b/.test(q)) {
-      out.push('-Slim')
+      out.push(
+        '-Slim',
+        '-PS2',
+        '-PS4',
+        '-PES',
+        '-Soccer',
+        '-Evolution',
+        '-Controller',
+        '-Headset',
+        '-Wheel',
+        '-Adapter',
+        '-Dongle',
+      )
     } else {
       out.push('-Slim', '-Pro')
-      if (/\bdisc\b/.test(q)) out.push('-Digital')
-      if (/\bdigital\b/.test(q)) out.push('-Disc')
+      if (/\bdisc\b/.test(q)) out.push('-Digital', '-Drive')
+      if (/\bdigital\b/.test(q)) out.push('-Disc', '-Code', '-Download', '-DLC')
     }
   }
   if (/\bswitch\b/.test(q)) {

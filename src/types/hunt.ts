@@ -10,6 +10,11 @@ export type HuntRules = {
   maxSellDays: number
   /** UI only until Marketplace geo links exist */
   distanceKm: number
+  /**
+   * Categories to emphasise on the hunt board / search suggestions.
+   * Empty or includes `all` → show every playbook category.
+   */
+  categories: Array<ProductCategory | 'all'>
 }
 
 export type BuyActionVerdict = 'BUY' | 'NEGOTIATE' | 'PASS' | 'INSUFFICIENT_DATA'
@@ -41,6 +46,7 @@ export type HuntBoardRow = {
   productId: string
   label: string
   searchQuery: string
+  category: ProductCategory
   maxBuy: number
   typicalSaleLow: number
   typicalSaleHigh: number
@@ -60,6 +66,20 @@ export type HuntBoard = {
     searchQuery: string
     label: string
     maxBuy: number
+    category: ProductCategory
+  }>
+  /** Category playbooks with guide prices (and scored Max Buy when available) */
+  categorySuggestions: Array<{
+    category: ProductCategory
+    title: string
+    blurb: string
+    searches: Array<{
+      label: string
+      searchQuery: string
+      maxBuy: number
+      source: 'scored' | 'guide'
+      why: string
+    }>
   }>
   falling: HuntBoardRow[]
   generatedAt: string
@@ -72,6 +92,7 @@ export const DEFAULT_HUNT_RULES: HuntRules = {
   minRoiPercent: 25,
   maxSellDays: 14,
   distanceKm: 25,
+  categories: ['all'],
 }
 
 /** Platform + shipping drag placeholder until calibrated */

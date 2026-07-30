@@ -43,6 +43,33 @@ describe('buildSearchQuery', () => {
     expect(q).toMatch(/console/i)
     expect(q).toMatch(/-Digital/)
     expect(q).toMatch(/-Pro/)
+    expect(q).toMatch(/-Drive/)
+  })
+
+  it('builds PlayStation 5 Pro query that suppresses PES / game noise', () => {
+    const q = buildSearchQuery({
+      brand: 'Sony',
+      model: 'PlayStation 5 Pro',
+      variant: null,
+      category: 'console',
+    })
+    expect(q).toMatch(/PlayStation 5 Pro/i)
+    expect(q).toMatch(/console/i)
+    expect(q).toMatch(/-Slim/)
+    expect(q).toMatch(/-PES|-Soccer|-PS2/)
+    expect(q).toMatch(/-Hawk|-Tony/)
+  })
+
+  it('builds Slim Digital without Disc/Pro', () => {
+    const q = buildSearchQuery({
+      brand: 'Sony',
+      model: 'PlayStation 5 Slim',
+      variant: 'Digital',
+      category: 'console',
+    })
+    expect(q).toMatch(/PS5 Slim Digital/i)
+    expect(q).toMatch(/-Disc/)
+    expect(q).toMatch(/-Pro/)
   })
 
   it('enrichBrowseQuery is idempotent on negations', () => {

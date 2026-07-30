@@ -16,10 +16,10 @@ export function buildExplanation(analysis: AnalysisResult): string {
   }
 
   if (analysis.deal.verdictLabel === 'INSUFFICIENT DATA' || !analysis.market) {
-    return (
+    const reason =
       analysis.confidence.reasons[0] ??
       "We don't have enough evidence to recommend buying or passing."
-    )
+    return `${reason} Ask the seller the details below — then suss it again with a clearer listing.`
   }
 
   const pct = Math.abs(analysis.deal.differenceFromMedianPercent)
@@ -322,20 +322,12 @@ export function categoryGlyph(
 }
 
 export function analysingSteps(
-  tier: 'full' | 'emerging' | 'basic',
+  _tier?: 'full' | 'emerging' | 'basic',
 ): readonly string[] {
-  if (tier === 'full') {
-    return [
-      'Finding current eBay Australia listings',
-      'Checking listing quality',
-      'Calculating a fair offer',
-      'Assessing this listing',
-    ] as const
-  }
   return [
     'Finding current eBay Australia listings',
     'Checking listing quality',
-    'Comparing asking prices',
-    'Assessing market coverage',
+    'Calculating a fair offer',
+    'Assessing this listing',
   ] as const
 }

@@ -255,6 +255,12 @@ function isConsoleAccessoryListing(title: string): boolean {
       'battery cover',
       'faceplate',
       'disc drive only',
+      'disc drive',
+      'optical drive',
+      'digital code',
+      'download code',
+      'game code',
+      'dlc code',
     ])
   ) {
     return true
@@ -294,6 +300,66 @@ function isConsoleAccessoryListing(title: string): boolean {
     'cfi-',
   ])
   return !looksLikeConsoleUnit
+}
+
+/** Title says sealed/BNIB unit — not "Brand New DualSense" on a used console. */
+function isBrandNewUnitTitle(title: string): boolean {
+  if (hasAny(title, ['sealed', 'unopened', 'bnib'])) return true
+  if (!/\bbrand\s*new\b/.test(title)) return false
+
+  const brandNewAccessoryOnly =
+    /brand\s*new[^.]{0,48}(dualsense|controller|game|games|headset|cable|charger)/i.test(
+      title,
+    ) &&
+    !/brand\s*new\s+(sony\s+)?(ps5|playstation|console|switch|xbox|quest)/i.test(
+      title,
+    )
+
+  return !brandNewAccessoryOnly
+}
+
+function isPs5GameOrPeripheralNoise(title: string): boolean {
+  if (
+    /tony\s*hawk|pro\s*skater|pro\s*enhanced|fanatec|magazine|demo\s*disc|pro\s*evolution|pes\s*\d|\bps2\b|playstation\s*2/.test(
+      title,
+    )
+  ) {
+    return true
+  }
+  if (
+    /digital\s*(code|download|dlc|voucher)/.test(title) &&
+    !/\bconsole\b/.test(title)
+  ) {
+    return true
+  }
+  // Controllers / headsets / wheels alone — keep console bundles
+  if (
+    /\bconsole\b/.test(title) ||
+    /digital\s*edition/.test(title) ||
+    /disc\s*edition/.test(title) ||
+    /\bcfi-/.test(title)
+  ) {
+    return false
+  }
+  return /victrix|racing\s*wheel|\bpedals?\b|headset|adapter|dongle|receiver/.test(
+    title,
+  )
+}
+
+function titleLooksLikePs5Pro(title: string): boolean {
+  return (
+    /\bps5\s*pro\b/.test(title) ||
+    /playstation\s*5\s*pro/.test(title) ||
+    /\bps5pro\b/.test(title) ||
+    /\bcfi-70\d{2}\b/.test(title)
+  )
+}
+
+function titleLooksLikePs5DigitalEdition(title: string): boolean {
+  if (/digital\s*edition/.test(title)) return true
+  if (/digital\s*(code|download|dlc|voucher|adventure)/.test(title)) return false
+  // "ps5 digital console" / bare digital + console — not publisher "Devolver Digital"
+  return /\bdigital\b/.test(title) && /\b(console|cfi-)\b/.test(title)
 }
 
 /** Shared spare/accessory rejects for any category (eval adversarial coverage). */
@@ -382,18 +448,27 @@ function wrongFamilyReason(
     const targetSlim = model.includes('slim')
     const targetPro = model.includes('pro')
     const titleSlim = /\bslim\b/.test(title)
-    const titlePro = /\bps5\s*pro\b/.test(title) || /playstation\s*5\s*pro/.test(title)
-    const titleDigital = /\bdigital\b/.test(title)
-    const titleDisc = /\bdisc\b/.test(title)
+    const titlePro = titleLooksLikePs5Pro(title)
+    const titleDigital = titleLooksLikePs5DigitalEdition(title)
+    const titleDisc =
+      /\bdisc\s*edition\b/.test(title) ||
+      (/\bdisc\b/.test(title) && !/\bdisc\s*drive\b/.test(title))
     const variant = norm(product.variant ?? '')
+
+    if (isPs5GameOrPeripheralNoise(title)) {
+      return targetPro ? 'Not a PS5 Pro console' : 'Not a PS5 console listing'
+    }
 
     if (targetPro) {
       if (
-        /tony\s*hawk|pro\s*skater|pro\s*enhanced|fanatec|magazine|demo\s*disc/.test(
+        /tony\s*hawk|pro\s*skater|pro\s*enhanced|fanatec|magazine|demo\s*disc|pro\s*evolution|\bps2\b/.test(
           title,
         )
       ) {
         return 'Not a PS5 Pro console'
+      }
+      if (/\bplaystation\s*4\s*pro\b|\bps4\s*pro\b/.test(title) && !titlePro) {
+        return 'Wrong PS5 model (PS4 Pro)'
       }
       if (titleSlim && !titlePro) return 'Wrong PS5 model (Slim)'
       if (!titlePro) return 'Wrong PS5 model (not Pro)'
@@ -410,17 +485,31 @@ function wrongFamilyReason(
     } else if (targetSlim) {
       if (titlePro) return 'Wrong PS5 model (Pro)'
       if (!titleSlim) return 'Wrong PS5 model (not Slim)'
+      if (/\bdisc\s*drive\b/.test(title) && !/\bconsole\b/.test(title)) {
+        return 'PS5 disc drive accessory'
+      }
     } else {
       // Fat / base PS5 — reject Slim and Pro neighbours
       if (titleSlim) return 'Wrong PS5 model (Slim)'
       if (titlePro) return 'Wrong PS5 model (Pro)'
     }
 
-    if (variant.includes('disc') && titleDigital) {
-      return 'Wrong PS5 edition (digital)'
+    if (variant.includes('disc')) {
+      if (titleDigital) return 'Wrong PS5 edition (digital)'
+      if (/\bdisc\s*drive\b/.test(title) && !/\b(console|edition)\b/.test(title)) {
+        return 'PS5 disc drive accessory'
+      }
     }
-    if (variant.includes('digital') && titleDisc && !titleDigital) {
-      return 'Wrong PS5 edition (disc)'
+    if (variant.includes('digital')) {
+      if (titleDisc && !titleDigital) return 'Wrong PS5 edition (disc)'
+      if (!titleDigital) return 'Wrong PS5 edition (not digital)'
+      if (
+        !/\bconsole\b/.test(title) &&
+        !/digital\s*edition/.test(title) &&
+        !/\bcfi-/.test(title)
+      ) {
+        return 'Not a PS5 digital console'
+      }
     }
   }
 
@@ -636,7 +725,7 @@ export function matchComparable(
 
   if (
     comparable.condition === 'new' ||
-    hasAny(title, ['brand new', 'sealed', 'unopened', 'bnib', '[brand new]'])
+    isBrandNewUnitTitle(title)
   ) {
     return reject(comparable, 'Brand new — rejected for used benchmark', reasons)
   }
@@ -825,16 +914,20 @@ export function matchComparable(
     'headset only',
     'no controllers',
     'without controllers',
-    'console only',
   ])
+  const consoleOnly = hasAny(title, ['console only'])
 
-  if (vr && headsetOnly) {
+  if (vr && (headsetOnly || consoleOnly)) {
     return reject(comparable, 'Headset without controllers', reasons)
   }
 
-  if (headsetOnly) {
+  if (product.category === 'console' && consoleOnly) {
+    // Clean console unit (no pad bundle) — good comps, not a penalty
+    score += 5
+    reasons.push('Console only (clean unit)')
+  } else if (headsetOnly) {
     score -= 20
-    reasons.push('Console/unit only')
+    reasons.push('Unit without controllers')
   } else if (hasControllers) {
     score += 5
     reasons.push('Controllers included')
@@ -883,7 +976,7 @@ export function matchComparable(
       comparable,
       included: false,
       matchScore: score,
-      rejectionReason: reasons[reasons.length - 1] ?? 'Below match threshold',
+      rejectionReason: 'Below match threshold',
       matchLabel: 'Excluded',
       reasons,
     }

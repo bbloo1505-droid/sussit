@@ -5,13 +5,13 @@ import { Header } from '@/components/layout/Header'
 import { formatAud } from '@/lib/utils'
 import { useAnalysis } from '@/hooks/useAnalysis'
 import { buildRelistCopy } from '@/lib/analysis/viewModel'
-import { hasFlipSubscription } from '@/lib/entitlements/flipAccess'
+import { hasFlipAccess } from '@/lib/entitlements/flipAccess'
 import { FlipPaywall } from '@/components/flip/FlipPaywall'
 
 export function RelistPage() {
   const { id = '' } = useParams()
   const { analysis, loading } = useAnalysis(id)
-  const [active] = useState(() => hasFlipSubscription())
+  const [active] = useState(() => hasFlipAccess())
   const [copied, setCopied] = useState<'body' | 'title' | null>(null)
 
   if (!active) {

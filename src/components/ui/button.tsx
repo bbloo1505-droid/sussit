@@ -15,7 +15,7 @@ export function PrimaryButton({
     <button
       type={type}
       className={cn(
-        'flex w-full items-center justify-center gap-2 rounded-2xl bg-lime px-5 py-4 font-display text-[16px] font-extrabold text-ink transition hover:bg-[#d2ff36] active:scale-[.99] disabled:opacity-50',
+        'flex w-full items-center justify-center gap-2 rounded-2xl bg-lime px-5 py-4 text-[15px] font-bold tracking-[-0.01em] text-ink transition hover:brightness-105 active:scale-[.99] disabled:opacity-40',
         className,
       )}
       {...props}
@@ -36,7 +36,7 @@ export function TextButton({
       type="button"
       disabled={disabled}
       className={cn(
-        'flex w-full items-center justify-between border-b border-white/10 py-5 text-left font-display text-[16px] font-bold text-cream transition hover:text-lime disabled:opacity-40',
+        'flex w-full items-center justify-between border-b border-white/10 py-5 text-left text-[16px] font-semibold text-cream transition hover:text-lime disabled:opacity-40',
         className,
       )}
       {...props}

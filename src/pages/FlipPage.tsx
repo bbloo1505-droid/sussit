@@ -2,9 +2,13 @@ import { useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { Header } from '@/components/layout/Header'
 import { FlipPaywall } from '@/components/flip/FlipPaywall'
+import { BuyCapture } from '@/components/flip/BuyCapture'
 import { SaleCapture } from '@/components/flip/SaleCapture'
 import { useAnalysis } from '@/hooks/useAnalysis'
-import { hasFlipSubscription } from '@/lib/entitlements/flipAccess'
+import {
+  hasFlipAccess,
+  hasFlipPro,
+} from '@/lib/entitlements/flipAccess'
 import { formatAud } from '@/lib/utils'
 import type { BuyActionVerdict } from '@/types/hunt'
 import type { SellSpeedLabel } from '@/types/sellSpeed'
@@ -43,7 +47,8 @@ function actionTone(verdict: BuyActionVerdict): string {
 export function FlipPage() {
   const { id = '' } = useParams()
   const { analysis, loading } = useAnalysis(id)
-  const [active, setActive] = useState(() => hasFlipSubscription())
+  const [active, setActive] = useState(() => hasFlipAccess())
+  const isPro = hasFlipPro()
 
   if (!active) {
     return <FlipPaywall onActivated={() => setActive(true)} />
@@ -239,6 +244,23 @@ export function FlipPage() {
         </p>
         <p className="mt-2 text-[14px] leading-6 text-muted">{flip.summary}</p>
       </div>
+
+      {isPro ? (
+        <BuyCapture
+          analysisId={analysis.id}
+          productId={analysis.productId}
+          productLabel={analysis.productLabel}
+          suggestedPurchase={flip.maxBuy?.maxBuy ?? analysis.offer?.openingOffer}
+          targetResale={Math.round((flip.resaleLow + flip.resaleHigh) / 2)}
+        />
+      ) : (
+        <p className="mt-6 text-[13px] leading-5 text-muted">
+          <Link to="/flip/history" className="text-lime underline-offset-2 hover:underline">
+            Flip Pro
+          </Link>{' '}
+          logs buys into inventory and tracks P&amp;L.
+        </p>
+      )}
 
       <SaleCapture
         analysisId={analysis.id}

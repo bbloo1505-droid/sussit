@@ -1,42 +1,42 @@
 {
-  "generatedAt": "2026-07-28T11:25:56.650Z",
+  "generatedAt": "2026-07-28T23:33:37.411Z",
   "mode": "live-score-wide",
-  "queries": 30,
-  "totalMapped": 446,
-  "totalIncluded": 327,
-  "includeRate": 73.3,
+  "queries": 43,
+  "totalMapped": 659,
+  "totalIncluded": 499,
+  "includeRate": 75.7,
   "accessoryContamination": 0,
   "wrongModelContamination": 0,
   "byCategory": {
     "audio": {
-      "skus": 2,
-      "mapped": 40,
-      "included": 27,
-      "includeRate": 67.5
+      "skus": 3,
+      "mapped": 60,
+      "included": 44,
+      "includeRate": 73.3
     },
     "camera": {
-      "skus": 2,
-      "mapped": 28,
-      "included": 19,
-      "includeRate": 67.9
+      "skus": 4,
+      "mapped": 68,
+      "included": 42,
+      "includeRate": 61.8
     },
     "clothing": {
-      "skus": 2,
-      "mapped": 40,
-      "included": 24,
-      "includeRate": 60
+      "skus": 3,
+      "mapped": 60,
+      "included": 37,
+      "includeRate": 61.7
     },
     "collectible": {
-      "skus": 1,
-      "mapped": 10,
-      "included": 10,
-      "includeRate": 100
+      "skus": 2,
+      "mapped": 16,
+      "included": 15,
+      "includeRate": 93.8
     },
     "console": {
-      "skus": 6,
-      "mapped": 106,
-      "included": 61,
-      "includeRate": 57.5
+      "skus": 9,
+      "mapped": 132,
+      "included": 87,
+      "includeRate": 65.9
     },
     "furniture": {
       "skus": 2,
@@ -45,16 +45,16 @@
       "includeRate": 100
     },
     "gpu": {
-      "skus": 1,
-      "mapped": 12,
-      "included": 5,
-      "includeRate": 41.7
+      "skus": 3,
+      "mapped": 52,
+      "included": 34,
+      "includeRate": 65.4
     },
     "jewellery": {
       "skus": 1,
       "mapped": 20,
-      "included": 16,
-      "includeRate": 80
+      "included": 17,
+      "includeRate": 85
     },
     "laptop": {
       "skus": 2,
@@ -62,11 +62,17 @@
       "included": 38,
       "includeRate": 95
     },
+    "other": {
+      "skus": 1,
+      "mapped": 20,
+      "included": 20,
+      "includeRate": 100
+    },
     "phone": {
-      "skus": 5,
-      "mapped": 87,
-      "included": 71,
-      "includeRate": 81.6
+      "skus": 7,
+      "mapped": 127,
+      "included": 108,
+      "includeRate": 85
     },
     "power_tool": {
       "skus": 1,
@@ -88,9 +94,9 @@
     },
     "wearable": {
       "skus": 1,
-      "mapped": 9,
-      "included": 8,
-      "includeRate": 88.9
+      "mapped": 10,
+      "included": 9,
+      "includeRate": 90
     }
   },
   "rows": [
@@ -116,6 +122,31 @@
         169,
         90,
         189.38
+      ],
+      "suspiciousTitles": []
+    },
+    {
+      "query": "Bose QuietComfort 45 -eartips -tips -cushion -earpad -single -replacement",
+      "skuKey": "bose-qc45",
+      "category": "audio",
+      "totalListings": 20,
+      "mapped": 20,
+      "included": 17,
+      "excluded": 3,
+      "accessoryIncluded": 0,
+      "wrongModelIncluded": 0,
+      "median": 140,
+      "p25": 121,
+      "p75": 180,
+      "sampleIncludedPrices": [
+        129.99,
+        129.99,
+        179.99,
+        179.99,
+        369.99,
+        179.99,
+        110,
+        110
       ],
       "suspiciousTitles": []
     },
@@ -165,6 +196,56 @@
         2418,
         2444,
         2662.7
+      ],
+      "suspiciousTitles": []
+    },
+    {
+      "query": "DJI Mini 3 body -lens -strap -bag -battery -charger -grip -cage -filter -hood -card",
+      "skuKey": "dji-mini-3",
+      "category": "camera",
+      "totalListings": 20,
+      "mapped": 20,
+      "included": 12,
+      "excluded": 8,
+      "accessoryIncluded": 0,
+      "wrongModelIncluded": 0,
+      "median": 445,
+      "p25": 357,
+      "p75": 507,
+      "sampleIncludedPrices": [
+        500,
+        81.5,
+        191.5,
+        945.66,
+        420,
+        469.22,
+        89,
+        109
+      ],
+      "suspiciousTitles": []
+    },
+    {
+      "query": "GoPro Hero 12 body -lens -strap -bag -battery -charger -grip -cage -filter -hood -card",
+      "skuKey": "gopro-hero12",
+      "category": "camera",
+      "totalListings": 20,
+      "mapped": 20,
+      "included": 11,
+      "excluded": 9,
+      "accessoryIncluded": 0,
+      "wrongModelIncluded": 0,
+      "median": 425,
+      "p25": 380,
+      "p75": 552,
+      "sampleIncludedPrices": [
+        299.99,
+        424.7,
+        379.95,
+        349.44,
+        842.7,
+        380,
+        480,
+        551.5
       ],
       "suspiciousTitles": []
     },
@@ -219,27 +300,52 @@
       "suspiciousTitles": []
     },
     {
+      "query": "Nike Air Jordan 1 -lot -bundle -wholesale -sample",
+      "skuKey": "jordan-1",
+      "category": "clothing",
+      "totalListings": 20,
+      "mapped": 20,
+      "included": 12,
+      "excluded": 8,
+      "accessoryIncluded": 0,
+      "wrongModelIncluded": 0,
+      "median": 65,
+      "p25": 60,
+      "p75": 96,
+      "sampleIncludedPrices": [
+        75.03,
+        449.99,
+        39.95,
+        60,
+        71.13,
+        59.5,
+        127.9,
+        48.4
+      ],
+      "suspiciousTitles": []
+    },
+    {
       "query": "Nike Air Force 1 -lot -bundle -wholesale -sample",
       "skuKey": "nike-air-force-1",
       "category": "clothing",
       "totalListings": 20,
       "mapped": 20,
-      "included": 13,
-      "excluded": 7,
+      "included": 14,
+      "excluded": 6,
       "accessoryIncluded": 0,
       "wrongModelIncluded": 0,
       "median": 50,
       "p25": 40,
-      "p75": 55,
+      "p75": 54,
       "sampleIncludedPrices": [
+        15,
+        78.07,
+        39.95,
         35,
         55,
         75,
         37.8,
-        49.95,
-        49.56,
-        49.9,
-        37.8
+        49.95
       ],
       "suspiciousTitles": []
     },
@@ -269,67 +375,135 @@
       "suspiciousTitles": []
     },
     {
-      "query": "PS5 Digital console -stand -cooling -skin -silicone -thumb -charging -preorder -cover -custom -battlebeaver -Slim -Pro -Disc",
-      "skuKey": "ps5-digital",
-      "category": "console",
-      "totalListings": 20,
-      "mapped": 20,
-      "included": 10,
-      "excluded": 10,
+      "query": "LEGO 75313 AT-AT -proxy -fake -reproduction -minifigure -minifig -figure",
+      "skuKey": "lego-75313",
+      "category": "collectible",
+      "totalListings": 6,
+      "mapped": 6,
+      "included": 5,
+      "excluded": 1,
       "accessoryIncluded": 0,
       "wrongModelIncluded": 0,
-      "median": 739,
-      "p25": 645,
-      "p75": 754,
+      "median": 895,
+      "p25": 486,
+      "p75": 1259,
       "sampleIncludedPrices": [
-        371.7,
-        738.7,
-        738.7,
-        894.7,
-        686.7,
-        149.95,
-        603.5,
-        768.86
+        1258.7,
+        1258.7,
+        44.49,
+        530.7,
+        350
       ],
       "suspiciousTitles": []
     },
     {
-      "query": "PS5 Pro console -stand -cooling -skin -silicone -thumb -charging -preorder -cover -custom -battlebeaver -Slim -Hawk -Skater -Tony -Fanatec -Magazine -Enhanced",
+      "query": "Sony PlayStation 4 Pro console -stand -cooling -skin -silicone -thumb -charging -preorder -cover -custom -battlebeaver",
+      "skuKey": "ps4-pro",
+      "category": "console",
+      "totalListings": 20,
+      "mapped": 20,
+      "included": 14,
+      "excluded": 6,
+      "accessoryIncluded": 0,
+      "wrongModelIncluded": 0,
+      "median": 232,
+      "p25": 200,
+      "p75": 282,
+      "sampleIncludedPrices": [
+        349.95,
+        150,
+        170,
+        286.03,
+        199,
+        269.99,
+        204.82,
+        313.4
+      ],
+      "suspiciousTitles": []
+    },
+    {
+      "query": "PS5 Slim Digital console -stand -cooling -skin -silicone -thumb -charging -preorder -cover -custom -battlebeaver -Pro -Drive -Disc",
+      "skuKey": "ps5-digital",
+      "category": "console",
+      "totalListings": 9,
+      "mapped": 9,
+      "included": 8,
+      "excluded": 1,
+      "accessoryIncluded": 0,
+      "wrongModelIncluded": 0,
+      "median": 693,
+      "p25": 630,
+      "p75": 730,
+      "sampleIncludedPrices": [
+        510,
+        700,
+        699.99,
+        686.7,
+        818,
+        634.7,
+        613.9,
+        1414.7
+      ],
+      "suspiciousTitles": []
+    },
+    {
+      "query": "PlayStation 5 Pro console -stand -cooling -skin -silicone -thumb -charging -preorder -cover -custom -battlebeaver -Slim -PS2 -PS4 -PES -Soccer -Evolution -Controller -Headset -Wheel -Adapter -Dongle -Hawk -Skater -Tony -Fanatec -Magazine -Enhanced",
       "skuKey": "ps5-pro",
       "category": "console",
       "totalListings": 20,
       "mapped": 20,
-      "included": 2,
-      "excluded": 18,
+      "included": 3,
+      "excluded": 17,
       "accessoryIncluded": 0,
       "wrongModelIncluded": 0,
-      "median": 1545,
-      "p25": 1376,
-      "p75": 1714,
+      "median": 1207,
+      "p25": 1128,
+      "p75": 1467,
       "sampleIncludedPrices": [
-        1206.7,
-        1882.7
+        1049.66,
+        1726.7,
+        1206.7
       ],
       "suspiciousTitles": []
     },
     {
-      "query": "PS5 Slim Disc console -stand -cooling -skin -silicone -thumb -charging -preorder -cover -custom -battlebeaver -Pro -Digital",
+      "query": "PS5 Slim Disc console -stand -cooling -skin -silicone -thumb -charging -preorder -cover -custom -battlebeaver -Pro -Drive -Digital",
       "skuKey": "ps5-slim",
       "category": "console",
-      "totalListings": 6,
-      "mapped": 6,
-      "included": 4,
-      "excluded": 2,
+      "totalListings": 5,
+      "mapped": 5,
+      "included": 2,
+      "excluded": 3,
       "accessoryIncluded": 0,
       "wrongModelIncluded": 0,
       "median": 760,
-      "p25": 579,
-      "p75": 789,
+      "p25": 745,
+      "p75": 776,
       "sampleIncludedPrices": [
-        127.9,
         790.7,
-        730,
-        789
+        730
+      ],
+      "suspiciousTitles": []
+    },
+    {
+      "query": "Valve Steam Deck 512GB console -stand -cooling -skin -silicone -thumb -charging -preorder -cover -custom -battlebeaver",
+      "skuKey": "steam-deck",
+      "category": "console",
+      "totalListings": 6,
+      "mapped": 6,
+      "included": 5,
+      "excluded": 1,
+      "accessoryIncluded": 0,
+      "wrongModelIncluded": 0,
+      "median": 1100,
+      "p25": 843,
+      "p75": 1103,
+      "sampleIncludedPrices": [
+        1362.7,
+        1102.7,
+        1100,
+        842.7,
+        801.1
       ],
       "suspiciousTitles": []
     },
@@ -339,22 +513,22 @@
       "category": "console",
       "totalListings": 20,
       "mapped": 20,
-      "included": 14,
-      "excluded": 6,
+      "included": 13,
+      "excluded": 7,
       "accessoryIncluded": 0,
       "wrongModelIncluded": 0,
-      "median": 203,
+      "median": 207,
       "p25": 165,
-      "p75": 235,
+      "p75": 220,
       "sampleIncludedPrices": [
+        212.7,
         297.5,
         212.7,
         140,
         249,
         149.99,
         190.44,
-        335,
-        220
+        335
       ],
       "suspiciousTitles": []
     },
@@ -368,18 +542,43 @@
       "excluded": 3,
       "accessoryIncluded": 0,
       "wrongModelIncluded": 0,
-      "median": 283,
+      "median": 262,
       "p25": 250,
       "p75": 312,
       "sampleIncludedPrices": [
+        185,
+        250,
+        273.31,
         318.7,
         249.99,
         299.99,
         350,
-        327.18,
-        842.7,
-        310,
-        239.95
+        327.18
+      ],
+      "suspiciousTitles": []
+    },
+    {
+      "query": "Xbox Series S console -stand -cooling -skin -silicone -thumb -charging -preorder -cover -custom -battlebeaver",
+      "skuKey": "xbox-series-s",
+      "category": "console",
+      "totalListings": 12,
+      "mapped": 12,
+      "included": 10,
+      "excluded": 2,
+      "accessoryIncluded": 0,
+      "wrongModelIncluded": 0,
+      "median": 478,
+      "p25": 404,
+      "p75": 572,
+      "sampleIncludedPrices": [
+        349,
+        403.5,
+        117.97,
+        478,
+        229.99,
+        582.7,
+        634.7,
+        530.7
       ],
       "suspiciousTitles": []
     },
@@ -389,22 +588,22 @@
       "category": "console",
       "totalListings": 20,
       "mapped": 20,
-      "included": 14,
-      "excluded": 6,
+      "included": 15,
+      "excluded": 5,
       "accessoryIncluded": 0,
       "wrongModelIncluded": 0,
       "median": 739,
-      "p25": 693,
-      "p75": 870,
+      "p25": 668,
+      "p75": 844,
       "sampleIncludedPrices": [
+        670,
         738.7,
         624.3,
         819,
-        1200,
         74.9,
         920,
         699,
-        686.7
+        49.67
       ],
       "suspiciousTitles": []
     },
@@ -459,6 +658,56 @@
       "suspiciousTitles": []
     },
     {
+      "query": "RTX 3080 -bracket -support -cable -riser -box -fan -laptop -notebook -blade -prebuilt -PC",
+      "skuKey": "rtx-3080",
+      "category": "gpu",
+      "totalListings": 20,
+      "mapped": 20,
+      "included": 18,
+      "excluded": 2,
+      "accessoryIncluded": 0,
+      "wrongModelIncluded": 0,
+      "median": 634,
+      "p25": 547,
+      "p75": 741,
+      "sampleIncludedPrices": [
+        599.86,
+        715.1,
+        498.85,
+        600,
+        530.7,
+        946.7,
+        520.1,
+        999
+      ],
+      "suspiciousTitles": []
+    },
+    {
+      "query": "RTX 4060 -bracket -support -cable -riser -box -fan -laptop -notebook -blade -prebuilt -PC",
+      "skuKey": "rtx-4060",
+      "category": "gpu",
+      "totalListings": 20,
+      "mapped": 20,
+      "included": 11,
+      "excluded": 9,
+      "accessoryIncluded": 0,
+      "wrongModelIncluded": 0,
+      "median": 468,
+      "p25": 445,
+      "p75": 503,
+      "sampleIncludedPrices": [
+        3650.7,
+        430,
+        850,
+        1570.7,
+        450,
+        456.5,
+        1882.7,
+        479
+      ],
+      "suspiciousTitles": []
+    },
+    {
       "query": "RTX 4070 -bracket -support -cable -riser -box -fan -laptop -notebook -blade -prebuilt -PC -Ti -SUPER -Super",
       "skuKey": "rtx-4070",
       "category": "gpu",
@@ -486,22 +735,22 @@
       "category": "jewellery",
       "totalListings": 20,
       "mapped": 20,
-      "included": 16,
-      "excluded": 4,
+      "included": 17,
+      "excluded": 3,
       "accessoryIncluded": 0,
       "wrongModelIncluded": 0,
-      "median": 124,
-      "p25": 89,
-      "p75": 204,
+      "median": 53,
+      "p25": 40,
+      "p75": 67,
       "sampleIncludedPrices": [
-        44,
-        44,
-        129.8,
-        297.5,
-        585,
-        585,
-        585,
-        48
+        33.93,
+        25.61,
+        60,
+        60,
+        45,
+        49.99,
+        149.1,
+        78
       ],
       "suspiciousTitles": []
     },
@@ -519,14 +768,14 @@
       "p25": 841,
       "p75": 1000,
       "sampleIncludedPrices": [
+        1050.7,
         1000,
         749,
         999,
         829,
         842.7,
         699,
-        842.7,
-        1049
+        842.7
       ],
       "suspiciousTitles": []
     },
@@ -551,7 +800,57 @@
         740,
         480,
         599,
-        729
+        549
+      ],
+      "suspiciousTitles": []
+    },
+    {
+      "query": "Dyson V8",
+      "skuKey": "dyson-v8",
+      "category": "other",
+      "totalListings": 20,
+      "mapped": 20,
+      "included": 20,
+      "excluded": 0,
+      "accessoryIncluded": 0,
+      "wrongModelIncluded": 0,
+      "median": 35,
+      "p25": 27,
+      "p75": 51,
+      "sampleIncludedPrices": [
+        35.99,
+        79.99,
+        48.4,
+        25.99,
+        8.99,
+        53.7,
+        41.7,
+        32.95
+      ],
+      "suspiciousTitles": []
+    },
+    {
+      "query": "Galaxy S23 128GB -case -cover -charger -cable -tempered -protector -magsafe -wallet -glass -holder -pouch",
+      "skuKey": "galaxy-s23",
+      "category": "phone",
+      "totalListings": 20,
+      "mapped": 20,
+      "included": 20,
+      "excluded": 0,
+      "accessoryIncluded": 0,
+      "wrongModelIncluded": 0,
+      "median": 469,
+      "p25": 407,
+      "p75": 553,
+      "sampleIncludedPrices": [
+        379,
+        379,
+        399.99,
+        409,
+        469,
+        409,
+        469,
+        550
       ],
       "suspiciousTitles": []
     },
@@ -578,6 +877,31 @@
       "suspiciousTitles": []
     },
     {
+      "query": "iPhone 14 128GB -case -cover -charger -cable -tempered -protector -magsafe -wallet -glass -holder -pouch -Pro -Plus -Max",
+      "skuKey": "iphone-14",
+      "category": "phone",
+      "totalListings": 20,
+      "mapped": 20,
+      "included": 18,
+      "excluded": 2,
+      "accessoryIncluded": 0,
+      "wrongModelIncluded": 0,
+      "median": 488,
+      "p25": 406,
+      "p75": 517,
+      "sampleIncludedPrices": [
+        498.9,
+        403.5,
+        477.7,
+        439,
+        529,
+        249.99,
+        399.99,
+        509
+      ],
+      "suspiciousTitles": []
+    },
+    {
       "query": "iPhone 15 128GB -case -cover -charger -cable -tempered -protector -magsafe -wallet -glass -holder -pouch -Pro -Plus -Max",
       "skuKey": "iphone-15-128",
       "category": "phone",
@@ -588,7 +912,7 @@
       "accessoryIncluded": 0,
       "wrongModelIncluded": 0,
       "median": 700,
-      "p25": 683,
+      "p25": 678,
       "p75": 769,
       "sampleIncludedPrices": [
         842.7,
@@ -597,8 +921,8 @@
         690,
         699,
         705,
-        572.3,
-        717.9
+        717.9,
+        699.9
       ],
       "suspiciousTitles": []
     },
@@ -612,18 +936,18 @@
       "excluded": 1,
       "accessoryIncluded": 0,
       "wrongModelIncluded": 0,
-      "median": 1040,
+      "median": 999,
       "p25": 904,
       "p75": 1133,
       "sampleIncludedPrices": [
+        980,
         819.99,
         909,
         998.7,
         980,
         1154.7,
         849,
-        842.7,
-        899
+        842.7
       ],
       "suspiciousTitles": []
     },
@@ -633,22 +957,22 @@
       "category": "phone",
       "totalListings": 20,
       "mapped": 20,
-      "included": 19,
-      "excluded": 1,
+      "included": 18,
+      "excluded": 2,
       "accessoryIncluded": 0,
       "wrongModelIncluded": 0,
-      "median": 831,
-      "p25": 728,
-      "p75": 868,
+      "median": 834,
+      "p25": 774,
+      "p75": 882,
       "sampleIncludedPrices": [
-        619.99,
         831.26,
         840,
         790.7,
         837.61,
         841.66,
         1189,
-        969
+        969,
+        659
       ],
       "suspiciousTitles": []
     },
@@ -788,24 +1112,24 @@
       "query": "Apple Watch Series 9 45mm GPS -band -strap -case -charger -protector -screen",
       "skuKey": "apple-watch-series-9",
       "category": "wearable",
-      "totalListings": 9,
-      "mapped": 9,
-      "included": 8,
+      "totalListings": 10,
+      "mapped": 10,
+      "included": 9,
       "excluded": 1,
       "accessoryIncluded": 0,
       "wrongModelIncluded": 0,
-      "median": 376,
-      "p25": 339,
-      "p75": 411,
+      "median": 349,
+      "p25": 319,
+      "p75": 409,
       "sampleIncludedPrices": [
+        169,
         349,
         319,
         429,
         408.8,
         345.2,
         402.44,
-        419,
-        318.7
+        419
       ],
       "suspiciousTitles": []
     }

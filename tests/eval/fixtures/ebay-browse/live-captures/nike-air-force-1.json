@@ -1,5 +1,5 @@
 {
-  "savedAt": "2026-07-28T11:25:35.046Z",
+  "savedAt": "2026-07-28T23:23:26.309Z",
   "query": "Nike Air Force 1 -lot -bundle -wholesale -sample",
   "skuKey": "nike-air-force-1",
   "product": {
@@ -12,6 +12,48 @@
   },
   "marketplaceId": "EBAY_AU",
   "itemSummaries": [
+    {
+      "itemId": "v1|358855775830|0",
+      "title": "Nike Air Force 1 AF1 Shadow Women’s Shoes US 6.5 Triple White Sneakers ci0919",
+      "price": {
+        "value": "15",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/358855775830?_skw=Nike+Air+Force+1+-lot+-bundle+-wholesale+-sample&hash=item538d789656:g:q4sAAOSwf1tmzWtv",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|398224943732|0",
+      "title": "Size 11 Nike Air Force 1 '07 LV8 J22 Black Carbon Fiber Iron Grey DR0155-002",
+      "price": {
+        "value": "78.07",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/398224943732?_skw=Nike+Air+Force+1+-lot+-bundle+-wholesale+-sample&hash=item5cb80e6a74:g:En0AAeSwzmBnpKVY",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|147467227578|0",
+      "title": "Men's Nike Air Force 1 White Size: US 10 UK 9",
+      "price": {
+        "value": "39.95",
+        "currency": "AUD"
+      },
+      "condition": "used_fair",
+      "itemWebUrl": "https://www.ebay.com.au/itm/147467227578?_skw=Nike+Air+Force+1+-lot+-bundle+-wholesale+-sample&hash=item2255bb51ba:g:UaEAAeSw03hqaNMc",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
     {
       "itemId": "v1|398223175837|0",
       "title": "Nike Air Force 1 '07 LV8 Paint Splatter White Size 7",
@@ -245,48 +287,6 @@
       },
       "condition": "used_good",
       "itemWebUrl": "https://www.ebay.com.au/itm/398215051944?_skw=Nike+Air+Force+1+-lot+-bundle+-wholesale+-sample&hash=item5cb7777aa8:g:5-cAAeSwYlpqXr1S",
-      "itemLocation": {
-        "city": "AU",
-        "country": "AU"
-      }
-    },
-    {
-      "itemId": "v1|178343578945|0",
-      "title": "Nike Air Force 1 Low Sneakers Orewood Brown DH4408-102 Women's Size US 8",
-      "price": {
-        "value": "65.5",
-        "currency": "AUD"
-      },
-      "condition": "used_good",
-      "itemWebUrl": "https://www.ebay.com.au/itm/178343578945?_skw=Nike+Air+Force+1+-lot+-bundle+-wholesale+-sample&hash=item29861b0d41:g:KPAAAOSwaX1oPBYy",
-      "itemLocation": {
-        "city": "AU",
-        "country": "AU"
-      }
-    },
-    {
-      "itemId": "v1|377369378505|0",
-      "title": "Nike Air Force 1 Sage Low Coral Stardust Pre-Owned",
-      "price": {
-        "value": "258",
-        "currency": "AUD"
-      },
-      "condition": "used_like_new",
-      "itemWebUrl": "https://www.ebay.com.au/itm/377369378505?_skw=Nike+Air+Force+1+-lot+-bundle+-wholesale+-sample&hash=item57dcf7bec9:g:kyIAAeSwK8xqZLDk",
-      "itemLocation": {
-        "city": "AU",
-        "country": "AU"
-      }
-    },
-    {
-      "itemId": "v1|137550355273|0",
-      "title": "Carhartt WIP × Nike Air Force 1 Low Ale Brown AV4113-200 Men's Size US9",
-      "price": {
-        "value": "69.6",
-        "currency": "AUD"
-      },
-      "condition": "used_fair",
-      "itemWebUrl": "https://www.ebay.com.au/itm/137550355273?_skw=Nike+Air+Force+1+-lot+-bundle+-wholesale+-sample&hash=item2006a3db49:g:j88AAeSwC~ZqZJ7T",
       "itemLocation": {
         "city": "AU",
         "country": "AU"

@@ -1,31 +1,17 @@
 {
-  "savedAt": "2026-07-28T11:24:57.389Z",
-  "query": "PS5 Digital console -stand -cooling -skin -silicone -thumb -charging -preorder -cover -custom -battlebeaver -Slim -Pro -Disc",
+  "savedAt": "2026-07-28T23:32:16.528Z",
+  "query": "PS5 Slim Digital console -stand -cooling -skin -silicone -thumb -charging -preorder -cover -custom -battlebeaver -Pro -Drive -Disc",
   "skuKey": "ps5-digital",
   "product": {
     "skuKey": "ps5-digital",
     "brand": "Sony",
-    "model": "PlayStation 5",
+    "model": "PlayStation 5 Slim",
     "variant": "Digital",
     "category": "console",
-    "typicalAsk": 480
+    "typicalAsk": 550
   },
   "marketplaceId": "EBAY_AU",
   "itemSummaries": [
-    {
-      "itemId": "v1|158123481123|0",
-      "title": "PS5 PlayStation 5 Slim Digital Console (825GB)",
-      "price": {
-        "value": "699",
-        "currency": "AUD"
-      },
-      "condition": "used_good",
-      "itemWebUrl": "https://www.ebay.com.au/itm/158123481123?_skw=PS5+Digital&hash=item24d0e4d823:g:iXQAAeSwRo9qZv4R",
-      "itemLocation": {
-        "city": "AU",
-        "country": "AU"
-      }
-    },
     {
       "itemId": "v1|137552125964|0",
       "title": "Sony Playstation 5 PS5 Slim Digital Edition Console CFI-2002 - Console Only",
@@ -34,7 +20,7 @@
         "currency": "AUD"
       },
       "condition": "used_good",
-      "itemWebUrl": "https://www.ebay.com.au/itm/137552125964?_skw=PS5+Digital&hash=item2006bee00c:g:oqYAAeSwLuxqZdbo",
+      "itemWebUrl": "https://www.ebay.com.au/itm/137552125964?_skw=PS5+Slim+Digital&hash=item2006bee00c:g:oqYAAeSwLuxqZdbo",
       "itemLocation": {
         "city": "AU",
         "country": "AU"
@@ -48,7 +34,7 @@
         "currency": "AUD"
       },
       "condition": "used_good",
-      "itemWebUrl": "https://www.ebay.com.au/itm/327276081027?_skw=PS5+Digital&hash=item4c332caf83:g:svcAAeSwxUxqYyX4",
+      "itemWebUrl": "https://www.ebay.com.au/itm/327276081027?_skw=PS5+Slim+Digital&hash=item4c332caf83:g:svcAAeSwxUxqYyX4",
       "itemLocation": {
         "city": "AU",
         "country": "AU"
@@ -62,21 +48,7 @@
         "currency": "AUD"
       },
       "condition": "used_good",
-      "itemWebUrl": "https://www.ebay.com.au/itm/147442042875?_skw=PS5+Digital&hash=item22543b07fb:g:l5MAAeSw8KJqWdDf",
-      "itemLocation": {
-        "city": "AU",
-        "country": "AU"
-      }
-    },
-    {
-      "itemId": "v1|188619865122|0",
-      "title": "ps5 digital console",
-      "price": {
-        "value": "371.7",
-        "currency": "AUD"
-      },
-      "condition": "for_parts",
-      "itemWebUrl": "https://www.ebay.com.au/itm/188619865122?_skw=PS5+Digital&hash=item2bea9ebc22:g:xW0AAeSwRZpqTzJd",
+      "itemWebUrl": "https://www.ebay.com.au/itm/147442042875?_skw=PS5+Slim+Digital&hash=item22543b07fb:g:l5MAAeSw8KJqWdDf",
       "itemLocation": {
         "city": "AU",
         "country": "AU"
@@ -90,119 +62,7 @@
         "currency": "AUD"
       },
       "condition": "used_good",
-      "itemWebUrl": "https://www.ebay.com.au/itm/168472732463?_skw=PS5+Digital&hash=item2739c1e32f:g:NmcAAeSwtOZqNNxf",
-      "itemLocation": {
-        "city": "AU",
-        "country": "AU"
-      }
-    },
-    {
-      "itemId": "v1|318467466523|0",
-      "title": "ps5 console digital 2 controllers",
-      "price": {
-        "value": "738.7",
-        "currency": "AUD"
-      },
-      "condition": "used_good",
-      "itemWebUrl": "https://www.ebay.com.au/itm/318467466523?_skw=PS5+Digital&hash=item4a2623e51b:g:pWkAAeSwSoNqMmCr",
-      "itemLocation": {
-        "city": "AU",
-        "country": "AU"
-      }
-    },
-    {
-      "itemId": "v1|206338314524|0",
-      "title": "Roadcraft PS5 *Bonus digital code*",
-      "price": {
-        "value": "45",
-        "currency": "AUD"
-      },
-      "condition": "new",
-      "itemWebUrl": "https://www.ebay.com.au/itm/206338314524?_skw=PS5+Digital&hash=item300ab8d11c:g:nIIAAeSwaqBqKjyc",
-      "itemLocation": {
-        "city": "AU",
-        "country": "AU"
-      }
-    },
-    {
-      "itemId": "v1|127895865459|0",
-      "title": "ps5 console digital",
-      "price": {
-        "value": "738.7",
-        "currency": "AUD"
-      },
-      "condition": "used_good",
-      "itemWebUrl": "https://www.ebay.com.au/itm/127895865459?_skw=PS5+Digital&hash=item1dc7300873:g:zHsAAeSwpKRqHKqv",
-      "itemLocation": {
-        "city": "AU",
-        "country": "AU"
-      }
-    },
-    {
-      "itemId": "v1|800063562646|0",
-      "title": "ps5 console digital",
-      "price": {
-        "value": "894.7",
-        "currency": "AUD"
-      },
-      "condition": "used_good",
-      "itemWebUrl": "https://www.ebay.com.au/itm/800063562646?_skw=PS5+Digital&hash=itemba47812396:g:j3AAAeSweqFqExC2",
-      "itemLocation": {
-        "city": "AU",
-        "country": "AU"
-      }
-    },
-    {
-      "itemId": "v1|147323563074|0",
-      "title": "Sony PS5 Digital Edition Console - White",
-      "price": {
-        "value": "686.7",
-        "currency": "AUD"
-      },
-      "condition": "used_good",
-      "itemWebUrl": "https://www.ebay.com.au/itm/147323563074?_skw=PS5+Digital&hash=item224d2b2c42:g:-x4AAeSweBdqD50z",
-      "itemLocation": {
-        "city": "AU",
-        "country": "AU"
-      }
-    },
-    {
-      "itemId": "v1|397909631154|0",
-      "title": "The Talos Principle 2 - PlayStation 5 (PS5, 2024 PAL) Devolver Digital Adventure",
-      "price": {
-        "value": "149.95",
-        "currency": "AUD"
-      },
-      "condition": "used_good",
-      "itemWebUrl": "https://www.ebay.com.au/itm/397909631154?_skw=PS5+Digital&hash=item5ca54320b2:g:WK0AAeSwVqBp6jt7",
-      "itemLocation": {
-        "city": "AU",
-        "country": "AU"
-      }
-    },
-    {
-      "itemId": "v1|147290142054|0",
-      "title": "Sony PS5 Digital Edition Console - White",
-      "price": {
-        "value": "603.5",
-        "currency": "AUD"
-      },
-      "condition": "used_good",
-      "itemWebUrl": "https://www.ebay.com.au/itm/147290142054?_skw=PS5+Digital&hash=item224b2d3566:g:lx8AAeSwl5xp9hwR",
-      "itemLocation": {
-        "city": "AU",
-        "country": "AU"
-      }
-    },
-    {
-      "itemId": "v1|168347630957|0",
-      "title": "playstation 5 console digital edition- like new and also comes with disc drive",
-      "price": {
-        "value": "768.86",
-        "currency": "AUD"
-      },
-      "condition": "used_good",
-      "itemWebUrl": "https://www.ebay.com.au/itm/168347630957?_skw=PS5+Digital&hash=item27324cfd6d:g:eo0AAeSwtK1p9Mhy",
+      "itemWebUrl": "https://www.ebay.com.au/itm/168472732463?_skw=PS5+Slim+Digital&hash=item2739c1e32f:g:NmcAAeSwtOZqNNxf",
       "itemLocation": {
         "city": "AU",
         "country": "AU"
@@ -216,7 +76,7 @@
         "currency": "AUD"
       },
       "condition": "used_good",
-      "itemWebUrl": "https://www.ebay.com.au/itm/147193648167?_skw=PS5+Digital&hash=item22456cd427:g:xi0AAeSwI0FprU72",
+      "itemWebUrl": "https://www.ebay.com.au/itm/147193648167?_skw=PS5+Slim+Digital&hash=item22456cd427:g:xi0AAeSwI0FprU72",
       "itemLocation": {
         "city": "AU",
         "country": "AU"
@@ -230,21 +90,7 @@
         "currency": "AUD"
       },
       "condition": "used_good",
-      "itemWebUrl": "https://www.ebay.com.au/itm/297956764008?_skw=PS5+Digital&hash=item455f9b6968:g:rJAAAeSwcQBqZ7TZ",
-      "itemLocation": {
-        "city": "AU",
-        "country": "AU"
-      }
-    },
-    {
-      "itemId": "v1|277568681887|0",
-      "title": "Call of Duty: Black Ops 6 *FREE Same Day Post* PS5 Game Digital Code DLC",
-      "price": {
-        "value": "59.95",
-        "currency": "AUD"
-      },
-      "condition": "used_fair",
-      "itemWebUrl": "https://www.ebay.com.au/itm/277568681887?_skw=PS5+Digital&hash=item40a061f79f:g:6xoAAOSwjRtoOdCM",
+      "itemWebUrl": "https://www.ebay.com.au/itm/297956764008?_skw=PS5+Slim+Digital&hash=item455f9b6968:m:m8jUQpjJn2EEsCwXPhExyXw",
       "itemLocation": {
         "city": "AU",
         "country": "AU"
@@ -258,21 +104,7 @@
         "currency": "AUD"
       },
       "condition": "used_good",
-      "itemWebUrl": "https://www.ebay.com.au/itm/146935510770?_skw=PS5+Digital&hash=item223609f6f2:g:ieIAAeSw9WRpBy0R",
-      "itemLocation": {
-        "city": "AU",
-        "country": "AU"
-      }
-    },
-    {
-      "itemId": "v1|317279547606|0",
-      "title": "LOW FIRMWARE 06.02 DIGITAL SONY PS5",
-      "price": {
-        "value": "2090.7",
-        "currency": "AUD"
-      },
-      "condition": "used_good",
-      "itemWebUrl": "https://www.ebay.com.au/itm/317279547606?_skw=PS5+Digital&hash=item49df55b0d6:g:WP4AAeSwmP5oxYku",
+      "itemWebUrl": "https://www.ebay.com.au/itm/146935510770?_skw=PS5+Slim+Digital&hash=item223609f6f2:g:ieIAAeSw9WRpBy0R",
       "itemLocation": {
         "city": "AU",
         "country": "AU"
@@ -286,12 +118,26 @@
         "currency": "AUD"
       },
       "condition": "used_good",
-      "itemWebUrl": "https://www.ebay.com.au/itm/297596601398?_skw=PS5+Digital&hash=item454a23c436:g:NCEAAeSwlsZovp0p",
+      "itemWebUrl": "https://www.ebay.com.au/itm/297596601398?_skw=PS5+Slim+Digital&hash=item454a23c436:g:NCEAAeSwlsZovp0p",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|236256736687|0",
+      "title": "Sony PS5 Slim Digital Edition Console Two DualSense Controllers Bundle - White",
+      "price": {
+        "value": "1414.7",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/236256736687?_skw=PS5+Slim+Digital&hash=item3701ffb5af:g:YsUAAOSwhONoWxi4",
       "itemLocation": {
         "city": "AU",
         "country": "AU"
       }
     }
   ],
-  "total": 20
+  "total": 9
 }

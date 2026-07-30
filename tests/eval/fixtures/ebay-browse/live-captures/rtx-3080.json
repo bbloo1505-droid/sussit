@@ -1,0 +1,297 @@
+{
+  "savedAt": "2026-07-28T23:23:19.460Z",
+  "query": "RTX 3080 -bracket -support -cable -riser -box -fan -laptop -notebook -blade -prebuilt -PC",
+  "skuKey": "rtx-3080",
+  "product": {
+    "skuKey": "rtx-3080",
+    "brand": "NVIDIA",
+    "model": "RTX 3080",
+    "variant": null,
+    "category": "gpu",
+    "typicalAsk": 550
+  },
+  "marketplaceId": "EBAY_AU",
+  "itemSummaries": [
+    {
+      "itemId": "v1|358844928976|0",
+      "title": "GIGABYTE AORUS GeForce RTX 3080 10GB GDDR6X Graphics Card",
+      "price": {
+        "value": "599.86",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/358844928976?_skw=RTX+3080+-bracket+-support+-cable+-riser+-box+-fan+-laptop+-notebook+-blade+-prebuilt+-PC&hash=item538cd313d0:g:zzMAAeSwR-dqZdWr",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|236963172713|0",
+      "title": "ASUS TUF Gaming GeForce RTX 3080 Ti OC 12GB GDDR6X Graphics Card",
+      "price": {
+        "value": "715.1",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/236963172713?_skw=RTX+3080+-bracket+-support+-cable+-riser+-box+-fan+-laptop+-notebook+-blade+-prebuilt+-PC&hash=item372c1b1169:g:d0EAAeSwmkxqZV43",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|227444579474|0",
+      "title": "ASUS Turbo RTX 3080 10GB GDDR6X NON-LHR Blower Graphics Card Tested",
+      "price": {
+        "value": "498.85",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/227444579474?_skw=RTX+3080+-bracket+-support+-cable+-riser+-box+-fan+-laptop+-notebook+-blade+-prebuilt+-PC&hash=item34f4c0dc92:g:iw8AAeSwKL1prqhp",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|407092815189|0",
+      "title": "GIGABYTE NVIDIA GeForce RTX 3080 10GB GDDR6X Graphics Card (GV-N3080GAMING...",
+      "price": {
+        "value": "600",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/407092815189?_skw=RTX+3080+-bracket+-support+-cable+-riser+-box+-fan+-laptop+-notebook+-blade+-prebuilt+-PC&hash=item5ec89f6555:g:zxEAAeSwYlpqYdYx",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|188684639401|0",
+      "title": "Dell Precision 3660 Tower Workstation i9 12900 16C 32GB DDR5 1TB Nvme RTX 3080Ti",
+      "price": {
+        "value": "2699.99",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/188684639401?_skw=RTX+3080+-bracket+-support+-cable+-riser+-box+-fan+-laptop+-notebook+-blade+-prebuilt+-PC&hash=item2bee7b1ca9:g:STMAAeSw3mlqYdD3",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|168556352615|0",
+      "title": "RTX 3080 Graphics Card",
+      "price": {
+        "value": "530.7",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/168556352615?_skw=RTX+3080+-bracket+-support+-cable+-riser+-box+-fan+-laptop+-notebook+-blade+-prebuilt+-PC&hash=item273ebdd467:g:-YwAAeSw0-xqYV9L",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|327270475882|0",
+      "title": "TUF Gaming GeForce RTX™ 3080 Ti OC Edition 12GB",
+      "price": {
+        "value": "946.7",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/327270475882?_skw=RTX+3080+-bracket+-support+-cable+-riser+-box+-fan+-laptop+-notebook+-blade+-prebuilt+-PC&hash=item4c32d7286a:g:-3EAAeSw6QhqXqh1",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|188658002009|0",
+      "title": "AORUS GeForce RTX™ 4090 XTREME WATERFORCE 24GB",
+      "price": {
+        "value": "5710.7",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/188658002009?_skw=RTX+3080+-bracket+-support+-cable+-riser+-box+-fan+-laptop+-notebook+-blade+-prebuilt+-PC&hash=item2bece4a859:g:7lEAAeSw6FJqWvDL",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|178314945371|0",
+      "title": "EVGA GeForce RTX 3080 FTW3 ULTRA GAMING 10GB GDDR6X GPU 10G-P5-3897-KL",
+      "price": {
+        "value": "520.1",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/178314945371?_skw=RTX+3080+-bracket+-support+-cable+-riser+-box+-fan+-laptop+-notebook+-blade+-prebuilt+-PC&hash=item298466235b:g:8roAAeSwUXxqWGul",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|298494901518|0",
+      "title": "EVGA Nvidia GeForce RTX 3080Ti FTW3 GPU Ultra Gaming 12GB Graphics Card",
+      "price": {
+        "value": "999",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/298494901518?_skw=RTX+3080+-bracket+-support+-cable+-riser+-box+-fan+-laptop+-notebook+-blade+-prebuilt+-PC&hash=item457faebd0e:g:UY4AAeSwvn5qUEtU",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|117294228864|0",
+      "title": "Nvidia GeForce RTX 3080 TI Gigabyte Vision OC",
+      "price": {
+        "value": "842.7",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/117294228864?_skw=RTX+3080+-bracket+-support+-cable+-riser+-box+-fan+-laptop+-notebook+-blade+-prebuilt+-PC&hash=item1b4f47e580:g:ro8AAeSwlDZqUD5h",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|366531907000|0",
+      "title": "ASUS TUF Gaming GeForce RTX 3080 OC V2 10GB GDDR6X",
+      "price": {
+        "value": "649.99",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/366531907000?_skw=RTX+3080+-bracket+-support+-cable+-riser+-box+-fan+-laptop+-notebook+-blade+-prebuilt+-PC&hash=item5557010db8:g:7o8AAeSwzNFqT2Sp",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|267720811552|0",
+      "title": "GIGABYTE NVIDIA GeForce RTX 3080 10GB GDDR6X Graphics Card (GV-N3080GAMING...",
+      "price": {
+        "value": "634.7",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/267720811552?_skw=RTX+3080+-bracket+-support+-cable+-riser+-box+-fan+-laptop+-notebook+-blade+-prebuilt+-PC&hash=item3e55676420:g:BiAAAeSwoSFqTbhq",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|236922338812|0",
+      "title": "Gigabyte NVIDIA GeForce RTX 3080 Vision OC 10GB + Lian Li Strimer Plus ",
+      "price": {
+        "value": "594",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/236922338812?_skw=RTX+3080+-bracket+-support+-cable+-riser+-box+-fan+-laptop+-notebook+-blade+-prebuilt+-PC&hash=item3729abfdfc:g:6pYAAeSwFJtpt5oH",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|137483806068|0",
+      "title": "Colorful iGame RTX 3080 Neptune OC 10G LHR",
+      "price": {
+        "value": "633.66",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/137483806068?_skw=RTX+3080+-bracket+-support+-cable+-riser+-box+-fan+-laptop+-notebook+-blade+-prebuilt+-PC&hash=item2002ac6574:g:h-oAAeSwezVqSeQQ",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|287437191888|0",
+      "title": "Gigabyte Turbo RTX 3080 10GB GDDR6X Blower Graphics Card rev 2.0 lhr",
+      "price": {
+        "value": "514.99",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/287437191888?_skw=RTX+3080+-bracket+-support+-cable+-riser+-box+-fan+-laptop+-notebook+-blade+-prebuilt+-PC&hash=item42ec977ad0:g:hoEAAeSwrFRqSLRB",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|198473933555|0",
+      "title": "Geforce RTX 3080 ti Gaming OC 12GB",
+      "price": {
+        "value": "821.9",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/198473933555?_skw=RTX+3080+-bracket+-support+-cable+-riser+-box+-fan+-laptop+-notebook+-blade+-prebuilt+-PC&hash=item2e35f7e2f3:g:m5kAAeSw0aRqSGTR",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|147414694970|0",
+      "title": "gigabyte Turbo RTX 3080 10GB GDDR6X Blower Graphics Card rev 2.0 lhr",
+      "price": {
+        "value": "502.8",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/147414694970?_skw=RTX+3080+-bracket+-support+-cable+-riser+-box+-fan+-laptop+-notebook+-blade+-prebuilt+-PC&hash=item225299bc3a:g:qN4AAeSwG7dqSDd1",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|287430214143|0",
+      "title": "Gigabyte RTX 3080 Ti 12GB GDDR6X Graphic Video Card Gaming OC GPU | Tested",
+      "price": {
+        "value": "749",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/287430214143?_skw=RTX+3080+-bracket+-support+-cable+-riser+-box+-fan+-laptop+-notebook+-blade+-prebuilt+-PC&hash=item42ec2d01ff:g:IrYAAeSwfd5qRICm",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|158040763901|0",
+      "title": "Gigabyte Aorus RTX 3080 Xtreme 10GB",
+      "price": {
+        "value": "686.7",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/158040763901?_skw=RTX+3080+-bracket+-support+-cable+-riser+-box+-fan+-laptop+-notebook+-blade+-prebuilt+-PC&hash=item24cbf6adfd:g:iyoAAeSwiNRqQ5~0",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    }
+  ],
+  "total": 20
+}

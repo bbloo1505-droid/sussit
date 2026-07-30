@@ -1,23 +1,17 @@
 import type { ProductCategory } from '@/types/domain'
 
 /**
- * Universal intake, narrow intelligence.
- * Accept any listing; only `full` categories earn strong Buy/Offer verdicts.
+ * Universal intake + comps-first intelligence.
+ * Category tiers label coverage maturity; they no longer force LIMITED MARKET DATA.
+ * Verdicts follow comparable quality (see calculateConfidence / runAnalysis).
  */
 export type IntelligenceTier = 'full' | 'emerging' | 'basic'
 
-/** Categories where SussIt aims for high-confidence pricing. */
+/** Categories with the strongest matchers and AU inventory. */
 export const FULL_INTELLIGENCE_CATEGORIES = new Set<ProductCategory>([
   'phone',
   'console',
   'vr_headset',
-])
-
-/**
- * Target expansion categories — accept + analyse, but don't over-claim
- * until comps/matchers are as strong as phones/gaming/VR.
- */
-export const EMERGING_INTELLIGENCE_CATEGORIES = new Set<ProductCategory>([
   'camera',
   'laptop',
   'tablet',
@@ -25,6 +19,17 @@ export const EMERGING_INTELLIGENCE_CATEGORIES = new Set<ProductCategory>([
   'audio',
   'gpu',
   'power_tool',
+])
+
+/**
+ * Broad marketplace categories — real Buy/Offer when comps are solid.
+ */
+export const EMERGING_INTELLIGENCE_CATEGORIES = new Set<ProductCategory>([
+  'furniture',
+  'clothing',
+  'jewellery',
+  'collectible',
+  'vehicle',
 ])
 
 export function intelligenceTierForCategory(
@@ -38,16 +43,16 @@ export function intelligenceTierForCategory(
 export function tierLabel(tier: IntelligenceTier): string {
   switch (tier) {
     case 'full':
-      return 'High-confidence category'
+      return 'Strong category coverage'
     case 'emerging':
-      return 'Growing category coverage'
+      return 'Broad marketplace coverage'
     case 'basic':
-      return 'Limited category coverage'
+      return 'General item coverage'
   }
 }
 
 export function limitedMarketCopy(category: ProductCategory): string {
-  return `We found some comparable listings, but ${categoryLabel(category)} isn't currently supported for high-confidence pricing. Treat this as a rough check — not a Buy/Offer call.`
+  return `We found some comparable listings for ${categoryLabel(category)}, but the evidence is still thin. Treat the range as directional.`
 }
 
 export function categoryLabel(category: ProductCategory): string {
@@ -93,6 +98,6 @@ export function categoryLabel(category: ProductCategory): string {
 export const SUSSIT_POSITIONING = {
   consumerHeadline: 'Know what to pay before you buy.',
   consumerSupport:
-    'Paste a listing. Strong Buy/Offer where our comps are proven — honest limits everywhere else.',
+    'Paste a listing. We compare live eBay Australia asking prices and tell you what to pay.',
   flipHeadline: 'Know what will flip — and what to pay.',
 } as const

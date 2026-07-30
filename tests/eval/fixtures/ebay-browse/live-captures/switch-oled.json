@@ -1,5 +1,5 @@
 {
-  "savedAt": "2026-07-28T11:24:58.876Z",
+  "savedAt": "2026-07-28T23:22:33.168Z",
   "query": "Switch OLED console -stand -cooling -skin -silicone -thumb -charging -preorder -cover -custom -battlebeaver -Lite",
   "skuKey": "switch-oled",
   "product": {
@@ -12,6 +12,48 @@
   },
   "marketplaceId": "EBAY_AU",
   "itemSummaries": [
+    {
+      "itemId": "v1|188709421610|0",
+      "title": "Nintendo Switch OLED Model HEG-001 Handheld Console - 64GB - Read Desc",
+      "price": {
+        "value": "185",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/188709421610?_skw=Switch+OLED+console+-stand+-cooling+-skin+-silicone+-thumb+-charging+-preorder+-cover+-custom+-battlebeaver+-Lite&hash=item2beff5422a:g:5OQAAeSwe41qaCDy",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|147467821925|0",
+      "title": "Nintendo Switch OLED Console Pink Blue Joy Cons *EXC* (FREE SHIP)",
+      "price": {
+        "value": "250",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/147467821925?_skw=Switch+OLED+console+-stand+-cooling+-skin+-silicone+-thumb+-charging+-preorder+-cover+-custom+-battlebeaver+-Lite&hash=item2255c46365:g:yiIAAeSw2MxqaTBg",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|358854577124|0",
+      "title": "Nintendo Switch OLED Model OLED Screen White Console with Dock & Power Adapter",
+      "price": {
+        "value": "273.31",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/358854577124?_skw=Switch+OLED+console+-stand+-cooling+-skin+-silicone+-thumb+-charging+-preorder+-cover+-custom+-battlebeaver+-Lite&hash=item538d664be4:g:Gx0AAeSwcGlqaMqa",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
     {
       "itemId": "v1|267741132284|0",
       "title": "Nintendo Switch OLED Model HEG-001 Handheld Console - 64GB - White",
@@ -245,48 +287,6 @@
       },
       "condition": "used_good",
       "itemWebUrl": "https://www.ebay.com.au/itm/147442556538?_skw=Switch+OLED+console+-stand+-cooling+-skin+-silicone+-thumb+-charging+-preorder+-cover+-custom+-battlebeaver+-Lite&hash=item225442de7a:g:6~AAAeSwDB5qWhoz",
-      "itemLocation": {
-        "city": "AU",
-        "country": "AU"
-      }
-    },
-    {
-      "itemId": "v1|147441012175|0",
-      "title": "Nintendo Switch OLED  Console + Case",
-      "price": {
-        "value": "270",
-        "currency": "AUD"
-      },
-      "condition": "used_good",
-      "itemWebUrl": "https://www.ebay.com.au/itm/147441012175?_skw=Switch+OLED+console+-stand+-cooling+-skin+-silicone+-thumb+-charging+-preorder+-cover+-custom+-battlebeaver+-Lite&hash=item22542b4dcf:g:3bcAAeSw1uFqWnzl",
-      "itemLocation": {
-        "city": "AU",
-        "country": "AU"
-      }
-    },
-    {
-      "itemId": "v1|318585912190|0",
-      "title": "Nintendo Switch OLED Model HEG-001 Handheld Console - 64GB - White",
-      "price": {
-        "value": "308.16",
-        "currency": "AUD"
-      },
-      "condition": "used_good",
-      "itemWebUrl": "https://www.ebay.com.au/itm/318585912190?_skw=Switch+OLED+console+-stand+-cooling+-skin+-silicone+-thumb+-charging+-preorder+-cover+-custom+-battlebeaver+-Lite&hash=item4a2d333b7e:g:7wkAAeSwtWFqV2lP",
-      "itemLocation": {
-        "city": "AU",
-        "country": "AU"
-      }
-    },
-    {
-      "itemId": "v1|318579398987|0",
-      "title": "Nintendo Switch OLED Console W Dock Charger White Joy Cons HEG-001 Tested Works",
-      "price": {
-        "value": "260",
-        "currency": "AUD"
-      },
-      "condition": "used_good",
-      "itemWebUrl": "https://www.ebay.com.au/itm/318579398987?_skw=Switch+OLED+console+-stand+-cooling+-skin+-silicone+-thumb+-charging+-preorder+-cover+-custom+-battlebeaver+-Lite&hash=item4a2ccfd94b:g:fuAAAeSwpx9qVcv4",
       "itemLocation": {
         "city": "AU",
         "country": "AU"

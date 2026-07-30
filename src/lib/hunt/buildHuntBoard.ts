@@ -1,4 +1,5 @@
 import { HUNT_CATALOG } from '@/lib/hunt/catalog'
+import { playbooksForCategories } from '@/lib/hunt/flipPlaybooks'
 import { createPricingProvider } from '@/lib/pricing/createPricingProvider'
 import { assessComparables } from '@/lib/valuation/matchComparable'
 import { calculateMarketRange } from '@/lib/valuation/calculateMarketRange'
@@ -8,7 +9,7 @@ import { calculateFlipScore } from '@/lib/sellSpeed/calculateFlipScore'
 import { seedV0SellSpeedFixtures } from '@/lib/sellSpeed/seedQuestLifecycle'
 import { loadLifecycles } from '@/lib/sellSpeed/lifecycleStore'
 import type { HuntBoard, HuntBoardRow, HuntRules } from '@/types/hunt'
-import type { IdentifiedProduct } from '@/types/domain'
+import type { IdentifiedProduct, ProductCategory } from '@/types/domain'
 
 function ensureSeed() {
   if (loadLifecycles().length > 0) return
@@ -50,12 +51,29 @@ function sellThroughText(label: HuntBoardRow['sellThroughLabel']): string {
 
 export { sellThroughText }
 
+function categorySelected(
+  rules: HuntRules,
+  category: ProductCategory,
+): boolean {
+  const cats = rules.categories ?? ['all']
+  if (cats.length === 0 || cats.includes('all')) return true
+  return cats.includes(category)
+}
+
+function normQuery(q: string): string {
+  return q.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim()
+}
+
 export async function buildHuntBoard(rules: HuntRules): Promise<HuntBoard> {
   ensureSeed()
   const pricing = createPricingProvider()
   const rows: HuntBoardRow[] = []
 
-  for (const item of HUNT_CATALOG) {
+  const catalog = HUNT_CATALOG.filter((item) =>
+    categorySelected(rules, item.category),
+  )
+
+  for (const item of catalog) {
     const product = asProduct(item)
     const listings = await pricing.search(product)
     const assessments = assessComparables(product, listings)
@@ -67,6 +85,7 @@ export async function buildHuntBoard(rules: HuntRules): Promise<HuntBoard> {
         productId: item.productId,
         label: item.label,
         searchQuery: item.searchQuery,
+        category: item.category,
         maxBuy: 0,
         typicalSaleLow: 0,
         typicalSaleHigh: 0,
@@ -102,7 +121,7 @@ export async function buildHuntBoard(rules: HuntRules): Promise<HuntBoard> {
       flip.sellSpeed.estimatedDaysLow > rules.maxSellDays
     ) {
       excludedReason = 'TOO_SLOW'
-    }     else if (flip.sellSpeed.evidence === 'INSUFFICIENT') {
+    } else if (flip.sellSpeed.evidence === 'INSUFFICIENT') {
       excludedReason = 'INSUFFICIENT_SPEED_DATA'
     }
 
@@ -123,6 +142,7 @@ export async function buildHuntBoard(rules: HuntRules): Promise<HuntBoard> {
       productId: item.productId,
       label: item.label,
       searchQuery: item.searchQuery,
+      category: item.category,
       maxBuy: maxBuy.maxBuy,
       typicalSaleLow: market.median,
       typicalSaleHigh: Math.max(market.p75, market.median),
@@ -141,14 +161,46 @@ export async function buildHuntBoard(rules: HuntRules): Promise<HuntBoard> {
     .filter((r) => r.excludedReason == null && r.flipScore != null)
     .sort((a, b) => (b.flipScore ?? 0) - (a.flipScore ?? 0))
 
-  const huntList = opportunities.slice(0, 5).map((r, i) => ({
+  const huntList = opportunities.slice(0, 8).map((r, i) => ({
     rank: i + 1,
     searchQuery: r.searchQuery,
     label: r.label,
     maxBuy: r.maxBuy,
+    category: r.category,
   }))
 
-  // Falling / avoid: slow sell-through with elevated active supply
+  const scoredByQuery = new Map<string, HuntBoardRow>()
+  for (const row of opportunities) {
+    scoredByQuery.set(normQuery(row.searchQuery), row)
+    scoredByQuery.set(normQuery(row.label), row)
+  }
+
+  const categorySuggestions = playbooksForCategories(
+    rules.categories ?? ['all'],
+  ).map((book) => ({
+    category: book.category,
+    title: book.title,
+    blurb: book.blurb,
+    searches: book.searches
+      .map((s) => {
+        const scored =
+          scoredByQuery.get(normQuery(s.searchQuery)) ??
+          scoredByQuery.get(normQuery(s.label))
+        const maxBuy = scored
+          ? Math.min(scored.maxBuy, rules.budget)
+          : Math.min(s.guideMaxBuy, rules.budget)
+        return {
+          label: s.label,
+          searchQuery: s.searchQuery,
+          maxBuy,
+          source: scored ? ('scored' as const) : ('guide' as const),
+          why: s.why,
+        }
+      })
+      .filter((s) => s.maxBuy > 0)
+      .sort((a, b) => b.maxBuy - a.maxBuy),
+  })).filter((book) => book.searches.length > 0)
+
   const falling = rows
     .filter((r) => {
       if (r.sellThroughLabel !== 'SLOW' && r.sellThroughLabel !== 'MODERATE') {
@@ -166,9 +218,10 @@ export async function buildHuntBoard(rules: HuntRules): Promise<HuntBoard> {
     rules,
     opportunities,
     huntList,
+    categorySuggestions,
     falling,
     generatedAt: new Date().toISOString(),
     disclaimer:
-      'Typical sale uses current AU asking comps — not eBay sold prices. Sell-through is observed listing movement, not Terapeak sell-through %.',
+      'Search suggestions are category playbooks. Scored Max Buy uses live/fixture AU asking comps — not eBay sold prices. Guide prices are directional until that SKU clears the hunt board.',
   }
 }

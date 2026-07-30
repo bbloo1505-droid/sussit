@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-28T11:24:19.707Z",
+  "generatedAt": "2026-07-28T11:52:54.348Z",
   "mode": "offline",
   "seed": 20260727,
   "totalCases": 10875,
@@ -7,7 +7,7 @@
   "totalFailed": 0,
   "totalWarned": 0,
   "overallScore": 100,
-  "runtimeMs": 1236,
+  "runtimeMs": 991,
   "suites": [
     {
       "suite": "identification",
@@ -231,7 +231,7 @@
   "previous": {
     "overallScore": 100,
     "totalFailed": 0,
-    "generatedAt": "2026-07-28T11:11:53.485Z"
+    "generatedAt": "2026-07-28T11:24:19.707Z"
   },
   "regressions": [],
   "highlights": {

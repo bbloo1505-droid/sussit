@@ -20,4 +20,25 @@ describe('runAnalysis', () => {
     expect(result.assessments.some((a) => !a.included)).toBe(true)
     expect(result.assessments.some((a) => a.included)).toBe(true)
   })
+
+  it('returns real Buy/Offer verdicts for console fixtures (not LIMITED)', async () => {
+    const product = {
+      ...questDemoProduct,
+      category: 'console' as const,
+      brand: 'Nintendo',
+      model: 'Switch OLED',
+      variant: null,
+      askingPrice: 340,
+      includedAccessories: [],
+      identificationConfidence: 0.88,
+    }
+    const result = await runAnalysis({
+      product,
+      pricing: new TestPricingProvider(),
+    })
+
+    expect(result.deal.verdictLabel).not.toBe('LIMITED MARKET DATA')
+    expect(result.offer).not.toBeNull()
+    expect(result.market).not.toBeNull()
+  })
 })

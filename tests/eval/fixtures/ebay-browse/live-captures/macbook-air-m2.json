@@ -1,5 +1,5 @@
 {
-  "savedAt": "2026-07-28T11:25:17.948Z",
+  "savedAt": "2026-07-28T23:23:04.338Z",
   "query": "Apple MacBook Air M2 8GB 256GB -case -sleeve -charger -adapter -battery -keyboard -screen -parts",
   "skuKey": "macbook-air-m2",
   "product": {
@@ -12,6 +12,20 @@
   },
   "marketplaceId": "EBAY_AU",
   "itemSummaries": [
+    {
+      "itemId": "v1|168571018483|0",
+      "title": "Apple 13-inch MacBook Air Apple. M2, 8GB of ram and 256GB storage",
+      "price": {
+        "value": "1050.7",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/168571018483?_skw=Apple+MacBook+Air+M2+8GB+256GB+-case+-sleeve+-charger+-adapter+-battery+-keyboard+-screen+-parts&hash=item273f9d9cf3:g:emIAAeSwzIxqaDh5",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
     {
       "itemId": "v1|267734004860|0",
       "title": "Apple 13-inch MacBook Air 2022, M2 Chip 8GB Ram 256GB SSD, Space Grey - As New",
@@ -273,20 +287,6 @@
       },
       "condition": "used_good",
       "itemWebUrl": "https://www.ebay.com.au/itm/318152062676?_skw=Apple+MacBook+Air+M2+8GB+256GB+-case+-sleeve+-charger+-adapter+-battery+-keyboard+-screen+-parts&hash=item4a135736d4:g:K30AAeSwBXRp3xTB",
-      "itemLocation": {
-        "city": "AU",
-        "country": "AU"
-      }
-    },
-    {
-      "itemId": "v1|147235902682|0",
-      "title": "Apple MacBook Air (M2, 2023) 15\" 8GB/256GB - Starlight 89% BH *GOOD* (READDESC)",
-      "price": {
-        "value": "1119",
-        "currency": "AUD"
-      },
-      "condition": "used_good",
-      "itemWebUrl": "https://www.ebay.com.au/itm/147235902682?_skw=Apple+MacBook+Air+M2+8GB+256GB+-case+-sleeve+-charger+-adapter+-battery+-keyboard+-screen+-parts&hash=item2247f194da:g:uXUAAeSwPSxpzY3e",
       "itemLocation": {
         "city": "AU",
         "country": "AU"

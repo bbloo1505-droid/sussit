@@ -26,22 +26,28 @@ const quest: IdentifiedProduct = {
 }
 
 describe('supportTiers', () => {
-  it('marks phones/gaming/VR as full intelligence', () => {
+  it('marks core electronics as full intelligence', () => {
     expect(intelligenceTierForCategory('phone')).toBe('full')
     expect(intelligenceTierForCategory('console')).toBe('full')
     expect(intelligenceTierForCategory('vr_headset')).toBe('full')
+    expect(intelligenceTierForCategory('laptop')).toBe('full')
+    expect(intelligenceTierForCategory('camera')).toBe('full')
+    expect(intelligenceTierForCategory('audio')).toBe('full')
+    expect(intelligenceTierForCategory('power_tool')).toBe('full')
   })
 
-  it('marks cameras/tools/consumer tech as emerging', () => {
-    expect(intelligenceTierForCategory('camera')).toBe('emerging')
-    expect(intelligenceTierForCategory('power_tool')).toBe('emerging')
-    expect(intelligenceTierForCategory('laptop')).toBe('emerging')
+  it('marks broad marketplace categories as emerging', () => {
+    expect(intelligenceTierForCategory('furniture')).toBe('emerging')
+    expect(intelligenceTierForCategory('clothing')).toBe('emerging')
+    expect(intelligenceTierForCategory('jewellery')).toBe('emerging')
+    expect(intelligenceTierForCategory('collectible')).toBe('emerging')
+    expect(intelligenceTierForCategory('vehicle')).toBe('emerging')
   })
 
-  it('marks furniture/clothing as basic', () => {
-    expect(intelligenceTierForCategory('furniture')).toBe('basic')
-    expect(intelligenceTierForCategory('clothing')).toBe('basic')
-    expect(limitedMarketCopy('furniture')).toMatch(/high-confidence/i)
+  it('marks unknown/other as basic coverage', () => {
+    expect(intelligenceTierForCategory('other')).toBe('basic')
+    expect(intelligenceTierForCategory('unknown')).toBe('basic')
+    expect(limitedMarketCopy('furniture')).toMatch(/directional/i)
   })
 })
 

@@ -1,25 +1,25 @@
 {
   "report": {
-    "generatedAt": "2026-07-28T11:25:39.833Z",
+    "generatedAt": "2026-07-28T23:23:36.297Z",
     "mode": "live",
     "seed": 20260727,
-    "totalCases": 30,
-    "totalPassed": 30,
+    "totalCases": 43,
+    "totalPassed": 43,
     "totalFailed": 0,
     "totalWarned": 0,
     "overallScore": 100,
-    "runtimeMs": 56226,
+    "runtimeMs": 79983,
     "suites": [
       {
         "suite": "ebay_replay",
-        "total": 30,
-        "passed": 30,
+        "total": 43,
+        "passed": 43,
         "failed": 0,
         "warned": 0,
         "score": 100,
         "metrics": {
-          "calls": 30,
-          "maxCalls": 30
+          "calls": 43,
+          "maxCalls": 43
         }
       }
     ],
@@ -69,9 +69,9 @@
       "query": "PS5 Slim Disc console -stand -cooling -skin -silicone -thumb -charging -preorder -cover -custom -battlebeaver -Pro -Digital",
       "skuKey": "ps5-slim",
       "category": "console",
-      "total": 6,
+      "total": 5,
       "saved": "C:\\Users\\bbloo\\sussit\\tests\\eval\\fixtures\\ebay-browse\\live-captures\\ps5-slim.json",
-      "itemCount": 6
+      "itemCount": 5
     },
     {
       "query": "PS5 Pro console -stand -cooling -skin -silicone -thumb -charging -preorder -cover -custom -battlebeaver -Slim -Hawk -Skater -Tony -Fanatec -Magazine -Enhanced",
@@ -111,6 +111,30 @@
       "category": "console",
       "total": 20,
       "saved": "C:\\Users\\bbloo\\sussit\\tests\\eval\\fixtures\\ebay-browse\\live-captures\\xbox-series-x.json",
+      "itemCount": 20
+    },
+    {
+      "query": "Xbox Series S console -stand -cooling -skin -silicone -thumb -charging -preorder -cover -custom -battlebeaver",
+      "skuKey": "xbox-series-s",
+      "category": "console",
+      "total": 12,
+      "saved": "C:\\Users\\bbloo\\sussit\\tests\\eval\\fixtures\\ebay-browse\\live-captures\\xbox-series-s.json",
+      "itemCount": 12
+    },
+    {
+      "query": "Valve Steam Deck 512GB console -stand -cooling -skin -silicone -thumb -charging -preorder -cover -custom -battlebeaver",
+      "skuKey": "steam-deck",
+      "category": "console",
+      "total": 6,
+      "saved": "C:\\Users\\bbloo\\sussit\\tests\\eval\\fixtures\\ebay-browse\\live-captures\\steam-deck.json",
+      "itemCount": 6
+    },
+    {
+      "query": "Sony PlayStation 4 Pro console -stand -cooling -skin -silicone -thumb -charging -preorder -cover -custom -battlebeaver",
+      "skuKey": "ps4-pro",
+      "category": "console",
+      "total": 20,
+      "saved": "C:\\Users\\bbloo\\sussit\\tests\\eval\\fixtures\\ebay-browse\\live-captures\\ps4-pro.json",
       "itemCount": 20
     },
     {
@@ -154,6 +178,22 @@
       "itemCount": 20
     },
     {
+      "query": "iPhone 14 128GB -case -cover -charger -cable -tempered -protector -magsafe -wallet -glass -holder -pouch -Pro -Plus -Max",
+      "skuKey": "iphone-14",
+      "category": "phone",
+      "total": 20,
+      "saved": "C:\\Users\\bbloo\\sussit\\tests\\eval\\fixtures\\ebay-browse\\live-captures\\iphone-14.json",
+      "itemCount": 20
+    },
+    {
+      "query": "Galaxy S23 128GB -case -cover -charger -cable -tempered -protector -magsafe -wallet -glass -holder -pouch",
+      "skuKey": "galaxy-s23",
+      "category": "phone",
+      "total": 20,
+      "saved": "C:\\Users\\bbloo\\sussit\\tests\\eval\\fixtures\\ebay-browse\\live-captures\\galaxy-s23.json",
+      "itemCount": 20
+    },
+    {
       "query": "Sony A7 III body -lens -strap -bag -battery -charger -grip -cage -filter -hood -card",
       "skuKey": "sony-a7iii",
       "category": "camera",
@@ -168,6 +208,22 @@
       "total": 8,
       "saved": "C:\\Users\\bbloo\\sussit\\tests\\eval\\fixtures\\ebay-browse\\live-captures\\canon-r6.json",
       "itemCount": 8
+    },
+    {
+      "query": "GoPro Hero 12 body -lens -strap -bag -battery -charger -grip -cage -filter -hood -card",
+      "skuKey": "gopro-hero12",
+      "category": "camera",
+      "total": 20,
+      "saved": "C:\\Users\\bbloo\\sussit\\tests\\eval\\fixtures\\ebay-browse\\live-captures\\gopro-hero12.json",
+      "itemCount": 20
+    },
+    {
+      "query": "DJI Mini 3 body -lens -strap -bag -battery -charger -grip -cage -filter -hood -card",
+      "skuKey": "dji-mini-3",
+      "category": "camera",
+      "total": 20,
+      "saved": "C:\\Users\\bbloo\\sussit\\tests\\eval\\fixtures\\ebay-browse\\live-captures\\dji-mini-3.json",
+      "itemCount": 20
     },
     {
       "query": "Apple MacBook Air M2 8GB 256GB -case -sleeve -charger -adapter -battery -keyboard -screen -parts",
@@ -197,9 +253,9 @@
       "query": "Apple Watch Series 9 45mm GPS -band -strap -case -charger -protector -screen",
       "skuKey": "apple-watch-series-9",
       "category": "wearable",
-      "total": 9,
+      "total": 10,
       "saved": "C:\\Users\\bbloo\\sussit\\tests\\eval\\fixtures\\ebay-browse\\live-captures\\apple-watch-series-9.json",
-      "itemCount": 9
+      "itemCount": 10
     },
     {
       "query": "Apple AirPods Pro 2 -eartips -tips -cushion -earpad -single -replacement",
@@ -218,12 +274,36 @@
       "itemCount": 20
     },
     {
+      "query": "Bose QuietComfort 45 -eartips -tips -cushion -earpad -single -replacement",
+      "skuKey": "bose-qc45",
+      "category": "audio",
+      "total": 20,
+      "saved": "C:\\Users\\bbloo\\sussit\\tests\\eval\\fixtures\\ebay-browse\\live-captures\\bose-qc45.json",
+      "itemCount": 20
+    },
+    {
       "query": "RTX 4070 -bracket -support -cable -riser -box -fan -laptop -notebook -blade -prebuilt -PC -Ti -SUPER -Super",
       "skuKey": "rtx-4070",
       "category": "gpu",
       "total": 12,
       "saved": "C:\\Users\\bbloo\\sussit\\tests\\eval\\fixtures\\ebay-browse\\live-captures\\rtx-4070.json",
       "itemCount": 12
+    },
+    {
+      "query": "RTX 4060 -bracket -support -cable -riser -box -fan -laptop -notebook -blade -prebuilt -PC",
+      "skuKey": "rtx-4060",
+      "category": "gpu",
+      "total": 20,
+      "saved": "C:\\Users\\bbloo\\sussit\\tests\\eval\\fixtures\\ebay-browse\\live-captures\\rtx-4060.json",
+      "itemCount": 20
+    },
+    {
+      "query": "RTX 3080 -bracket -support -cable -riser -box -fan -laptop -notebook -blade -prebuilt -PC",
+      "skuKey": "rtx-3080",
+      "category": "gpu",
+      "total": 20,
+      "saved": "C:\\Users\\bbloo\\sussit\\tests\\eval\\fixtures\\ebay-browse\\live-captures\\rtx-3080.json",
+      "itemCount": 20
     },
     {
       "query": "Makita DTD172 18V -battery -charger -bit -bits -case -bag -only",
@@ -266,6 +346,14 @@
       "itemCount": 20
     },
     {
+      "query": "Nike Air Jordan 1 -lot -bundle -wholesale -sample",
+      "skuKey": "jordan-1",
+      "category": "clothing",
+      "total": 20,
+      "saved": "C:\\Users\\bbloo\\sussit\\tests\\eval\\fixtures\\ebay-browse\\live-captures\\jordan-1.json",
+      "itemCount": 20
+    },
+    {
       "query": "LEGO 75192 Millennium Falcon -proxy -fake -reproduction -minifigure -minifig -figure",
       "skuKey": "lego-75192",
       "category": "collectible",
@@ -274,11 +362,27 @@
       "itemCount": 10
     },
     {
+      "query": "LEGO 75313 AT-AT -proxy -fake -reproduction -minifigure -minifig -figure",
+      "skuKey": "lego-75313",
+      "category": "collectible",
+      "total": 6,
+      "saved": "C:\\Users\\bbloo\\sussit\\tests\\eval\\fixtures\\ebay-browse\\live-captures\\lego-75313.json",
+      "itemCount": 6
+    },
+    {
       "query": "Pandora Charm -box -empty -display",
       "skuKey": "pandora-charm",
       "category": "jewellery",
       "total": 20,
       "saved": "C:\\Users\\bbloo\\sussit\\tests\\eval\\fixtures\\ebay-browse\\live-captures\\pandora-charm.json",
+      "itemCount": 20
+    },
+    {
+      "query": "Dyson V8",
+      "skuKey": "dyson-v8",
+      "category": "other",
+      "total": 20,
+      "saved": "C:\\Users\\bbloo\\sussit\\tests\\eval\\fixtures\\ebay-browse\\live-captures\\dyson-v8.json",
       "itemCount": 20
     }
   ]

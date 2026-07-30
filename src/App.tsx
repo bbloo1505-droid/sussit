@@ -11,6 +11,7 @@ import { RisksPage } from '@/pages/RisksPage'
 import { FlipPage } from '@/pages/FlipPage'
 import { RelistPage } from '@/pages/RelistPage'
 import { FlipHistoryPage } from '@/pages/FlipHistoryPage'
+import { FlipAssistantPage } from '@/pages/FlipAssistantPage'
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/flip" element={<FlipHuntPage />} />
           <Route path="/flip/history" element={<FlipHistoryPage />} />
+          <Route path="/flip/assistant" element={<FlipAssistantPage />} />
           <Route path="/analyse" element={<Navigate to="/" replace />} />
           <Route path="/confirm" element={<ConfirmPage />} />
           <Route path="/analysing" element={<AnalysingPage />} />

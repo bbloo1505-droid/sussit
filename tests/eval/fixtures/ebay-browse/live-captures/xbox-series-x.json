@@ -1,5 +1,5 @@
 {
-  "savedAt": "2026-07-28T11:25:03.223Z",
+  "savedAt": "2026-07-28T23:22:37.155Z",
   "query": "Xbox Series X console -stand -cooling -skin -silicone -thumb -charging -preorder -cover -custom -battlebeaver",
   "skuKey": "xbox-series-x",
   "product": {
@@ -12,6 +12,20 @@
   },
   "marketplaceId": "EBAY_AU",
   "itemSummaries": [
+    {
+      "itemId": "v1|318646591392|0",
+      "title": "Microsoft XBOX Series X 1TB SSD Ultra HD Blu-ray 4K Gaming Console VGC - BOXED",
+      "price": {
+        "value": "670",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/318646591392?_skw=Xbox+Series+X+console+-stand+-cooling+-skin+-silicone+-thumb+-charging+-preorder+-cover+-custom+-battlebeaver&hash=item4a30d11fa0:g:DJ4AAeSwN-lqaK4j",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
     {
       "itemId": "v1|298538776016|0",
       "title": "Xbox One X 1TB 4K Console Bundle White Series X Controller HDMI Power Cord",
@@ -83,20 +97,6 @@
       }
     },
     {
-      "itemId": "v1|158114928256|0",
-      "title": "Xbox Series X Halo Infinite Limited Edition console LIGHTLY PLAYED",
-      "price": {
-        "value": "1200",
-        "currency": "AUD"
-      },
-      "condition": "used_good",
-      "itemWebUrl": "https://www.ebay.com.au/itm/158114928256?_skw=Xbox+Series+X+console+-stand+-cooling+-skin+-silicone+-thumb+-charging+-preorder+-cover+-custom+-battlebeaver&hash=item24d0625680:g:QqYAAeSwzGVqYw5W",
-      "itemLocation": {
-        "city": "AU",
-        "country": "AU"
-      }
-    },
-    {
       "itemId": "v1|178338745257|0",
       "title": "ANNO 1800 Console Edition | Xbox Series X | Aus Stock",
       "price": {
@@ -133,20 +133,6 @@
       },
       "condition": "used_good",
       "itemWebUrl": "https://www.ebay.com.au/itm/188673838771?_skw=Xbox+Series+X+console+-stand+-cooling+-skin+-silicone+-thumb+-charging+-preorder+-cover+-custom+-battlebeaver&hash=item2bedd64eb3:g:r2YAAeSwahlqXwza",
-      "itemLocation": {
-        "city": "AU",
-        "country": "AU"
-      }
-    },
-    {
-      "itemId": "v1|198493071391|0",
-      "title": "Xbox Series X Console 1TB",
-      "price": {
-        "value": "686.7",
-        "currency": "AUD"
-      },
-      "condition": "used_good",
-      "itemWebUrl": "https://www.ebay.com.au/itm/198493071391?_skw=Xbox+Series+X+console+-stand+-cooling+-skin+-silicone+-thumb+-charging+-preorder+-cover+-custom+-battlebeaver&hash=item2e371be81f:g:KtkAAeSwgvZqU3q0",
       "itemLocation": {
         "city": "AU",
         "country": "AU"
@@ -287,6 +273,20 @@
       },
       "condition": "used_good",
       "itemWebUrl": "https://www.ebay.com.au/itm/205940425408?_skw=Xbox+Series+X+console+-stand+-cooling+-skin+-silicone+-thumb+-charging+-preorder+-cover+-custom+-battlebeaver&hash=item2ff30182c0:g:RiQAAeSw48ZpSYgs",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|136830897851|0",
+      "title": "Microsoft Xbox Series X 1TB Video Game Console - Black BUNDLE",
+      "price": {
+        "value": "946.7",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/136830897851?_skw=Xbox+Series+X+console+-stand+-cooling+-skin+-silicone+-thumb+-charging+-preorder+-cover+-custom+-battlebeaver&hash=item1fdbc1cebb:g:M2MAAeSwcLppN15j",
       "itemLocation": {
         "city": "AU",
         "country": "AU"

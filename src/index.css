@@ -1,15 +1,15 @@
 @import "tailwindcss";
 
 @theme {
-  --color-lime: #c6ff00;
-  --color-ink: #111111;
-  --color-cream: #faf8f5;
-  --color-surface: #1a1a1a;
-  --color-panel: #222222;
-  --color-muted: #8a8a8a;
+  --color-lime: #c4ff00;
+  --color-ink: #090b09;
+  --color-cream: #f7f7f2;
+  --color-surface: #11140f;
+  --color-panel: #171a15;
+  --color-muted: #969c91;
   --color-fair: #facc15;
-  --font-sans: "Figtree", ui-sans-serif, system-ui, sans-serif;
-  --font-display: "Barlow", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Manrope", ui-sans-serif, system-ui, sans-serif;
 }
 
 @layer base {
@@ -27,9 +27,7 @@
   body {
     margin: 0;
     font-family: var(--font-sans);
-    background:
-      radial-gradient(120% 80% at 50% -10%, #2a2a2a 0%, transparent 55%),
-      #0c0c0c;
+    background: var(--color-ink);
     color: var(--color-cream);
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;

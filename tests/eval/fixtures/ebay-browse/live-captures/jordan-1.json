@@ -1,0 +1,297 @@
+{
+  "savedAt": "2026-07-28T23:23:29.467Z",
+  "query": "Nike Air Jordan 1 -lot -bundle -wholesale -sample",
+  "skuKey": "jordan-1",
+  "product": {
+    "skuKey": "jordan-1",
+    "brand": "Nike",
+    "model": "Air Jordan 1",
+    "variant": null,
+    "category": "clothing",
+    "typicalAsk": 220
+  },
+  "marketplaceId": "EBAY_AU",
+  "itemSummaries": [
+    {
+      "itemId": "v1|327283114779|0",
+      "title": "Nike Air Jordan 1 Low Dark Powder Blue White Gum DC0774104 Women US 8 UK 5.5 AJ1",
+      "price": {
+        "value": "139.99",
+        "currency": "AUD"
+      },
+      "condition": "used_like_new",
+      "itemWebUrl": "https://www.ebay.com.au/itm/327283114779?_skw=Nike+Air+Jordan+1+-lot+-bundle+-wholesale+-sample&hash=item4c3398031b:g:buoAAeSwZl5qaLHK",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|336712236796|0",
+      "title": "Nike Air Jordan 1 High Top Lace Up Sneakers White Black Blue US 9.5 555088-134",
+      "price": {
+        "value": "75.03",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/336712236796?_skw=Nike+Air+Jordan+1+-lot+-bundle+-wholesale+-sample&hash=item4e659cfefc:g:KDAAAeSwD-lqaAtW",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|298536586718|0",
+      "title": "Nike Air Jordan 1 x Off-White UNC Blue | Size 11.5 US | PREOWNED",
+      "price": {
+        "value": "449.99",
+        "currency": "AUD"
+      },
+      "condition": "used_fair",
+      "itemWebUrl": "https://www.ebay.com.au/itm/298536586718?_skw=Nike+Air+Jordan+1+-lot+-bundle+-wholesale+-sample&hash=item45822acdde:g:gtoAAeSw6PpqZ1Ha",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|236965822585|0",
+      "title": "Nike Air Jordan 1 Low Toddler Shoes Black White Red US 9C EU 27 Sneakers",
+      "price": {
+        "value": "39.95",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/236965822585?_skw=Nike+Air+Jordan+1+-lot+-bundle+-wholesale+-sample&hash=item372c438079:g:AfkAAeSw4NdqZyh0",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|298536114215|0",
+      "title": "Nike Air Jordan 1 Low Mens Shoes Black White Grey AU 7 US 8 EU 41",
+      "price": {
+        "value": "89",
+        "currency": "AUD"
+      },
+      "condition": "used_like_new",
+      "itemWebUrl": "https://www.ebay.com.au/itm/298536114215?_skw=Nike+Air+Jordan+1+-lot+-bundle+-wholesale+-sample&hash=item4582239827:g:qcMAAeSwlYhqZySe",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|366568164458|0",
+      "title": "Nike Air Jordan 1 Mid Sneakers Size 4Y Good Condition #44315",
+      "price": {
+        "value": "60",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/366568164458?_skw=Nike+Air+Jordan+1+-lot+-bundle+-wholesale+-sample&hash=item55592a4c6a:g:SiMAAeSwDDdqaNM~",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|318639722915|0",
+      "title": "Nike Air Jordan  1 Elevate Low SE DQ3698-141 University Blue US 8 Eur 39 Women’s",
+      "price": {
+        "value": "71.13",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/318639722915?_skw=Nike+Air+Jordan+1+-lot+-bundle+-wholesale+-sample&hash=item4a306851a3:g:Ki8AAOSwtohm53UX",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|137555164164|0",
+      "title": "Nike Air Jordan 1 Mid Split 'Homage Black White' Women's Size 9.5",
+      "price": {
+        "value": "69.6",
+        "currency": "AUD"
+      },
+      "condition": "used_like_new",
+      "itemWebUrl": "https://www.ebay.com.au/itm/137555164164?_skw=Nike+Air+Jordan+1+-lot+-bundle+-wholesale+-sample&hash=item2006ed3c04:g:rJ8AAeSwn2JqZulJ",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|137555125268|0",
+      "title": "Nike Air Jordan 1 Low HQ2010-005 Men US 9 UK 8 EU 42.5 Grey Pink Purple",
+      "price": {
+        "value": "53.7",
+        "currency": "AUD"
+      },
+      "condition": "used_like_new",
+      "itemWebUrl": "https://www.ebay.com.au/itm/137555125268?_skw=Nike+Air+Jordan+1+-lot+-bundle+-wholesale+-sample&hash=item2006eca414:g:93oAAeSwan9qZuM0",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|137554839366|0",
+      "title": "Nike Air Jordan 1 Kids High Top Sneakers White/Blue/Black US 5 555088-134",
+      "price": {
+        "value": "64.3",
+        "currency": "AUD"
+      },
+      "condition": "used_like_new",
+      "itemWebUrl": "https://www.ebay.com.au/itm/137554839366?_skw=Nike+Air+Jordan+1+-lot+-bundle+-wholesale+-sample&hash=item2006e84746:g:EAsAAeSwE55qZsXz",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|800412492277|0",
+      "title": "Nike Air Jordan 1 Mid Wolf Grey Black White Shoes US 9.5 EU 43",
+      "price": {
+        "value": "69.99",
+        "currency": "AUD"
+      },
+      "condition": "used_like_new",
+      "itemWebUrl": "https://www.ebay.com.au/itm/800412492277?_skw=Nike+Air+Jordan+1+-lot+-bundle+-wholesale+-sample&hash=itemba5c4d61f5:g:BtIAAeSw75ZqZobd",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|800412423839|0",
+      "title": "Nike Air Jordan 1 Mid Pink Black Women’s Sneakers US 8.5 EU 42",
+      "price": {
+        "value": "59.99",
+        "currency": "AUD"
+      },
+      "condition": "used_like_new",
+      "itemWebUrl": "https://www.ebay.com.au/itm/800412423839?_skw=Nike+Air+Jordan+1+-lot+-bundle+-wholesale+-sample&hash=itemba5c4c569f:g:g1QAAeSwtxVqZoOi",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|178343578977|0",
+      "title": "Nike Air Jordan 1 Low Women's US 9 Sneakers Shoes Triple White Leather VGC",
+      "price": {
+        "value": "59.5",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/178343578977?_skw=Nike+Air+Jordan+1+-lot+-bundle+-wholesale+-sample&hash=item29861b0d61:g:MSwAAeSwQJpqOy6Z",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|168563272810|0",
+      "title": "Nike Air Jordan 1 Retro High OG (GS) US 7Y Black/White/Brown Mocha",
+      "price": {
+        "value": "127.9",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/168563272810?_skw=Nike+Air+Jordan+1+-lot+-bundle+-wholesale+-sample&hash=item273f276c6a:g:guoAAeSwQBhqZPSk",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|137550345787|0",
+      "title": "Nike Air Jordan 1 Mid Johnny Kilroy 554724-057 Black/Silver Men's Size US11",
+      "price": {
+        "value": "48.4",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/137550345787?_skw=Nike+Air+Jordan+1+-lot+-bundle+-wholesale+-sample&hash=item2006a3b63b:g:kksAAeSwx7pqZJv6",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|137550319847|0",
+      "title": "Nike Air Jordan 1 High Top Leather Sneakers Silver/Grey/White US 9 DC1788-029",
+      "price": {
+        "value": "62.18",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/137550319847?_skw=Nike+Air+Jordan+1+-lot+-bundle+-wholesale+-sample&hash=item2006a350e7:g:7hAAAeSwE55qZJbe",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|366564747048|0",
+      "title": "Nike Air Jordan 1 Low Purple/White Men’s Size US 12 Casual Sneakers",
+      "price": {
+        "value": "125",
+        "currency": "AUD"
+      },
+      "condition": "used_like_new",
+      "itemWebUrl": "https://www.ebay.com.au/itm/366564747048?_skw=Nike+Air+Jordan+1+-lot+-bundle+-wholesale+-sample&hash=item5558f62728:g:BMkAAeSwN09qZJLn",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|168562727155|0",
+      "title": "Nike Jayson Tatum x Air Jordan Nu Retro 1 Low 'U City' Men's US9 VGC!",
+      "price": {
+        "value": "65.36",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/168562727155?_skw=Nike+Air+Jordan+1+-lot+-bundle+-wholesale+-sample&hash=item273f1f18f3:g:rL0AAeSwtxVqZIsK",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|158118783706|0",
+      "title": "Nike Air Jordan 1 Mid GS 4Y Black White Red 554725-069 Youth Sneakers Kids Bulls",
+      "price": {
+        "value": "129.99",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/158118783706?_skw=Nike+Air+Jordan+1+-lot+-bundle+-wholesale+-sample&hash=item24d09d2ada:g:hEEAAeSwVuppKqJa",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|227446973645|0",
+      "title": "Nike Air Jordan 1 Mid Vivid Orange US Size 9.5",
+      "price": {
+        "value": "117.3",
+        "currency": "AUD"
+      },
+      "condition": "used_fair",
+      "itemWebUrl": "https://www.ebay.com.au/itm/227446973645?_skw=Nike+Air+Jordan+1+-lot+-bundle+-wholesale+-sample&hash=item34f4e564cd:g:Mr8AAeSw2JtqZIJN",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    }
+  ],
+  "total": 20
+}

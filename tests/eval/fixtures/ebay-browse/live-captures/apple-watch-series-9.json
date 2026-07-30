@@ -1,5 +1,5 @@
 {
-  "savedAt": "2026-07-28T11:25:23.294Z",
+  "savedAt": "2026-07-28T23:23:09.737Z",
   "query": "Apple Watch Series 9 45mm GPS -band -strap -case -charger -protector -screen",
   "skuKey": "apple-watch-series-9",
   "product": {
@@ -12,6 +12,20 @@
   },
   "marketplaceId": "EBAY_AU",
   "itemSummaries": [
+    {
+      "itemId": "v1|137560126081|0",
+      "title": "USED Grade B Apple Watch Series 9 45mm | Starlight | Aluminium | GPS",
+      "price": {
+        "value": "169",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/137560126081?_skw=Apple+Watch+Series+9+45mm+GPS+-band+-strap+-case+-charger+-protector+-screen&hash=item200738f281:g:hvUAAeSwZl5qaLR3",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
     {
       "itemId": "v1|178334170720|477708240255",
       "title": "Apple Watch Series 9 45mm GPS Cellular Aluminium | Very Good Condition | 6M WTY",
@@ -139,5 +153,5 @@
       }
     }
   ],
-  "total": 9
+  "total": 10
 }

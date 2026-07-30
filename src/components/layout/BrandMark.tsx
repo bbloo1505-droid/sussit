@@ -33,12 +33,12 @@ export function BrandMark({
           alt=""
           width={s.icon}
           height={s.icon}
-          className="shrink-0 rounded-[7px]"
+          className="shrink-0 rounded-[6px]"
         />
       ) : null}
       <span
         className={cn(
-          'font-display leading-none font-black tracking-[-0.055em] text-cream',
+          'font-display leading-none font-extrabold tracking-[-0.04em] text-cream',
           s.text,
         )}
       >

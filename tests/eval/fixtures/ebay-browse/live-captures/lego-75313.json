@@ -1,0 +1,101 @@
+{
+  "savedAt": "2026-07-28T23:23:33.104Z",
+  "query": "LEGO 75313 AT-AT -proxy -fake -reproduction -minifigure -minifig -figure",
+  "skuKey": "lego-75313",
+  "product": {
+    "skuKey": "lego-75313",
+    "brand": "LEGO",
+    "model": "75313",
+    "variant": "AT-AT",
+    "category": "collectible",
+    "typicalAsk": 220
+  },
+  "marketplaceId": "EBAY_AU",
+  "itemSummaries": [
+    {
+      "itemId": "v1|206402248161|0",
+      "title": "lego star wars at-at 75313",
+      "price": {
+        "value": "1258.7",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/206402248161?_skw=LEGO+75313+AT-AT&hash=item300e885de1:g:cxAAAeSwFQVqThvZ",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|206402208992|0",
+      "title": "lego star wars at-at 75313",
+      "price": {
+        "value": "1258.7",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/206402208992?_skw=LEGO+75313+AT-AT&hash=item300e87c4e0:g:cxAAAeSwFQVqThvZ",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|168500462623|0",
+      "title": "Lego Star Wars UCS AT-AT 75313 / Original Packaging & Box Only 📦",
+      "price": {
+        "value": "100",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/168500462623?_skw=LEGO+75313+AT-AT&hash=item273b69041f:g:kPMAAeSwoAVpU1hI",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|317411192300|0",
+      "title": "Star Wars LEGO® General Maximillian Veers AT-AT Officer Minifigure 75313 sw1175",
+      "price": {
+        "value": "44.49",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/317411192300?_skw=LEGO+75313+AT-AT&hash=item49e72e6dec:g:yWkAAOSwI6doWS-h",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|166575344154|0",
+      "title": "LEGO Star Wars AT-AT Walker 4483 (2003)",
+      "price": {
+        "value": "530.7",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/166575344154?_skw=LEGO+75313+AT-AT&hash=item26c8aa0a1a:g:vOcAAOSwUrJlubde",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    },
+    {
+      "itemId": "v1|333974217812|0",
+      "title": "Lego Star Wars - AT- AT - USED 100% comp [4483]",
+      "price": {
+        "value": "350",
+        "currency": "AUD"
+      },
+      "condition": "used_good",
+      "itemWebUrl": "https://www.ebay.com.au/itm/333974217812?_skw=LEGO+75313+AT-AT&hash=item4dc26a2454:g:lCYAAOSw195ghLp9",
+      "itemLocation": {
+        "city": "AU",
+        "country": "AU"
+      }
+    }
+  ],
+  "total": 6
+}

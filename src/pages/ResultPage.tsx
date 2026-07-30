@@ -6,6 +6,7 @@ import { TextButton } from '@/components/ui/button'
 import { formatAud } from '@/lib/utils'
 import { useAnalysis } from '@/hooks/useAnalysis'
 import { buildExplanation } from '@/lib/analysis/viewModel'
+import { AskSellerCard } from '@/components/result/AskSellerCard'
 import { OutcomeCapture } from '@/components/result/OutcomeCapture'
 import { tierLabel } from '@/lib/intelligence/supportTier'
 
@@ -25,8 +26,7 @@ export function ResultPage() {
   const limited = analysis.deal.verdictLabel === 'LIMITED MARKET DATA'
   const insufficient = analysis.deal.verdictLabel === 'INSUFFICIENT DATA'
   const softGate = limited || insufficient
-  const showStrongOffer =
-    analysis.intelligenceTier === 'full' && Boolean(analysis.offer) && !softGate
+  const showStrongOffer = Boolean(analysis.offer) && !softGate
 
   const verdictLines = limited
     ? ['LIMITED', 'MARKET DATA']
@@ -65,11 +65,9 @@ export function ResultPage() {
         <p className="mt-6 max-w-[300px] text-[15px] leading-6 text-muted">
           {buildExplanation(analysis)}
         </p>
-        {softGate ? (
-          <p className="mt-3 text-[12px] text-muted">
-            {tierLabel(analysis.intelligenceTier)}
-          </p>
-        ) : null}
+        <p className="mt-3 text-[12px] text-muted">
+          {tierLabel(analysis.intelligenceTier)}
+        </p>
 
         <div className="mt-10">
           {showStrongOffer ? (
@@ -155,6 +153,8 @@ export function ResultPage() {
             <ChevronRight size={19} />
           </TextButton>
         </div>
+
+        <AskSellerCard analysis={analysis} />
 
         <OutcomeCapture analysisId={analysis.id} />
 

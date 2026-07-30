@@ -1,15 +1,22 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Camera, ChevronDown, RefreshCw } from 'lucide-react'
+import { Camera, ChevronDown, Copy, Check, RefreshCw } from 'lucide-react'
 import { Header } from '@/components/layout/Header'
 import { FlipPaywall } from '@/components/flip/FlipPaywall'
 import { buildHuntBoard, sellThroughText } from '@/lib/hunt/buildHuntBoard'
+import { FLIP_CATEGORY_OPTIONS } from '@/lib/hunt/flipPlaybooks'
 import { pollHuntLifecycles } from '@/lib/hunt/pollHuntLifecycles'
 import { loadHuntRules, saveHuntRules } from '@/lib/hunt/huntRulesStore'
-import { hasFlipSubscription } from '@/lib/entitlements/flipAccess'
+import {
+  hasFlipAccess,
+  hasFlipAssistant,
+  hasFlipPro,
+} from '@/lib/entitlements/flipAccess'
+import { categoryLabel } from '@/lib/intelligence/supportTier'
 import { formatAud } from '@/lib/utils'
 import { seedHuntProducts } from '@/lib/supabase/persist'
 import type { HuntBoard, HuntRules } from '@/types/hunt'
+import type { ProductCategory } from '@/types/domain'
 import type { SellSpeedLabel } from '@/types/sellSpeed'
 
 const POLL_ONCE_KEY = 'sussit:hunt-polled-session'
@@ -20,13 +27,14 @@ const MAX_DAYS = [7, 14, 21, 30]
 
 /** Subscriber hunt board — gated behind Flip entitlement */
 export function FlipHuntPage() {
-  const [active, setActive] = useState(() => hasFlipSubscription())
+  const [active, setActive] = useState(() => hasFlipAccess())
   const [rules, setRules] = useState<HuntRules>(() => loadHuntRules())
   const [board, setBoard] = useState<HuntBoard | null>(null)
   const [loading, setLoading] = useState(true)
   const [polling, setPolling] = useState(false)
   const [pollNote, setPollNote] = useState<string | null>(null)
   const [boardTick, setBoardTick] = useState(0)
+  const [copiedQuery, setCopiedQuery] = useState<string | null>(null)
 
   useEffect(() => {
     if (!active) return
@@ -86,6 +94,28 @@ export function FlipHuntPage() {
     setRules((prev) => ({ ...prev, ...partial }))
   }
 
+  function toggleCategory(id: ProductCategory | 'all') {
+    if (id === 'all') {
+      patch({ categories: ['all'] })
+      return
+    }
+    const current = (rules.categories ?? ['all']).filter((c) => c !== 'all')
+    const next = current.includes(id)
+      ? current.filter((c) => c !== id)
+      : [...current, id]
+    patch({ categories: next.length === 0 ? ['all'] : next })
+  }
+
+  async function copySearch(query: string) {
+    try {
+      await navigator.clipboard.writeText(query)
+      setCopiedQuery(query)
+      window.setTimeout(() => setCopiedQuery(null), 1600)
+    } catch {
+      // ignore
+    }
+  }
+
   async function refreshMarket() {
     setPolling(true)
     setPollNote(null)
@@ -103,6 +133,8 @@ export function FlipHuntPage() {
     setBoardTick((n) => n + 1)
   }
 
+  const selected = rules.categories ?? ['all']
+
   return (
     <div className="flex min-h-full flex-col px-6 pt-5 pb-9">
       <Header backTo="/" detail="FLIP" />
@@ -116,8 +148,7 @@ export function FlipHuntPage() {
           flip today?
         </h1>
         <p className="mt-3 text-[15px] leading-6 text-muted">
-          Find it cheap. Flip it fast. Know what to buy, what to pay, and what
-          it&apos;ll sell for.
+          Pick a category, copy a search, and hunt under the Max Buy.
         </p>
 
         <button
@@ -133,7 +164,35 @@ export function FlipHuntPage() {
           <p className="mt-2 text-center text-[12px] leading-5 text-muted">{pollNote}</p>
         ) : null}
 
-        <div className="mt-7 grid grid-cols-2 gap-3">
+        <section className="mt-7">
+          <p className="font-display text-[11px] font-bold tracking-[0.14em] text-muted">
+            CATEGORIES
+          </p>
+          <div className="mt-3 flex flex-wrap gap-2">
+            {FLIP_CATEGORY_OPTIONS.map((opt) => {
+              const on =
+                opt.id === 'all'
+                  ? selected.includes('all') || selected.length === 0
+                  : selected.includes(opt.id)
+              return (
+                <button
+                  key={opt.id}
+                  type="button"
+                  onClick={() => toggleCategory(opt.id)}
+                  className={
+                    on
+                      ? 'rounded-full border border-lime bg-lime px-3 py-1.5 font-display text-[12px] font-bold text-ink'
+                      : 'rounded-full border border-white/15 px-3 py-1.5 font-display text-[12px] font-bold text-muted'
+                  }
+                >
+                  {opt.label}
+                </button>
+              )
+            })}
+          </div>
+        </section>
+
+        <div className="mt-6 grid grid-cols-2 gap-3">
           <RuleSelect
             label="Budget"
             value={rules.budget}
@@ -166,13 +225,90 @@ export function FlipHuntPage() {
 
         <section className="mt-9">
           <p className="font-display text-[11px] font-bold tracking-[0.14em] text-lime">
-            TODAY&apos;S TOP FLIPS
+            SEARCH THESE TODAY
+          </p>
+          <p className="mt-2 text-[14px] leading-5 text-muted">
+            Copy a query into Marketplace, Gumtree, or eBay — stay under Max Buy.
+          </p>
+          {loading || !board ? (
+            <p className="mt-4 text-sm text-muted">Building suggestions…</p>
+          ) : board.categorySuggestions.length === 0 ? (
+            <p className="mt-4 text-sm text-muted">
+              No suggestions in this category set. Try All or raise budget.
+            </p>
+          ) : (
+            <div className="mt-5 space-y-6">
+              {board.categorySuggestions.map((group) => (
+                <div key={group.category}>
+                  <div className="mb-3">
+                    <h2 className="font-display text-[20px] font-black tracking-[-0.03em] text-cream">
+                      {group.title}
+                    </h2>
+                    <p className="mt-1 text-[13px] leading-5 text-muted">
+                      {group.blurb}
+                    </p>
+                  </div>
+                  <ul className="space-y-2">
+                    {group.searches.map((item) => (
+                      <li
+                        key={item.searchQuery}
+                        className="rounded-[18px] border border-white/10 bg-surface px-4 py-3"
+                      >
+                        <div className="flex items-start justify-between gap-3">
+                          <div className="min-w-0">
+                            <p className="font-display text-[16px] font-black text-cream">
+                              {item.label}
+                            </p>
+                            <p className="mt-1 truncate text-[13px] text-muted">
+                              &ldquo;{item.searchQuery}&rdquo;
+                            </p>
+                            <p className="mt-1 text-[12px] leading-5 text-muted">
+                              {item.why}
+                            </p>
+                          </div>
+                          <div className="shrink-0 text-right">
+                            <p className="font-display text-[10px] font-bold tracking-[0.12em] text-muted">
+                              {item.source === 'scored' ? 'MAX BUY' : 'GUIDE'}
+                            </p>
+                            <p className="font-display text-[22px] leading-none font-black text-lime">
+                              ≤{formatAud(item.maxBuy)}
+                            </p>
+                          </div>
+                        </div>
+                        <button
+                          type="button"
+                          onClick={() => void copySearch(item.searchQuery)}
+                          className="mt-3 flex w-full items-center justify-center gap-2 rounded-xl border border-white/10 py-2.5 text-[13px] font-semibold text-cream transition hover:border-lime/40"
+                        >
+                          {copiedQuery === item.searchQuery ? (
+                            <>
+                              <Check size={15} className="text-lime" /> Copied
+                            </>
+                          ) : (
+                            <>
+                              <Copy size={15} className="text-lime" /> Copy search
+                            </>
+                          )}
+                        </button>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          )}
+        </section>
+
+        <section className="mt-10 border-t border-white/10 pt-8">
+          <p className="font-display text-[11px] font-bold tracking-[0.14em] text-lime">
+            SCORED TOP FLIPS
           </p>
           {loading || !board ? (
             <p className="mt-4 text-sm text-muted">Building hunt board…</p>
           ) : board.opportunities.length === 0 ? (
             <p className="mt-4 text-sm text-muted">
-              No SKUs clear your rules yet. Loosen budget, profit, or sell-time.
+              No scored SKUs clear your rules yet — use the category searches above,
+              or loosen budget / profit / sell-time.
             </p>
           ) : (
             <div className="mt-4 space-y-3">
@@ -184,7 +320,7 @@ export function FlipHuntPage() {
                   <div className="flex items-start justify-between gap-3">
                     <div>
                       <p className="font-display text-[11px] font-bold text-lime">
-                        #{i + 1}
+                        #{i + 1} · {categoryLabel(row.category)}
                       </p>
                       <h2 className="font-display text-[20px] font-black tracking-[-0.03em] text-cream">
                         {row.label}
@@ -214,38 +350,19 @@ export function FlipHuntPage() {
                       value={`${speedMark(row.sellThroughLabel)} ${sellThroughText(row.sellThroughLabel)}`}
                     />
                   </dl>
+                  <button
+                    type="button"
+                    onClick={() => void copySearch(row.searchQuery)}
+                    className="mt-3 flex w-full items-center justify-center gap-2 rounded-xl border border-white/10 py-2.5 text-[13px] font-semibold text-cream"
+                  >
+                    <Copy size={15} className="text-lime" />
+                    Copy &ldquo;{row.searchQuery}&rdquo;
+                  </button>
                 </article>
               ))}
             </div>
           )}
         </section>
-
-        {board && board.huntList.length > 0 ? (
-          <section className="mt-9 border-t border-white/10 pt-7">
-            <p className="font-display text-[11px] font-bold tracking-[0.14em] text-lime">
-              YOUR HUNT TODAY
-            </p>
-            <p className="mt-2 text-[14px] text-muted">
-              Budget {formatAud(rules.budget)} — search Marketplace for:
-            </p>
-            <ol className="mt-4 space-y-3">
-              {board.huntList.map((item) => (
-                <li
-                  key={item.searchQuery}
-                  className="flex items-baseline justify-between gap-3 border-b border-white/10 pb-3"
-                >
-                  <span className="text-[15px] text-cream">
-                    <span className="text-muted">{item.rank}. </span>
-                    &ldquo;{item.searchQuery}&rdquo;
-                  </span>
-                  <span className="shrink-0 font-display text-[14px] font-black text-lime">
-                    ≤ {formatAud(item.maxBuy)}
-                  </span>
-                </li>
-              ))}
-            </ol>
-          </section>
-        ) : null}
 
         {board && board.falling.length > 0 ? (
           <section className="mt-8">
@@ -271,11 +388,27 @@ export function FlipHuntPage() {
           Analyse a listing
         </Link>
 
+        {hasFlipAssistant() ? (
+          <Link
+            to="/flip/assistant"
+            className="mt-3 flex w-full items-center justify-center rounded-2xl border border-white/15 py-3.5 font-display text-[14px] font-bold text-cream"
+          >
+            Open Assistant desk
+          </Link>
+        ) : (
+          <Link
+            to="/flip/assistant"
+            className="mt-3 block text-center text-[13px] text-muted underline-offset-4 hover:text-cream hover:underline"
+          >
+            Upgrade to Flip Assistant
+          </Link>
+        )}
+
         <Link
           to="/flip/history"
           className="mt-3 block text-center text-[13px] text-muted underline-offset-4 hover:text-cream hover:underline"
         >
-          View flip history
+          {hasFlipPro() ? 'Inventory & P&L' : 'Flip Pro — track inventory & profit'}
         </Link>
 
         {board ? (
